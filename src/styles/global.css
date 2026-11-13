@@ -719,18 +719,42 @@ img {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2px;
+		justify-content: center;
+		gap: 4px;
 		padding: 8px 0 10px;
 		font-size: 12px;
 		font-weight: 700;
+		color: var(--ink);
 	}
-	.bottom-bar a span {
-		font-size: 18px;
-		line-height: 1.2;
+	.bottom-bar .bb-ic {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		color: #fff;
+		font-size: 9px;
+		font-weight: 800;
+		line-height: 1;
+	}
+	.bottom-bar .bb-ic svg {
+		width: 16px;
+		height: 16px;
+		fill: currentColor;
+	}
+	.bottom-bar .bb-call .bb-ic {
+		background: #1f9d57;
+	}
+	.bottom-bar .bb-zalo .bb-ic {
+		background: #0068ff;
 	}
 	.bottom-bar .bb-main {
 		background: var(--brand);
 		color: #fff;
+	}
+	.bottom-bar .bb-main .bb-ic {
+		background: #fff;
+		color: var(--brand);
 	}
 	.foot-grid {
 		grid-template-columns: 1fr;
