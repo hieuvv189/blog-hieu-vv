@@ -10,6 +10,8 @@ import { SITE_DESCRIPTION } from '../consts';
 import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, zaloLink } from '../data/molli';
 
 const catLabel = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.label]));
+// Tab Nổi bật hiện theo đúng thứ tự `featured` (1, 2, 3...); các mã còn lại giữ thứ tự trong PRODUCTS.
+const featuredFirst = [...PRODUCTS.filter((p) => p.featured).sort((a, b) => (a.featured ?? 0) - (b.featured ?? 0)), ...PRODUCTS.filter((p) => !p.featured)];
 const total = (items: { price: number }[]) => items.reduce((sum, i) => sum + i.price, 0);
 
 const values = [
@@ -21,26 +23,26 @@ const values = [
 
 // Video feedback thật của khách (bản gốc trong brain: Molli/video-feedback.md), mã theo bảng video-feedback.
 const feedbackVideos = [
+	{ slug: 'lot-chong-tham-mol3019-01', label: 'Lót chống thấm size M 60 miếng', text: 'Mẹ rót cả cốc nước lên miếng lót để thử độ thấm.' },
 	{ slug: 'tui-tru-sua-mol3012', label: 'Túi trữ sữa 250ml', text: 'Khoá zip đôi, có vạch chia ml, phần ghi ngày giờ trữ sữa.' },
-	{ slug: 'khan-kho-mol3016', label: 'Khăn vải khô 900g', text: 'Dùng khô hay nhúng nước đều được, túi zip tiện mang theo.' },
+	{ slug: 'lot-tham-sua-mol3013', label: 'Miếng lót thấm sữa', text: 'Mẹ đổ nước thử lên miếng lót thấm sữa.' },
 	{ slug: 'gac-ro-luoi-mol3002', label: 'Gạc rơ lưỡi', text: 'Từng chiếc gói riêng, mẹ lấy dùng một lần là bỏ.' },
+	{ slug: 'lot-chong-tham-mol3020', label: 'Lót chống thấm size L 35 miếng', text: 'Mẹ đổ nước màu lên miếng lót rồi xem mặt dưới.' },
+	{ slug: 'khan-kho-mol3016', label: 'Khăn vải khô 900g', text: 'Dùng khô hay nhúng nước đều được, túi zip tiện mang theo.' },
+	{ slug: 'bvs-quan-mol3028', label: 'BVS dạng quần sau sinh', text: 'Mẹ đổ nước màu thử lên lớp thấm của quần.' },
+	{ slug: 'lot-chong-tham-mol3023', label: 'Lót chống thấm size S 100 miếng', text: 'Mẹ đổ nước từ chai lên miếng lót để thử.' },
+	{ slug: 'khan-uot-mol3042', label: 'Khăn ướt Molli', text: 'Mẹ rút thử, kéo căng và lau thử khăn.' },
+	{ slug: 'tam-bong-mol3001', label: 'Tăm bông xoắn ốc 200 que', text: 'Mẹ dùng vệ sinh tai cho bé hằng ngày.' },
+	{ slug: 'lot-me-sau-sinh-mol3025', label: 'Lót cho mẹ sau sinh và người già', text: 'Mẹ thử độ thấm hút của miếng lót cỡ lớn.' },
+	{ slug: 'lot-chong-tham-mol3019-02', label: 'Lót chống thấm size M 60 miếng', text: 'Thêm một lần thử đổ nước lên miếng lót.' },
 	{ slug: 'diu-hong-mol3043', label: 'Địu ngồi hông cao cấp', text: 'Mẹ mở hộp, xem cận cảnh địu và cách đeo cho bé.' },
 	{ slug: 'hop-thuc-pham-mol3048-01', label: 'Set hộp đựng thực phẩm', text: 'Mẹ mở set, xem từng hộp nhỏ và nắp đậy.' },
+	{ slug: 'bang-dan-tai-mol3022', label: 'Băng dán tai chống nước', text: 'Mẹ mở hộp, xem miếng dán vành tai cho bé.' },
 	{ slug: 'co-binh-mol3046-01', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Cọ bình, cọ núm ti và cọ ống hút trong một vỉ.' },
 	{ slug: 'khan-xo-mol2028', label: 'Khăn xô Premium Bamboo', text: 'Mẹ mở túi, xem chất khăn xô sợi tre.' },
 	{ slug: 'bong-vien-mol3031', label: 'Viên bông ngọc trai 100 viên', text: 'Mẹ mở túi, xem cận cảnh từng viên bông.' },
-	{ slug: 'khan-uot-mol3042', label: 'Khăn ướt Molli', text: 'Mẹ rút thử, kéo căng và lau thử khăn.' },
-	{ slug: 'tam-bong-mol3001', label: 'Tăm bông xoắn ốc 200 que', text: 'Mẹ dùng vệ sinh tai cho bé hằng ngày.' },
 	{ slug: 'tui-tru-sua-mol3012-02', label: 'Túi trữ sữa đủ size', text: 'Một buổi trữ sữa của mẹ với túi Molli nhiều dung tích.' },
-	{ slug: 'co-binh-mol3046-02', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Bộ cọ nhỏ nhưng giúp mẹ tiết kiệm nhiều thời gian.' },
-	{ slug: 'hop-thuc-pham-mol3048-02', label: 'Set hộp đựng thực phẩm', text: 'Mẹ mở hộp, xem từng hộp nhỏ trong set.' },
-	{ slug: 'bong-vien-mol3030', label: 'Viên bông ngọc trai 200 viên', text: 'Túi lớn 200 viên, mẹ dùng dần cả tháng.' },
 	{ slug: 'hop-thuc-pham-mol3048-03', label: 'Set hộp đựng thực phẩm', text: 'Nắp vặn chắc, thiết kế tiện cho mẹ mang theo.' },
-	{ slug: 'co-binh-mol3046-03', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Thêm một góc nhìn cận cảnh bộ cọ rửa bình.' },
-	{ slug: 'hop-thuc-pham-mol3048-04', label: 'Set hộp đựng thực phẩm', text: 'Mẹ xếp các hộp lại cho gọn tủ.' },
-	{ slug: 'hop-thuc-pham-mol3048-05', label: 'Set hộp đựng thực phẩm', text: 'Combo 3 hộp trữ, mẹ mở hộp xem từng món.' },
-	{ slug: 'hop-thuc-pham-mol3048-06', label: 'Set hộp đựng thực phẩm', text: 'Đi đâu cũng gọn hơn nhờ mấy hộp nhỏ này.' },
-	{ slug: 'hop-thuc-pham-mol3048-07', label: 'Set hộp đựng thực phẩm', text: 'Hộp nhỏ, mẹ chia từng phần cho bé.' },
 ];
 
 const papers = [
@@ -914,7 +916,7 @@ const papers = [
 				</div>
 				<div class="wrap grid" id="product-grid">
 					{
-						PRODUCTS.map((p) => (
+						featuredFirst.map((p) => (
 							<article class="card" data-cat={p.cat} data-featured={p.featured ? 'true' : 'false'} hidden={!p.featured}>
 								<img src={imageOf(p.code)} alt={`${p.name} Molli ${p.code}`} width="560" height="560" loading="lazy" />
 								<div class="card-body">
