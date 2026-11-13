@@ -31,7 +31,7 @@ export const CATEGORIES: { key: CategoryKey; label: string; desc: string; cover:
 	{ key: 'tru-sua', label: 'Trữ sữa và ăn dặm', desc: 'Túi trữ sữa 100-250ml, cọ bình, hộp ăn dặm', cover: 'MOL3012' },
 	{ key: 'giac-ngu', label: 'Giấc ngủ của bé', desc: 'Lót chống thấm vải, khăn xô, chăn, gối', cover: 'MOL2023' },
 	{ key: 'diu', label: 'Địu em bé', desc: 'Địu ngồi, địu ngồi hông', cover: 'MOL3043' },
-	{ key: 'ca-nha', label: 'Cả nhà cùng dùng', desc: 'Khăn ướt, khăn rửa mặt dùng 1 lần cho cả gia đình', cover: 'MOL3035' },
+	{ key: 'ca-nha', label: 'Cả nhà cùng dùng', desc: 'Khăn khô, khăn ướt, khăn rửa mặt dùng 1 lần', cover: 'MOL3035' },
 ];
 
 // Link Shopee của từng mã, lấy từ file "Molli - Danh sách link Shopee.xlsx" trên Drive (anh Hiếu cập nhật 13/11/2026).
@@ -121,10 +121,11 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3020', name: 'Lót chống thấm 1 lần size L', spec: '35 miếng/túi · 45x60cm', note: 'Túi lớn dùng ở nhà. Viền cách ly 3cm, giữ khô thoáng.', price: 198000, cat: 've-sinh' },
 	{ code: 'MOL3051', name: 'Tấm lót phân su sơ sinh', spec: '30 miếng/túi · 19x21cm', note: 'Lót trong tã những ngày đầu, sản xuất tại Việt Nam.', price: 40000, cat: 've-sinh' },
 	{ code: 'MOL3031', name: 'Viên bông ngọc trai 1g', spec: '100 viên/túi', note: 'Bông thiên nhiên, đã tiệt trùng, cả nhà dùng được.', price: 52000, cat: 've-sinh' },
+	{ code: 'MOL3030', name: 'Viên bông ngọc trai 0,5g', spec: '200 viên/túi', note: 'Viên nhỏ, bông thiên nhiên, đã tiệt trùng.', price: 52000, cat: 've-sinh' },
 	{ code: 'MOL3022', name: 'Băng dán tai chống nước', spec: '30 miếng/hộp · 4,5x7cm', note: 'Dán vành tai cho bé khi tắm, khi bơi.', price: 83000, cat: 've-sinh' },
-	{ code: 'MOL3041', name: 'Khăn vải khô đa năng 300g', spec: 'Khoảng 208 tờ · 20x14cm', note: 'Túi nhỏ gọn, sản xuất tại Việt Nam.', price: 61000, cat: 've-sinh' },
-	{ code: 'MOL3036', name: 'Khăn vải khô đa năng 600g', spec: 'Khoảng 416 tờ · 20x14cm', note: 'Vải không dệt, sản xuất tại Việt Nam.', price: 104000, cat: 've-sinh' },
-	{ code: 'MOL3016', name: 'Khăn vải khô đa năng 900g', spec: 'Khoảng 620 tờ · 20x14cm', note: 'Thấm nước lạnh và ấm, túi zip.', price: 154000, cat: 've-sinh', featured: 5 },
+	{ code: 'MOL3041', name: 'Khăn vải khô đa năng 300g', spec: 'Khoảng 208 tờ · 20x14cm', note: 'Túi nhỏ gọn, sản xuất tại Việt Nam.', price: 61000, cat: 'ca-nha' },
+	{ code: 'MOL3036', name: 'Khăn vải khô đa năng 600g', spec: 'Khoảng 416 tờ · 20x14cm', note: 'Vải không dệt, sản xuất tại Việt Nam.', price: 104000, cat: 'ca-nha' },
+	{ code: 'MOL3016', name: 'Khăn vải khô đa năng 900g', spec: 'Khoảng 620 tờ · 20x14cm', note: 'Thấm nước lạnh và ấm, túi zip.', price: 154000, cat: 'ca-nha', featured: 5 },
 	{ code: 'MOL3042', name: 'Khăn ướt Molli', spec: '80 tờ/túi · 18x14cm', note: 'Vải không dệt, không cồn, không paraben. Sản xuất tại Việt Nam.', price: 31000, cat: 'ca-nha', featured: 6 },
 	{ code: 'MOL3032', name: 'Khăn rửa mặt dùng 1 lần', spec: '60 tờ/bịch · 20x20cm', note: 'Sợi thực vật, không dệt. Dạng rút tiện mang đi.', price: 72000, cat: 'ca-nha' },
 	{ code: 'MOL3033', name: 'Khăn rửa mặt dùng 1 lần', spec: '200g/túi · 20x20cm', note: 'Sợi thực vật, không dệt. Túi rút dây để bàn.', price: 76000, cat: 'ca-nha' },
@@ -147,14 +148,19 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3046', name: 'Bộ cọ rửa bình sữa 3 chi tiết', spec: '3 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ ống hút. Không BPA.', price: 102000, cat: 'tru-sua', featured: 8 },
 
 	{ code: 'MOL2031', name: 'Tấm lót chống thấm 4 lớp', spec: '50x70cm · 1 tấm', note: 'Hai lớp ngoài làm từ cotton, lớp TPU chống thấm.', price: 122000, cat: 'giac-ngu' },
+	{ code: 'MOL2003', name: 'Lót chống thấm vải in hình, thêu hình', spec: '50x70cm · 1 tấm', note: 'Mặt trên cotton chần bông, mặt dưới chống thấm. Bé 0-36 tháng.', price: 169000, cat: 'giac-ngu' },
 	{ code: 'MOL2059', name: 'Khăn sữa 6 lớp', spec: '3 khăn/hộp · 27x27cm', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 107000, cat: 'giac-ngu' },
 	{ code: 'MOL2030', name: 'Khăn sữa Premium Bamboo', spec: '6 khăn/hộp · 30x30cm', note: 'Làm từ sợi tre, không nhuộm màu.', price: 105000, cat: 'giac-ngu' },
+	{ code: 'MOL2015', name: 'Khăn sữa xô Muslin', spec: '5 khăn/hộp · 30x30cm', note: 'Muslin 2 lớp, viền ren. Bé 0-36 tháng.', price: 101000, cat: 'giac-ngu' },
+	{ code: 'MOL2016', name: 'Khăn yếm xô Muslin 2 in 1', spec: '3 khăn/hộp · 25x25cm', note: 'Muslin 4 lớp, có cúc bấm, vừa làm khăn vừa làm yếm.', price: 90000, cat: 'giac-ngu' },
 	{ code: 'MOL2028', name: 'Khăn xô Premium Bamboo', spec: '120x120cm · 1 khăn', note: 'Làm từ sợi tre. Từ 0 tháng.', price: 154000, cat: 'giac-ngu' },
+	{ code: 'MOL2014', name: 'Khăn xô Muslin đa năng', spec: '100x100cm · 1 khăn', note: 'Làm từ cotton 2 lớp. Từ 0 tháng.', price: 131000, cat: 'giac-ngu' },
 	{ code: 'MOL2023', name: 'Chăn xô 3 lớp in hình', spec: '100x120cm', note: 'Làm từ cotton 3 lớp, có lỗ thoáng khí.', price: 270000, cat: 'giac-ngu' },
 	{ code: 'MOL2026', name: 'Chăn xô ủ 3 lớp in hình', spec: '90x90cm', note: 'Làm từ cotton 3 lớp. Từ 0 tháng.', price: 260000, cat: 'giac-ngu' },
 	{ code: 'MOL2058', name: 'Chăn xô 6 lớp', spec: '80x100cm', note: 'Làm từ cotton 6 lớp. Từ 3 tháng.', price: 192000, cat: 'giac-ngu' },
 	{ code: 'MOL2053', name: 'Chăn lông hạt đậu', spec: '100x120cm', note: 'Vải lông nhung hạt đậu. Từ 3 tháng.', price: 302000, cat: 'giac-ngu' },
 	{ code: 'MOL2029', name: 'Lót gối sơ sinh xô 6 lớp', spec: '25x40cm · 1 gối', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 64000, cat: 'giac-ngu' },
+	{ code: 'MOL2002', name: 'Gối cao su non in hình, thêu hình', spec: '22x38x3cm · 1 gối', note: 'Vỏ cotton chần bông, ruột cao su non. Từ 3 tuổi.', price: 265000, cat: 'giac-ngu' },
 
 	// Địu: chỉ ghi thông số trùng khớp giữa bảng giá và file thông tin sản phẩm.
 	// Độ tuổi và tải trọng hai nguồn đang lệch nhau nên chưa đưa lên web.
