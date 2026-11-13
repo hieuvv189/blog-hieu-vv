@@ -2,7 +2,7 @@
 title: "Trữ sữa mẹ bằng túi: chọn dung tích và bảo quản đúng cách"
 description: "Cách chọn túi trữ sữa 100ml đến 250ml, các bước trữ sữa và thời gian bảo quản sữa mẹ theo hướng dẫn của CDC."
 pubDate: "2026-11-08"
-heroImage: "/images/molli/cam-nang/tru-sua.webp"
+heroImage: "/images/molli/cam-nang/tru-sua.webp?v=2"
 ---
 
 Trữ sữa giúp mẹ đi làm, đi ra ngoài mà bé vẫn được bú sữa mẹ. Làm đúng vài bước nhỏ thì sữa giữ được chất lượng và mẹ không phải bỏ phí giọt nào.
