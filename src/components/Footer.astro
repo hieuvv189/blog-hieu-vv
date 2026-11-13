@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
 			<ul>
 				<li><a href={CONTACT.shopee} target="_blank" rel="noopener">Shop Shopee chính thức</a></li>
 				<li><a href={CONTACT.tiktok} target="_blank" rel="noopener">TikTok @mollivn</a></li>
-				<li><a href="/#dai-ly">Đăng ký đại lý</a></li>
+				<li><a href="/dai-ly/">Đại lý / Nhà phân phối</a></li>
 			</ul>
 		</div>
 		<div>
@@ -47,6 +47,39 @@ const year = new Date().getFullYear();
 </footer>
 
 <div class="float-contact" aria-label="Liên hệ nhanh">
+	<a class="fc-dealer" href="/dai-ly/" aria-label="Thông tin đại lý, nhà phân phối">Đại lý</a>
+	<div class="fc-social" id="fc-social">
+		<ul class="fc-social-list" id="fc-social-list" aria-label="Kênh của Molli">
+			<li>
+				<a class="s-fb" href={CONTACT.facebook} target="_blank" rel="noopener" aria-label="Facebook Molli" data-label="Facebook">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="s-tt" href={CONTACT.tiktok} target="_blank" rel="noopener" aria-label="TikTok Molli" data-label="TikTok">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4.2 4.1v3.4c-1.6 0-3-.5-4.2-1.3v6.3c0 3.6-2.9 6.5-6.5 6.5S3.5 19.1 3.5 15.5 6.4 9 10 9c.4 0 .8 0 1.2.1v3.6c-.4-.1-.8-.2-1.2-.2-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V3h3.5z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="s-yt" href={CONTACT.youtube} target="_blank" rel="noopener" aria-label="YouTube Molli" data-label="YouTube">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2c-.2-1.5-1-2.6-2.5-2.8C17.2 5 12 5 12 5s-5.2 0-7.5.4C3 5.6 2.2 6.7 2 8.2 1.8 9.5 1.8 12 1.8 12s0 2.5.2 3.8c.2 1.5 1 2.6 2.5 2.8C6.8 19 12 19 12 19s5.2 0 7.5-.4c1.5-.2 2.3-1.3 2.5-2.8.2-1.3.2-3.8.2-3.8s0-2.5-.2-3.8zM10 15V9l5.2 3z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="s-oa" href={CONTACT.zaloOA} target="_blank" rel="noopener" aria-label="Zalo OA Molli" data-label="Zalo OA">OA</a>
+			</li>
+			<li>
+				<a class="s-sp" href={CONTACT.shopee} target="_blank" rel="noopener" aria-label="Shop Shopee Molli" data-label="Shopee">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-2.2 0-4 1.9-4.2 4.3H4.5L3.4 21.5h17.2L19.5 6.8h-3.3C16 4.4 14.2 2.5 12 2.5zm0 1.8c1.2 0 2.2 1.1 2.4 2.5H9.6c.2-1.4 1.2-2.5 2.4-2.5zm.2 5.2c1.4 0 2.5.6 3.1 1.4l-1.1 1c-.5-.5-1.2-.8-2-.8-.9 0-1.4.4-1.4.9 0 1.5 4.8.9 4.8 4 0 1.6-1.4 2.7-3.5 2.7-1.6 0-2.9-.6-3.6-1.6l1.1-1c.6.7 1.5 1.1 2.5 1.1 1 0 1.6-.4 1.6-1 0-1.6-4.8-1-4.8-4 0-1.5 1.3-2.7 3.3-2.7z"></path></svg>
+				</a>
+			</li>
+		</ul>
+		<button class="fc-toggle" type="button" aria-expanded="false" aria-controls="fc-social-list" aria-label="Theo dõi Molli trên mạng xã hội">
+			<svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.1C1 8.8 2.9 5 6.5 5c2 0 3.6 1.1 4.5 2.6l1 1.5 1-1.5C13.9 6.1 15.5 5 17.5 5 21.1 5 23 8.8 21.6 11.9 19.5 16.4 12 21 12 21z"></path></svg>
+			<svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4 17.6 5 12 10.6z"></path></svg>
+			<span class="fc-hint">Theo dõi</span>
+		</button>
+	</div>
 	<a class="fc-zalo" href={zaloLink} target="_blank" rel="noopener" aria-label="Nhắn Zalo tư vấn">Zalo</a>
 	<a class="fc-call" href={callLink} aria-label={`Gọi ${formatPhone(CONTACT.callPhone)}`}>
 		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"></path></svg>
@@ -57,3 +90,23 @@ const year = new Date().getFullYear();
 	<a href={zaloLink} target="_blank" rel="noopener"><span aria-hidden="true">💬</span>Nhắn Zalo</a>
 	<a class="bb-main" href={CONTACT.shopee} target="_blank" rel="noopener"><span aria-hidden="true">🛍</span>Mua Shopee</a>
 </nav>
+
+<script is:inline>
+	(() => {
+		// Bấm trái tim để mở / đóng các kênh mạng xã hội của Molli.
+		const box = document.getElementById('fc-social');
+		if (!box) return;
+		const btn = box.querySelector('.fc-toggle');
+		const set = (open) => {
+			box.classList.toggle('open', open);
+			btn.setAttribute('aria-expanded', String(open));
+		};
+		btn.addEventListener('click', () => set(!box.classList.contains('open')));
+		document.addEventListener('click', (e) => {
+			if (!box.contains(e.target)) set(false);
+		});
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') set(false);
+		});
+	})();
+</script>

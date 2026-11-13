@@ -1,0 +1,130 @@
+---
+// Form nhận bảng giá đại lý / nhà phân phối: chỉ hỏi tên cửa hàng và số điện thoại.
+// Web chưa có máy chủ nhận form, nên khi gửi: chép sẵn lời nhắn rồi mở Zalo Molli để khách dán và gửi.
+import { zaloLink } from '../data/molli';
+interface Props {
+	id?: string;
+	title?: string;
+}
+const { id = 'dealer-form', title = 'Nhận bảng giá đại lý / nhà phân phối' } = Astro.props;
+---
+
+<form class="dealer-form" id={id} data-zalo={zaloLink} novalidate>
+	<h3>{title}</h3>
+	<p>Để lại tên cửa hàng và số điện thoại, Molli gửi bảng giá qua Zalo.</p>
+	<label>
+		<span>Tên cửa hàng</span>
+		<input name="shop" type="text" autocomplete="organization" placeholder="VD: Mẹ và Bé Su Su" required maxlength="80" />
+	</label>
+	<label>
+		<span>Số điện thoại</span>
+		<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="VD: 0912 345 678" required maxlength="15" />
+	</label>
+	<p class="df-error" role="alert" hidden></p>
+	<button type="submit">Nhận bảng giá</button>
+	<p class="df-done" role="status" hidden>
+		Đã chép sẵn lời nhắn. Zalo Molli đang mở, anh chị dán vào ô chat và bấm gửi là xong.
+	</p>
+</form>
+
+<style>
+	.dealer-form {
+		background: #fff;
+		border-radius: 20px;
+		padding: 26px;
+		color: #22313f;
+		display: grid;
+		gap: 14px;
+	}
+	.dealer-form h3 {
+		color: #24618f;
+		margin: 0;
+	}
+	.dealer-form > p {
+		color: #5f7486;
+		margin: 0;
+		font-size: 15px;
+	}
+	.dealer-form label {
+		display: grid;
+		gap: 6px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.dealer-form input {
+		font: inherit;
+		font-weight: 500;
+		padding: 12px 14px;
+		border: 1px solid #cfdde9;
+		border-radius: 12px;
+		background: #f7fbff;
+		color: #22313f;
+	}
+	.dealer-form input:focus {
+		outline: 2px solid #3d8fd1;
+		outline-offset: 1px;
+	}
+	.dealer-form button {
+		width: 100%;
+		border: 0;
+		cursor: pointer;
+		font: inherit;
+		font-weight: 800;
+		padding: 14px 24px;
+		border-radius: 99px;
+		background: #3a87c0;
+		color: #fff;
+		transition: 0.2s;
+	}
+	.dealer-form button:hover {
+		background: #24618f;
+	}
+	.dealer-form .df-error {
+		color: #c0392b;
+		font-weight: 700;
+	}
+	.dealer-form .df-done {
+		color: #1f7a45;
+		font-weight: 700;
+	}
+</style>
+
+<script is:inline>
+	(() => {
+		document.querySelectorAll('form.dealer-form:not([data-ready])').forEach((form) => {
+			form.dataset.ready = '1';
+			const err = form.querySelector('.df-error');
+			const done = form.querySelector('.df-done');
+			// Chép đồng bộ trong cú bấm để trình duyệt không chặn, rồi mới mở Zalo.
+			const copy = (text) => {
+				const ta = document.createElement('textarea');
+				ta.value = text;
+				ta.setAttribute('readonly', '');
+				ta.style.cssText = 'position:fixed;opacity:0;left:-9999px';
+				document.body.appendChild(ta);
+				ta.select();
+				let ok = false;
+				try {
+					ok = document.execCommand('copy');
+				} catch (_) {}
+				ta.remove();
+				if (!ok && navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
+			};
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const shop = form.shop.value.trim();
+				const phone = form.phone.value.replace(/[\s.-]/g, '');
+				let msg = '';
+				if (shop.length < 2) msg = 'Anh chị nhập giúp tên cửa hàng.';
+				else if (!/^(\+?84|0)\d{9,10}$/.test(phone)) msg = 'Số điện thoại chưa đúng, anh chị kiểm tra lại giúp.';
+				err.hidden = !msg;
+				err.textContent = msg;
+				if (msg) return;
+				const text = `Chào Molli, mình muốn nhận bảng giá đại lý / nhà phân phối.\nTên cửa hàng: ${shop}\nSố điện thoại: ${phone}`;
+				copy(text);
+				done.hidden = false;
+				window.open(form.dataset.zalo, '_blank', 'noopener');
+			});
+		});
+	})();
+</script>

@@ -5,6 +5,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import DealerForm from '../components/DealerForm.astro';
 import { SITE_DESCRIPTION } from '../consts';
 import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, zaloLink } from '../data/molli';
 
@@ -20,9 +21,26 @@ const values = [
 
 // Video feedback thật của khách (bản gốc trong brain: Molli/video-feedback.md), mã theo bảng video-feedback.
 const feedbackVideos = [
-	{ slug: 'tui-tru-sua-mol3012', label: 'Túi trữ sữa', text: 'Khoá zip đôi, có vạch chia ml, phần ghi ngày giờ trữ sữa.' },
+	{ slug: 'tui-tru-sua-mol3012', label: 'Túi trữ sữa 250ml', text: 'Khoá zip đôi, có vạch chia ml, phần ghi ngày giờ trữ sữa.' },
 	{ slug: 'khan-kho-mol3016', label: 'Khăn vải khô 900g', text: 'Dùng khô hay nhúng nước đều được, túi zip tiện mang theo.' },
 	{ slug: 'gac-ro-luoi-mol3002', label: 'Gạc rơ lưỡi', text: 'Từng chiếc gói riêng, mẹ lấy dùng một lần là bỏ.' },
+	{ slug: 'diu-hong-mol3043', label: 'Địu ngồi hông cao cấp', text: 'Mẹ mở hộp, xem cận cảnh địu và cách đeo cho bé.' },
+	{ slug: 'hop-thuc-pham-mol3048-01', label: 'Set hộp đựng thực phẩm', text: 'Mẹ mở set, xem từng hộp nhỏ và nắp đậy.' },
+	{ slug: 'co-binh-mol3046-01', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Cọ bình, cọ núm ti và cọ ống hút trong một vỉ.' },
+	{ slug: 'khan-xo-mol2028', label: 'Khăn xô Premium Bamboo', text: 'Mẹ mở túi, xem chất khăn xô sợi tre.' },
+	{ slug: 'bong-vien-mol3031', label: 'Viên bông ngọc trai 100 viên', text: 'Mẹ mở túi, xem cận cảnh từng viên bông.' },
+	{ slug: 'khan-uot-mol3042', label: 'Khăn ướt Molli', text: 'Mẹ rút thử, kéo căng và lau thử khăn.' },
+	{ slug: 'tam-bong-mol3001', label: 'Tăm bông xoắn ốc 200 que', text: 'Mẹ dùng vệ sinh tai cho bé hằng ngày.' },
+	{ slug: 'tui-tru-sua-mol3012-02', label: 'Túi trữ sữa đủ size', text: 'Một buổi trữ sữa của mẹ với túi Molli nhiều dung tích.' },
+	{ slug: 'co-binh-mol3046-02', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Bộ cọ nhỏ nhưng giúp mẹ tiết kiệm nhiều thời gian.' },
+	{ slug: 'hop-thuc-pham-mol3048-02', label: 'Set hộp đựng thực phẩm', text: 'Mẹ mở hộp, xem từng hộp nhỏ trong set.' },
+	{ slug: 'bong-vien-mol3030', label: 'Viên bông ngọc trai 200 viên', text: 'Túi lớn 200 viên, mẹ dùng dần cả tháng.' },
+	{ slug: 'hop-thuc-pham-mol3048-03', label: 'Set hộp đựng thực phẩm', text: 'Nắp vặn chắc, thiết kế tiện cho mẹ mang theo.' },
+	{ slug: 'co-binh-mol3046-03', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Thêm một góc nhìn cận cảnh bộ cọ rửa bình.' },
+	{ slug: 'hop-thuc-pham-mol3048-04', label: 'Set hộp đựng thực phẩm', text: 'Mẹ xếp các hộp lại cho gọn tủ.' },
+	{ slug: 'hop-thuc-pham-mol3048-05', label: 'Set hộp đựng thực phẩm', text: 'Combo 3 hộp trữ, mẹ mở hộp xem từng món.' },
+	{ slug: 'hop-thuc-pham-mol3048-06', label: 'Set hộp đựng thực phẩm', text: 'Đi đâu cũng gọn hơn nhờ mấy hộp nhỏ này.' },
+	{ slug: 'hop-thuc-pham-mol3048-07', label: 'Set hộp đựng thực phẩm', text: 'Hộp nhỏ, mẹ chia từng phần cho bé.' },
 ];
 
 const papers = [
@@ -417,12 +435,21 @@ const papers = [
 				padding: 10px;
 			}
 
-			/* Video feedback */
+			/* Video feedback: dải vuốt ngang có nút chuyển */
+			.video-rail {
+				position: relative;
+				margin-top: 36px;
+			}
 			.videos {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 24px;
-				margin-top: 36px;
+				grid-auto-flow: column;
+				grid-auto-columns: calc((100% - 3 * 20px) / 4);
+				gap: 20px;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				padding-bottom: 12px;
+				scrollbar-width: thin;
 			}
 			.video-card {
 				background: var(--surface);
@@ -431,6 +458,7 @@ const papers = [
 				overflow: hidden;
 				display: flex;
 				flex-direction: column;
+				scroll-snap-align: start;
 			}
 			.video-card video {
 				display: block;
@@ -451,17 +479,43 @@ const papers = [
 				font-size: 15px;
 				color: var(--muted);
 			}
-			@media (max-width: 860px) {
+			.vnav {
+				position: absolute;
+				top: 40%;
+				z-index: 2;
+				width: 46px;
+				height: 46px;
+				border-radius: 50%;
+				border: 1px solid var(--line);
+				background: var(--surface);
+				color: var(--accent);
+				font-size: 28px;
+				line-height: 1;
+				cursor: pointer;
+				box-shadow: 0 6px 18px rgba(23, 52, 76, 0.16);
+			}
+			.vnav.prev {
+				left: -22px;
+			}
+			.vnav.next {
+				right: -22px;
+			}
+			.vnav:disabled {
+				opacity: 0;
+				pointer-events: none;
+			}
+			@media (max-width: 1000px) {
 				.videos {
-					grid-template-columns: none;
-					grid-auto-flow: column;
-					grid-auto-columns: 72%;
-					overflow-x: auto;
-					scroll-snap-type: x mandatory;
-					padding-bottom: 8px;
+					grid-auto-columns: calc((100% - 2 * 20px) / 3);
 				}
-				.video-card {
-					scroll-snap-align: start;
+			}
+			@media (max-width: 760px) {
+				.videos {
+					grid-auto-columns: 72%;
+					gap: 14px;
+				}
+				.vnav {
+					display: none;
 				}
 			}
 
@@ -585,29 +639,19 @@ const papers = [
 				content: '✓ ';
 				font-weight: 800;
 			}
-			.dealer-box {
-				background: #fff;
-				border-radius: 20px;
-				padding: 26px;
-				color: #22313f;
+			.dealer ul li {
+				font-size: 17px;
 			}
-			.dealer-box h3 {
-				color: #24618f;
-				margin: 0 0 8px;
+			.dealer-more {
+				margin: 22px 0 0;
 			}
-			.dealer-box p {
-				color: #5f7486;
-				margin: 0 0 16px;
-				font-size: 15px;
+			.dealer-more a {
+				color: #fff;
+				font-weight: 800;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 			}
-			.dealer-box ol {
-				margin: 0 0 20px;
-				padding-left: 20px;
-				color: #22313f;
-				font-size: 15px;
-			}
-			.dealer-box .pill-btn {
-				width: 100%;
+			.dealer-more a:hover {
+				border-bottom-color: #fff;
 			}
 
 			@media (max-width: 1000px) {
@@ -666,6 +710,132 @@ const papers = [
 					flex-direction: column;
 				}
 			}
+
+			/* Nền có họa tiết: đốm màu pastel và dấu chân thỏ */
+			.sec,
+			.hero {
+				position: relative;
+				overflow: hidden;
+				isolation: isolate;
+			}
+			.sec {
+				background-color: var(--surface);
+				background-image:
+					radial-gradient(circle at 4% 10%, var(--blob-pink) 0, transparent 240px),
+					radial-gradient(circle at 97% 92%, var(--blob-blue) 0, transparent 280px);
+			}
+			.sec.alt {
+				background-color: var(--bg);
+				background-image:
+					radial-gradient(circle at 95% 8%, var(--blob-yellow) 0, transparent 260px),
+					radial-gradient(circle at 3% 95%, var(--blob-pink) 0, transparent 260px),
+					var(--paws);
+				background-size: auto, auto, 220px 220px;
+			}
+			.hero {
+				background-image:
+					radial-gradient(circle at 8% 85%, var(--blob-pink) 0, transparent 260px),
+					radial-gradient(circle at 45% 6%, var(--blob-yellow) 0, transparent 220px),
+					var(--paws),
+					linear-gradient(135deg, var(--bg) 0%, var(--tile) 100%);
+				background-size: auto, auto, 220px 220px, auto;
+			}
+			:root {
+				--blob-pink: rgba(251, 214, 228, 0.55);
+				--blob-blue: rgba(205, 230, 248, 0.7);
+				--blob-yellow: rgba(255, 240, 200, 0.6);
+				--paws: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='%233685bb' fill-opacity='0.07'%3E%3Cg transform='translate(40 50) rotate(-18)'%3E%3Cellipse cx='0' cy='10' rx='11' ry='9'/%3E%3Ccircle cx='-11' cy='-6' r='4.5'/%3E%3Ccircle cx='-3' cy='-12' r='4.5'/%3E%3Ccircle cx='6' cy='-12' r='4.5'/%3E%3Ccircle cx='13' cy='-5' r='4.5'/%3E%3C/g%3E%3Cg transform='translate(160 150) rotate(22)'%3E%3Cellipse cx='0' cy='10' rx='11' ry='9'/%3E%3Ccircle cx='-11' cy='-6' r='4.5'/%3E%3Ccircle cx='-3' cy='-12' r='4.5'/%3E%3Ccircle cx='6' cy='-12' r='4.5'/%3E%3Ccircle cx='13' cy='-5' r='4.5'/%3E%3C/g%3E%3C/g%3E%3Cg fill='%23f08fb0' fill-opacity='0.12'%3E%3Cpath d='M170 40c-4-6-13-3-11 4 1 5 11 11 11 11s10-6 11-11c2-7-7-10-11-4z'/%3E%3Cpath d='M50 170c-3-5-10-2-9 3 1 4 9 9 9 9s8-5 9-9c1-5-6-8-9-3z'/%3E%3C/g%3E%3C/svg%3E");
+			}
+			:root[data-theme='dark'] {
+				--blob-pink: rgba(120, 60, 90, 0.22);
+				--blob-blue: rgba(60, 110, 160, 0.22);
+				--blob-yellow: rgba(140, 120, 60, 0.16);
+			}
+
+			/* Linh vật thỏ Molli quanh tiêu đề các phần */
+			.head {
+				position: relative;
+			}
+			.mascot-side {
+				position: absolute;
+				bottom: -6px;
+				height: 150px;
+				width: auto;
+				pointer-events: none;
+				filter: drop-shadow(0 10px 14px rgba(23, 52, 76, 0.16));
+				animation: bob 4s ease-in-out infinite;
+			}
+			.ms-left {
+				left: 0;
+			}
+			.ms-right {
+				right: 0;
+				animation-delay: -2s;
+			}
+			@keyframes bob {
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-8px);
+				}
+			}
+			.papers-tho {
+				display: block;
+				width: 120px;
+				height: auto;
+				margin-top: 22px;
+				filter: drop-shadow(0 10px 14px rgba(23, 52, 76, 0.16));
+				animation: bob 4s ease-in-out infinite;
+			}
+			.dealer {
+				position: relative;
+			}
+			.dealer-tho {
+				position: absolute;
+				top: -58px;
+				left: 46%;
+				width: 92px;
+				height: auto;
+				pointer-events: none;
+				filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.2));
+			}
+			#dai-ly {
+				padding-top: 96px;
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.mascot-side,
+				.papers-tho {
+					animation: none;
+				}
+			}
+			@media (max-width: 1000px) {
+				.mascot-side {
+					height: 110px;
+				}
+			}
+			@media (max-width: 760px) {
+				.mascot-side.ms-right {
+					display: none;
+				}
+				.mascot-side.ms-left,
+				.head:not(:has(.ms-left)) .ms-right {
+					position: static;
+					display: block;
+					height: 92px;
+					margin: 0 auto 6px;
+				}
+				.papers-tho {
+					display: none;
+				}
+				.dealer-tho {
+					left: auto;
+					right: 22px;
+					width: 72px;
+					top: -46px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -705,7 +875,9 @@ const papers = [
 			</section>
 
 			<section class="sec" aria-labelledby="h-groups">
-				<div class="wrap center">
+				<div class="wrap center head">
+					<img class="mascot-side ms-left" src="/images/molli/linh-vat/tho-chi-tay.webp" alt="" aria-hidden="true" loading="lazy" />
+					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-vay-chao.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Danh mục</span>
 					<h2 id="h-groups" class="title">Mẹ đang tìm gì cho bé?</h2>
 					<p class="lead">Năm nhóm sản phẩm theo đúng những việc mẹ làm mỗi ngày.</p>
@@ -724,7 +896,8 @@ const papers = [
 			</section>
 
 			<section class="sec" id="san-pham" style="padding-top:0" aria-labelledby="h-products">
-				<div class="wrap center">
+				<div class="wrap center head">
+					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-ngon-cai.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Sản phẩm</span>
 					<h2 id="h-products" class="title">Được các mẹ chọn nhiều</h2>
 					<div class="filters" role="group" aria-label="Lọc sản phẩm theo nhóm">
@@ -756,7 +929,7 @@ const papers = [
 											Tư vấn Zalo
 										</a>
 										<a class="s" href={CONTACT.shopee} target="_blank" rel="noopener">
-											Shopee
+											Mua ngay
 										</a>
 									</div>
 								</div>
@@ -768,7 +941,9 @@ const papers = [
 			</section>
 
 			<section class="sec alt" id="giai-doan" aria-labelledby="h-stages">
-				<div class="wrap center">
+				<div class="wrap center head">
+					<img class="mascot-side ms-left" src="/images/molli/linh-vat/tho-suy-nghi.webp" alt="" aria-hidden="true" loading="lazy" />
+					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-om-tim.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Chọn theo giai đoạn</span>
 					<h2 id="h-stages" class="title">Mẹ đang ở chặng nào?</h2>
 					<p class="lead">Mỗi chặng một danh sách gợi ý, mẹ không phải tự nghĩ xem còn thiếu gì.</p>
@@ -800,12 +975,16 @@ const papers = [
 			</section>
 
 			<section class="sec" id="video-feedback" aria-labelledby="h-videos">
-				<div class="wrap center">
+				<div class="wrap center head">
+					<img class="mascot-side ms-left" src="/images/molli/linh-vat/tho-nhay-reo.webp" alt="" aria-hidden="true" loading="lazy" />
+					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-ngac-nhien.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Mẹ nói gì về Molli</span>
 					<h2 id="h-videos" class="title">Video thật từ các mẹ đã dùng</h2>
-					<p class="lead">Các mẹ tự quay khi nhận hàng và dùng ở nhà. Bấm vào video để xem, có tiếng.</p>
+					<p class="lead">{feedbackVideos.length} video các mẹ tự quay khi nhận hàng và dùng ở nhà. Vuốt ngang để xem thêm, bấm vào video để phát có tiếng.</p>
 				</div>
-				<div class="wrap videos">
+				<div class="wrap video-rail">
+					<button class="vnav prev" type="button" aria-label="Video trước" aria-controls="video-list">‹</button>
+					<div class="videos" id="video-list">
 					{
 						feedbackVideos.map((v) => (
 							<article class="video-card">
@@ -822,11 +1001,14 @@ const papers = [
 							</article>
 						))
 					}
+					</div>
+					<button class="vnav next" type="button" aria-label="Video tiếp theo" aria-controls="video-list">›</button>
 				</div>
 			</section>
 
 			<section class="sec" id="cau-chuyen" aria-labelledby="h-values">
-				<div class="wrap center">
+				<div class="wrap center head">
+					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-dang-tay.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Câu chuyện Molli</span>
 					<h2 id="h-values" class="title">Bốn điều Molli giữ trong từng sản phẩm</h2>
 					<p class="lead">
@@ -860,6 +1042,7 @@ const papers = [
 						<p style="margin-top:20px">
 							<a class="pill-btn solid" href={zaloLink} target="_blank" rel="noopener">Xin giấy kiểm định theo mã</a>
 						</p>
+						<img class="papers-tho" src="/images/molli/linh-vat/tho-cam-bang.webp" alt="" aria-hidden="true" loading="lazy" width="324" height="484" />
 					</div>
 					<div class="papers">
 						{
@@ -877,27 +1060,21 @@ const papers = [
 			<section class="sec" id="dai-ly" aria-labelledby="h-dealer">
 				<div class="wrap">
 					<div class="dealer">
+						<img class="dealer-tho" src="/images/molli/linh-vat/tho-ngoi-vay.webp" alt="" aria-hidden="true" loading="lazy" width="305" height="476" />
 						<div>
 							<span class="tag">Dành cho cửa hàng</span>
 							<h2 id="h-dealer" class="title">Mở cửa hàng mẹ và bé? Nhập Molli</h2>
-							<p class="lead">Nhắn Molli qua Zalo, Molli gửi bảng giá theo bậc số lượng và tư vấn mã phù hợp với khu vực của anh chị.</p>
 							<ul>
-								<li>Giá theo bậc số lượng từng mã, đơn tối thiểu 1,5 triệu</li>
-								<li>Miễn cước từ 10 triệu (nội thành Hà Nội từ 3 triệu)</li>
-								<li>Miền Bắc gửi xe trong ngày, miền Trung và Nam đi SPX</li>
-								<li>Hàng lỗi đổi mới trong 3 ngày</li>
+								<li>Giá cả cạnh tranh, nguồn gốc rõ ràng, hoá đơn chứng từ đầy đủ</li>
+								<li>Hỗ trợ cước phí vận chuyển</li>
+								<li>Hỗ trợ đổi, trả hàng linh hoạt</li>
+								<li>Giao hàng tức thì</li>
 							</ul>
+							<p class="dealer-more">
+								<a href="/dai-ly/">Xem thông tin đại lý / nhà phân phối →</a>
+							</p>
 						</div>
-						<div class="dealer-box">
-							<h3>Nhận bảng giá đại lý</h3>
-							<p>Nhắn Zalo cho Molli, ghi sẵn ba ý sau để được báo giá nhanh:</p>
-							<ol>
-								<li>Tên cửa hàng và tỉnh, thành phố</li>
-								<li>Các mã anh chị muốn nhập</li>
-								<li>Số lượng dự kiến của từng mã</li>
-							</ol>
-							<a class="pill-btn solid" href={zaloLink} target="_blank" rel="noopener">Nhắn Zalo nhận bảng giá</a>
-						</div>
+						<DealerForm id="dealer-form-home" />
 					</div>
 				</div>
 			</section>
@@ -929,6 +1106,22 @@ const papers = [
 				);
 				const start = new URLSearchParams(location.search).get('nhom');
 				if (start) pick(start);
+
+				// Dải video: nút chuyển, chỉ phát một video mỗi lúc
+				const list = document.getElementById('video-list');
+				const prev = document.querySelector('.vnav.prev');
+				const next = document.querySelector('.vnav.next');
+				const step = () => list.querySelector('.video-card').offsetWidth + 20;
+				const sync = () => {
+					prev.disabled = list.scrollLeft < 8;
+					next.disabled = list.scrollLeft + list.clientWidth > list.scrollWidth - 8;
+				};
+				prev.addEventListener('click', () => list.scrollBy({ left: -step() * 2 }));
+				next.addEventListener('click', () => list.scrollBy({ left: step() * 2 }));
+				list.addEventListener('scroll', sync, { passive: true });
+				sync();
+				const vids = [...list.querySelectorAll('video')];
+				vids.forEach((v) => v.addEventListener('play', () => vids.forEach((o) => o !== v && o.pause())));
 
 				// Phóng to giấy kiểm định
 				const box = document.getElementById('lightbox');

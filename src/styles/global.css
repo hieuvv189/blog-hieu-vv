@@ -514,6 +514,135 @@ img {
 	height: 22px;
 	fill: currentColor;
 }
+.float-contact .fc-dealer {
+	width: 50px;
+	height: 50px;
+	background: #f08fb0;
+	font-size: 11px;
+	line-height: 1.1;
+	text-align: center;
+}
+.fc-social {
+	position: relative;
+	display: grid;
+	justify-items: center;
+}
+.fc-toggle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0;
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	color: #fff;
+	background: linear-gradient(135deg, #f08fb0, #3685bb);
+	box-shadow: 0 6px 18px rgba(23, 52, 76, 0.22);
+	position: relative;
+}
+.fc-toggle .i-close,
+.fc-social.open .fc-toggle .i-open {
+	display: none;
+}
+.fc-social.open .fc-toggle .i-close {
+	display: block;
+}
+.fc-toggle .i-open {
+	animation: fc-beat 2.4s ease-in-out infinite;
+}
+@keyframes fc-beat {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	12% {
+		transform: scale(1.18);
+	}
+	24% {
+		transform: scale(1);
+	}
+}
+.fc-hint {
+	position: absolute;
+	right: 60px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--surface);
+	color: var(--ink);
+	border: 1px solid var(--line);
+	font-size: 12px;
+	font-weight: 700;
+	padding: 4px 10px;
+	border-radius: 99px;
+	white-space: nowrap;
+	opacity: 0;
+	transition: opacity 0.2s;
+	pointer-events: none;
+}
+.fc-toggle:hover .fc-hint,
+.fc-toggle:focus-visible .fc-hint {
+	opacity: 1;
+}
+.fc-social-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 60px;
+	display: grid;
+	gap: 10px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition:
+		opacity 0.2s,
+		transform 0.2s,
+		visibility 0.2s;
+}
+.fc-social.open .fc-social-list {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+.fc-social-list a {
+	position: relative;
+	width: 46px;
+	height: 46px;
+}
+.fc-social-list a::after {
+	content: attr(data-label);
+	position: absolute;
+	right: 56px;
+	background: var(--surface);
+	color: var(--ink);
+	border: 1px solid var(--line);
+	font-size: 12px;
+	font-weight: 700;
+	padding: 4px 10px;
+	border-radius: 99px;
+	white-space: nowrap;
+}
+.fc-social-list .s-fb {
+	background: #1877f2;
+}
+.fc-social-list .s-tt {
+	background: #111;
+}
+.fc-social-list .s-yt {
+	background: #ff0033;
+}
+.fc-social-list .s-oa {
+	background: #0068ff;
+	font-size: 13px;
+}
+.fc-social-list .s-sp {
+	background: #ee4d2d;
+}
+@media (prefers-reduced-motion: reduce) {
+	.fc-toggle .i-open {
+		animation: none;
+	}
+}
 .bottom-bar {
 	display: none;
 }
@@ -567,6 +696,11 @@ img {
 		padding-bottom: 64px;
 	}
 	.float-contact {
+		right: 12px;
+		bottom: 78px;
+	}
+	.float-contact .fc-zalo,
+	.float-contact .fc-call {
 		display: none;
 	}
 	.bottom-bar {
