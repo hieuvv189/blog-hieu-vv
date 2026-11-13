@@ -479,7 +479,14 @@
         "MOL3042"
       ],
       "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
-      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7",
+      "displayPages": [
+        8,
+        9,
+        7,
+        6
+      ],
+      "displayNote": "Ba quy cách 300g, 600g, 900g dùng chung phiếu kiểm nghiệm đủ 2 trang, giấy chứng nhận tiếng Việt và tiếng Anh theo yêu cầu chủ."
     },
     "MOL3036": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
@@ -503,7 +510,14 @@
         "MOL3042"
       ],
       "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
-      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7",
+      "displayPages": [
+        8,
+        9,
+        7,
+        6
+      ],
+      "displayNote": "Ba quy cách 300g, 600g, 900g dùng chung phiếu kiểm nghiệm đủ 2 trang, giấy chứng nhận tiếng Việt và tiếng Anh theo yêu cầu chủ."
     },
     "MOL3041": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
@@ -527,7 +541,14 @@
         "MOL3042"
       ],
       "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
-      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7",
+      "displayPages": [
+        8,
+        9,
+        7,
+        6
+      ],
+      "displayNote": "Ba quy cách 300g, 600g, 900g dùng chung phiếu kiểm nghiệm đủ 2 trang, giấy chứng nhận tiếng Việt và tiếng Anh theo yêu cầu chủ."
     },
     "MOL3042": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
