@@ -1,23 +1,25 @@
 ---
-// Thanh đầu trang dùng chung, khớp với trang chủ: logo, điều hướng, nút giao diện góc phải.
+// Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút mua Shopee, nút giao diện góc phải.
+import { CONTACT } from '../data/molli';
 interface Props {
 	active?: 'home' | 'blog' | 'about';
 }
 const { active } = Astro.props;
 const links = [
-	{ key: 'home', href: '/', label: 'Trang chủ' },
-	{ key: 'blog', href: '/blog/', label: 'Bài viết' },
-	{ key: 'notes', href: '/#ghi-chu', label: 'Ghi chú' },
-	{ key: 'about', href: '/about/', label: 'Về tôi' },
+	{ key: 'products', href: '/#san-pham', label: 'Sản phẩm' },
+	{ key: 'stages', href: '/#goi-y', label: 'Gợi ý theo giai đoạn' },
+	{ key: 'wholesale', href: '/#nhap-si', label: 'Nhập sỉ' },
+	{ key: 'blog', href: '/blog/', label: 'Cẩm nang' },
+	{ key: 'about', href: '/about/', label: 'Về Molli' },
+	{ key: 'contact', href: '/#lien-he', label: 'Liên hệ' },
 ];
 ---
 
 <a class="skip" href="#noi-dung">Đến nội dung chính</a>
 <header class="topbar">
 	<div class="wrap nav">
-		<a class="brand" href="/" aria-label="Hiếu VV, trang chủ">
-			<span class="brand-mark" aria-hidden="true"></span><span>hiếu vv<span class="brand-dot">.</span></span>
-			<small>Một góc nhìn, nhiều câu chuyện.</small>
+		<a class="brand" href="/" aria-label="Molli, về trang chủ">
+			<img src="/images/molli/logo.webp" alt="Molli - More Love, More Care" width="520" height="230" />
 		</a>
 		<nav class="navlinks" aria-label="Điều hướng chính">
 			{
@@ -32,6 +34,7 @@ const links = [
 				))
 			}
 		</nav>
+		<a class="nav-cta" href={CONTACT.shopee} target="_blank" rel="noopener">Mua trên Shopee</a>
 		<div class="theme">
 			<span id="theme-icon" aria-hidden="true">◐</span>
 			<label for="theme-mode" class="sr-only">Chọn giao diện</label>
@@ -61,7 +64,7 @@ const links = [
 		};
 		select.addEventListener('change', () => {
 			try {
-				localStorage.setItem('hieuvv-theme', select.value);
+				localStorage.setItem('molli-theme', select.value);
 			} catch {}
 			apply();
 		});
@@ -71,7 +74,7 @@ const links = [
 			if (!document.hidden) apply();
 		});
 		window.addEventListener('storage', (e) => {
-			if (e.key === 'hieuvv-theme') {
+			if (e.key === 'molli-theme') {
 				select.value = valid(e.newValue);
 				apply();
 			}
