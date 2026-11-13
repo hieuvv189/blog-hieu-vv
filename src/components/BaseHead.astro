@@ -36,19 +36,8 @@ const { title, description, image = '/images/molli/tho-vay-chao.webp', type = 'w
 	rel="stylesheet"
 />
 
-<!-- Giao diện: Tự động (06:00-18:00 sáng, còn lại tối, theo giờ máy người xem) / Sáng / Tối -->
-<script is:inline>
-	(() => {
-		let mode = 'auto';
-		try {
-			mode = localStorage.getItem('molli-theme') || 'auto';
-		} catch {}
-		if (!['auto', 'light', 'dark'].includes(mode)) mode = 'auto';
-		const h = new Date().getHours();
-		document.documentElement.dataset.theme = mode === 'auto' ? (h >= 6 && h < 18 ? 'light' : 'dark') : mode;
-		document.documentElement.dataset.mode = mode;
-	})();
-</script>
+<!-- Molli chỉ dùng giao diện sáng -->
+<meta name="color-scheme" content="light" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

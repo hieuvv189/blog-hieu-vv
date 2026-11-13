@@ -106,11 +106,11 @@ export interface Product {
 
 // Chỉ ghi điều có trong file thông tin sản phẩm; không ghi "100%" và các câu còn chờ xác minh.
 export const PRODUCTS: Product[] = [
-	{ code: 'MOL3018', name: 'Tăm bông hai đầu tròn', spec: '200 que/hộp', note: 'Làm từ bông tự nhiên, cho trẻ sơ sinh và trẻ em.', price: 30000, cat: 've-sinh' },
-	{ code: 'MOL3050', name: 'Tăm bông sơ sinh đầu hồ lô', spec: '110 que/hộp', note: 'Làm từ bông tự nhiên, thân giấy.', price: 38000, cat: 've-sinh' },
-	{ code: 'MOL3045', name: 'Tăm bông sơ sinh đầu tròn nhỏ', spec: '200 que/hộp', note: 'Đầu nhỏ, dành cho trẻ sơ sinh.', price: 30000, cat: 've-sinh' },
 	{ code: 'MOL3001', name: 'Tăm bông xoắn ốc và đầu dẹt', spec: '200 que/hộp', note: 'Thân giấy, cho trẻ em và người lớn.', price: 28000, cat: 've-sinh', featured: 4 },
+	{ code: 'MOL3018', name: 'Tăm bông hai đầu tròn', spec: '200 que/hộp', note: 'Làm từ bông tự nhiên, cho trẻ sơ sinh và trẻ em.', price: 30000, cat: 've-sinh' },
+	{ code: 'MOL3045', name: 'Tăm bông sơ sinh đầu tròn nhỏ', spec: '200 que/hộp', note: 'Đầu nhỏ, dành cho trẻ sơ sinh.', price: 30000, cat: 've-sinh' },
 	{ code: 'MOL3007', name: 'Tăm bông trẻ em', spec: '400 que/hộp', note: 'Hai đầu dẹt và xoắn ốc. Trẻ em và người lớn.', price: 45000, cat: 've-sinh' },
+	{ code: 'MOL3050', name: 'Tăm bông sơ sinh đầu hồ lô', spec: '110 que/hộp', note: 'Làm từ bông tự nhiên, thân giấy.', price: 38000, cat: 've-sinh' },
 	{ code: 'MOL3026', name: 'Tăm bông trẻ em', spec: '600 que/hộp', note: 'Hai đầu dẹt và xoắn ốc riêng. Trẻ em và người lớn.', price: 61000, cat: 've-sinh' },
 	{ code: 'MOL3002', name: 'Gạc rơ lưỡi cho bé', spec: '30 cái/hộp', note: 'Đầu sóng 3D, dùng một lần. Bé 0-36 tháng.', price: 80000, cat: 've-sinh', featured: 2 },
 	{ code: 'MOL3038', name: 'Lót chống thấm 1 lần size S', spec: '32 miếng/túi · 25x33cm', note: 'Túi nhỏ tiện mang đi. Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 've-sinh' },
@@ -131,11 +131,11 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3033', name: 'Khăn rửa mặt dùng 1 lần', spec: '200g/túi · 20x20cm', note: 'Sợi thực vật, không dệt. Túi rút dây để bàn.', price: 76000, cat: 'ca-nha' },
 	{ code: 'MOL3035', name: 'Khăn rửa mặt dùng 1 lần', spec: '160 tờ/bịch · 19x20cm', note: 'Sợi thực vật, không dệt. Bịch lớn cho cả nhà.', price: 161000, cat: 'ca-nha' },
 
-	{ code: 'MOL3014', name: 'Miếng lót thấm sữa', spec: '100 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 145000, cat: 'sau-sinh', featured: 7 },
 	{ code: 'MOL3013', name: 'Miếng lót thấm sữa', spec: '50 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 85000, cat: 'sau-sinh' },
+	{ code: 'MOL3014', name: 'Miếng lót thấm sữa', spec: '100 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 145000, cat: 'sau-sinh', featured: 7 },
+	{ code: 'MOL3006', name: 'Phễu hứng sữa silicon', spec: '2 cái/hộp · 100ml', note: 'Silicon, tiệt trùng được.', price: 108000, cat: 'sau-sinh' },
 	{ code: 'MOL3028', name: 'BVS dạng quần sau sinh size L', spec: '5 miếng/túi · vòng hông 85-110cm', note: 'Mặc như quần lót, ôm bụng.', price: 86000, cat: 'sau-sinh' },
 	{ code: 'MOL3029', name: 'BVS dạng quần sau sinh size XL', spec: '5 miếng/túi · vòng hông 105-125cm', note: 'Mặc như quần lót, cỡ lớn cho mẹ sau sinh.', price: 86000, cat: 'sau-sinh' },
-	{ code: 'MOL3006', name: 'Phễu hứng sữa silicon', spec: '2 cái/hộp · 100ml', note: 'Silicon, tiệt trùng được.', price: 108000, cat: 'sau-sinh' },
 	{ code: 'MOL3025', name: 'Lót chống thấm cho mẹ sau sinh và người già', spec: '10 miếng/túi · 60x90cm', note: 'Dùng 1 lần, thấm nhanh, chống thấm ngược.', price: 94000, cat: 'sau-sinh' },
 
 	{ code: 'MOL3015', name: 'Túi trữ sữa 100ml', spec: '30 túi/hộp', note: 'Khóa zip đôi, có vòi đổ, không BPA.', price: 91000, cat: 'tru-sua' },

@@ -1,5 +1,5 @@
 ---
-// Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút nhắn Zalo, nút giao diện góc phải.
+// Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút nhắn Zalo. Web chỉ dùng giao diện sáng.
 import { zaloLink } from '../data/molli';
 interface Props {
 	active?: 'home' | 'blog' | 'about' | 'wholesale';
@@ -35,49 +35,6 @@ const links = [
 			}
 		</nav>
 		<a class="nav-cta" href={zaloLink} target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
-		<div class="theme">
-			<span id="theme-icon" aria-hidden="true">◐</span>
-			<label for="theme-mode" class="sr-only">Chọn giao diện</label>
-			<select id="theme-mode">
-				<option value="auto">Tự động</option>
-				<option value="light">Sáng</option>
-				<option value="dark">Tối</option>
-			</select>
-		</div>
 	</div>
 </header>
 
-<script is:inline>
-	(() => {
-		const select = document.getElementById('theme-mode');
-		const icon = document.getElementById('theme-icon');
-		if (!select) return;
-		const valid = (v) => (['light', 'dark', 'auto'].includes(v) ? v : 'auto');
-		select.value = valid(document.documentElement.dataset.mode);
-		const resolve = (mode, hour) => (mode === 'auto' ? (hour >= 6 && hour < 18 ? 'light' : 'dark') : mode);
-		const apply = () => {
-			const mode = valid(select.value);
-			const theme = resolve(mode, new Date().getHours());
-			document.documentElement.dataset.theme = theme;
-			document.documentElement.dataset.mode = mode;
-			if (icon) icon.textContent = theme === 'dark' ? '☾' : '☀';
-		};
-		select.addEventListener('change', () => {
-			try {
-				localStorage.setItem('molli-theme', select.value);
-			} catch {}
-			apply();
-		});
-		apply();
-		setInterval(apply, 60000);
-		document.addEventListener('visibilitychange', () => {
-			if (!document.hidden) apply();
-		});
-		window.addEventListener('storage', (e) => {
-			if (e.key === 'molli-theme') {
-				select.value = valid(e.newValue);
-				apply();
-			}
-		});
-	})();
-</script>
