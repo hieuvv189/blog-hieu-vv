@@ -2,110 +2,295 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+import { readingMinutes } from '../../utils/reading';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.map((post) => ({ post, minutes: readingMinutes(post.body) }));
+
+const [featured, ...rest] = posts;
+const tones = ['', 'blue', 'peach'];
+const years = [...new Set(rest.map(({ post }) => post.data.pubDate.getFullYear()))];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="vi" data-theme="light">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`Bài viết · ${SITE_TITLE}`}
+			description="Thư viện bài viết của Hiếu VV: kinh doanh, sáng tạo, công nghệ và cuộc sống."
+		/>
 		<style>
-			main {
-				width: 960px;
-			}
-			ul {
+			.toolbar {
 				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
+				gap: 24px;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid var(--line);
+				padding-bottom: 14px;
+				margin-bottom: 36px;
 			}
-			ul li {
-				width: calc(50% - 1rem);
+			.toolbar input {
+				flex: 1;
+				max-width: 420px;
+				background: transparent;
+				border: 0;
+				padding: 10px 0;
+				font-size: 14px;
+				border-radius: 0;
 			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
+			.toolbar input::placeholder {
+				color: var(--muted);
 			}
-			ul li:first-child {
+			.count {
+				font-size: 12px;
+				color: var(--muted);
+				white-space: nowrap;
+			}
+			.featured {
+				display: grid;
+				grid-template-columns: 1.1fr 0.9fr;
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				overflow: hidden;
+				background: var(--surface);
+				margin-bottom: 56px;
+			}
+			.featured:hover h2 {
+				color: var(--accent);
+			}
+			.featured-img {
+				background: var(--blue);
+				min-height: 300px;
+			}
+			.featured-img img {
 				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
+				height: 100%;
+				object-fit: cover;
 				display: block;
 			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
+			.featured-copy {
+				padding: 40px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
+			.featured-copy h2 {
+				font-size: 28px;
+				line-height: 1.4;
+				font-weight: 600;
+				letter-spacing: -1px;
+				margin: 14px 0 12px;
+				transition: color 0.2s;
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
+			.featured-copy p {
+				color: var(--muted);
+				font-size: 14px;
+				margin: 0 0 20px;
 			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
+			.readlink {
+				margin-top: 22px;
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--accent);
 			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
+			.year {
+				font-size: 13px;
+				font-weight: 650;
+				color: var(--muted);
+				letter-spacing: 1px;
+				margin: 0 0 4px;
+				padding-top: 8px;
+			}
+			.list {
+				list-style: none;
+				margin: 0 0 40px;
+				padding: 0;
+			}
+			.post a {
+				display: grid;
+				grid-template-columns: 1fr 140px;
+				gap: 28px;
+				padding: 26px 0;
+				border-bottom: 1px solid var(--line);
+				align-items: center;
+			}
+			.post h3 {
+				font-size: 20px;
+				line-height: 1.5;
+				font-weight: 600;
+				letter-spacing: -0.4px;
+				margin: 0 0 8px;
+				transition: color 0.2s;
+			}
+			.post a:hover h3 {
+				color: var(--accent);
+			}
+			.post p {
+				font-size: 13px;
+				color: var(--muted);
+				margin: 0 0 12px;
+			}
+			.thumb {
+				height: 100px;
+				border-radius: 12px;
+				background: var(--tile);
+				overflow: hidden;
+			}
+			.thumb.blue {
+				background: var(--blue);
+			}
+			.thumb.peach {
+				background: var(--peach);
+			}
+			.thumb img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			.empty {
+				color: var(--muted);
+				font-size: 14px;
+				padding: 20px 0;
+			}
+			@media (max-width: 760px) {
+				.featured {
+					grid-template-columns: 1fr;
 				}
-				ul li {
-					width: 100%;
-					text-align: center;
+				.featured-img {
+					min-height: 200px;
+					aspect-ratio: 2 / 1;
 				}
-				ul li:first-child {
-					margin-bottom: 0;
+				.featured-copy {
+					padding: 26px;
 				}
-				ul li:first-child .title {
-					font-size: 1.563em;
+				.featured-copy h2 {
+					font-size: 23px;
+				}
+				.post a {
+					grid-template-columns: 1fr 88px;
+					gap: 16px;
+					padding: 22px 0;
+				}
+				.thumb {
+					height: 80px;
+				}
+				.post h3 {
+					font-size: 17px;
+				}
+				.toolbar {
+					gap: 12px;
 				}
 			}
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
+		<Header active="blog" />
+		<main id="noi-dung" class="wrap">
+			<section class="page-head">
+				<div class="eyebrow"><span class="dot"></span>Thư viện bài viết</div>
+				<h1>Những trang viết, <em>xếp theo thời gian.</em></h1>
+				<p>
+					Ghi chép về kinh doanh, xây dựng sản phẩm, công nghệ và cuộc sống. Mỗi bài là một điều
+					đang học, viết ra để nghĩ rõ hơn.
+				</p>
 			</section>
+
+			<div class="toolbar">
+				<label for="search" class="sr-only">Tìm bài viết</label>
+				<input type="search" id="search" placeholder="Tìm một ý tưởng, một câu chuyện…" autocomplete="off" />
+				<span class="count" id="count" aria-live="polite">{posts.length} bài viết</span>
+			</div>
+
+			{
+				featured && (
+					<a class="featured post-item" href={`/blog/${featured.post.id}/`}>
+						<div class="featured-img">
+							{featured.post.data.heroImage && (
+								<img src={featured.post.data.heroImage} alt="" width={720} height={360} />
+							)}
+						</div>
+						<div class="featured-copy">
+							<span class="tag">Bài mới nhất</span>
+							<h2>{featured.post.data.title}</h2>
+							<p>{featured.post.data.description}</p>
+							<div class="meta">
+								<FormattedDate date={featured.post.data.pubDate} />
+								<span>·</span>
+								<span>{featured.minutes} phút đọc</span>
+							</div>
+							<span class="readlink">
+								Đọc bài <span aria-hidden="true">↗</span>
+							</span>
+						</div>
+					</a>
+				)
+			}
+
+			{
+				years.map((year) => (
+					<section class="year-group" data-group={year} aria-label={`Năm ${year}`}>
+						<h2 class="year">{year}</h2>
+						<ul class="list">
+							{rest
+								.filter(({ post }) => post.data.pubDate.getFullYear() === year)
+								.map(({ post, minutes }, i) => (
+									<li class="post post-item">
+										<a href={`/blog/${post.id}/`}>
+											<div>
+												<h3>{post.data.title}</h3>
+												<p>{post.data.description}</p>
+												<div class="meta">
+													<FormattedDate date={post.data.pubDate} />
+													<span>·</span>
+													<span>{minutes} phút đọc</span>
+												</div>
+											</div>
+											<div class:list={['thumb', tones[i % tones.length]]} aria-hidden="true">
+												{post.data.heroImage && (
+													<img src={post.data.heroImage} alt="" width={280} height={140} loading="lazy" />
+												)}
+											</div>
+										</a>
+									</li>
+								))}
+						</ul>
+					</section>
+				))
+			}
+
+			<p class="empty" id="empty" role="status" hidden>
+				Chưa có bài phù hợp. Bạn thử một từ khóa khác nhé.
+			</p>
 		</main>
 		<Footer />
+
+		<script is:inline>
+			(() => {
+				const input = document.getElementById('search');
+				const items = [...document.querySelectorAll('.post-item')];
+				const groups = [...document.querySelectorAll('.year-group')];
+				const normalize = (s) =>
+					s.toLocaleLowerCase('vi').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+				const texts = items.map((el) => normalize(el.textContent || ''));
+				input.addEventListener('input', () => {
+					const term = normalize(input.value.trim());
+					let count = 0;
+					items.forEach((el, i) => {
+						el.hidden = !texts[i].includes(term);
+						if (!el.hidden) count++;
+					});
+					groups.forEach((g) => {
+						g.hidden = !g.querySelector('.post-item:not([hidden])');
+					});
+					document.getElementById('count').textContent = `${count} bài viết`;
+					document.getElementById('empty').hidden = count !== 0;
+				});
+			})();
+		</script>
 	</body>
 </html>
