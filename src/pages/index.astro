@@ -525,6 +525,9 @@ const papers = [
 				.vnav {
 					display: none;
 				}
+				.papers {
+					grid-auto-columns: 30%;
+				}
 			}
 
 			/* Bốn điều */
@@ -563,12 +566,27 @@ const papers = [
 				gap: 40px;
 				align-items: center;
 			}
+			/* Dải giấy: hiện 3 giấy, vuốt hoặc bấm nút để xem tiếp */
+			.papers-rail {
+				position: relative;
+				min-width: 0;
+			}
 			.papers {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-auto-flow: column;
+				grid-auto-columns: calc((100% - 2 * 14px) / 3);
 				gap: 14px;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				padding: 4px 2px 14px;
+				scrollbar-width: thin;
+			}
+			.papers-rail .vnav {
+				top: 38%;
 			}
 			.papers button {
+				scroll-snap-align: start;
 				all: unset;
 				background: #fff;
 				border-radius: 14px;
@@ -1046,14 +1064,16 @@ const papers = [
 						<span class="tag">Minh bạch</span>
 						<h2 id="h-papers" class="title">Giấy kiểm định, mẹ xem tận mắt</h2>
 						<p class="lead">
-							Giấy chứng nhận hợp quy và phiếu thử nghiệm của các mã có giấy. Bấm vào ảnh để phóng to, cần giấy của mã khác thì nhắn Molli.
+							Giấy chứng nhận hợp quy và phiếu thử nghiệm của {papers.length} mã có giấy. Vuốt ngang để xem thêm, bấm vào ảnh để phóng to, cần giấy của mã khác thì nhắn Molli.
 						</p>
 						<p style="margin-top:20px">
 							<a class="pill-btn solid" href={zaloLink} target="_blank" rel="noopener">Xin giấy kiểm định theo mã</a>
 						</p>
 						<img class="papers-tho" src="/images/molli/linh-vat/tho-cam-bang.webp" alt="" aria-hidden="true" loading="lazy" width="324" height="484" />
 					</div>
-					<div class="papers">
+					<div class="papers-rail">
+					<button class="vnav prev" type="button" aria-label="Giấy trước" aria-controls="paper-list">‹</button>
+					<div class="papers" id="paper-list">
 						{
 							papers.map((p) => (
 								<button type="button" data-full={`/images/molli/giay/${p.code.toLowerCase()}.webp`} aria-label={`Phóng to ${p.alt}`}>
@@ -1062,6 +1082,8 @@ const papers = [
 								</button>
 							))
 						}
+					</div>
+					<button class="vnav next" type="button" aria-label="Giấy tiếp theo" aria-controls="paper-list">›</button>
 					</div>
 				</div>
 			</section>
@@ -1117,19 +1139,25 @@ const papers = [
 				const start = new URLSearchParams(location.search).get('nhom');
 				if (start) pick(start);
 
-				// Dải video: nút chuyển, chỉ phát một video mỗi lúc
-				const list = document.getElementById('video-list');
-				const prev = document.querySelector('.vnav.prev');
-				const next = document.querySelector('.vnav.next');
-				const step = () => list.querySelector('.video-card').offsetWidth + 20;
-				const sync = () => {
-					prev.disabled = list.scrollLeft < 8;
-					next.disabled = list.scrollLeft + list.clientWidth > list.scrollWidth - 8;
+				// Dải vuốt ngang (video, giấy kiểm định): nút chuyển ẩn khi tới đầu/cuối
+				const rail = (list, gap, jump) => {
+					const box = list.parentElement;
+					const prev = box.querySelector(':scope > .vnav.prev');
+					const next = box.querySelector(':scope > .vnav.next');
+					const step = () => list.firstElementChild.offsetWidth + gap;
+					const sync = () => {
+						prev.disabled = list.scrollLeft < 8;
+						next.disabled = list.scrollLeft + list.clientWidth > list.scrollWidth - 8;
+					};
+					prev.addEventListener('click', () => list.scrollBy({ left: -step() * jump }));
+					next.addEventListener('click', () => list.scrollBy({ left: step() * jump }));
+					list.addEventListener('scroll', sync, { passive: true });
+					addEventListener('resize', sync);
+					sync();
 				};
-				prev.addEventListener('click', () => list.scrollBy({ left: -step() * 2 }));
-				next.addEventListener('click', () => list.scrollBy({ left: step() * 2 }));
-				list.addEventListener('scroll', sync, { passive: true });
-				sync();
+				const list = document.getElementById('video-list');
+				rail(list, 20, 2);
+				rail(document.getElementById('paper-list'), 14, 3);
 				const vids = [...list.querySelectorAll('video')];
 				vids.forEach((v) => v.addEventListener('play', () => vids.forEach((o) => o !== v && o.pause())));
 
