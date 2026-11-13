@@ -2,13 +2,13 @@
 // Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút nhắn Zalo, nút giao diện góc phải.
 import { zaloLink } from '../data/molli';
 interface Props {
-	active?: 'home' | 'blog' | 'about';
+	active?: 'home' | 'blog' | 'about' | 'wholesale';
 }
 const { active } = Astro.props;
 const links = [
 	{ key: 'products', href: '/#san-pham', label: 'Sản phẩm' },
 	{ key: 'stages', href: '/#giai-doan', label: 'Theo giai đoạn' },
-	{ key: 'wholesale', href: '/#dai-ly', label: 'Đại lý' },
+	{ key: 'wholesale', href: '/dai-ly/', label: 'Đại lý' },
 	{ key: 'blog', href: '/blog/', label: 'Cẩm nang' },
 	{ key: 'about', href: '/about/', label: 'Về Molli' },
 	{ key: 'contact', href: '/#lien-he', label: 'Liên hệ' },
