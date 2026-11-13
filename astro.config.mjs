@@ -9,6 +9,13 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
 	site: "https://blog-hieu-vv.hieuvv189.workers.dev",
 	integrations: [mdx(), sitemap()],
+	markdown: {
+		// Khối mã đổi màu theo giao diện Sáng/Tối của blog.
+		shikiConfig: {
+			themes: { light: "github-light", dark: "github-dark" },
+			defaultColor: "light",
+		},
+	},
 	adapter: cloudflare({
 		platformProxy: {
 			enabled: true,

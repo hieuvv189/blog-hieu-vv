@@ -4,82 +4,259 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'];
+type NavPost = { id: string; title: string };
+type Props = CollectionEntry<'blog'>['data'] & {
+	minutes?: number;
+	prev?: NavPost;
+	next?: NavPost;
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, minutes, prev, next } = Astro.props;
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="vi" data-theme="light">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={`${title} · ${SITE_TITLE}`} description={description} image={heroImage} type="article" />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
+			.progress {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 3px;
 				width: 100%;
+				background: var(--accent);
+				transform-origin: 0 50%;
+				transform: scaleX(0);
+				z-index: 20;
 			}
-			.hero-image img {
-				display: block;
+			.article-head {
+				max-width: 680px;
 				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				padding: 60px 0 36px;
 			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+			.back {
+				font-size: 12px;
+				color: var(--muted);
+				display: inline-flex;
+				gap: 8px;
+				margin-bottom: 28px;
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+			.back:hover {
+				color: var(--accent);
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+			.article-head h1 {
+				font-size: clamp(30px, 4vw, 46px);
+				font-weight: 650;
+				letter-spacing: -1.8px;
+				line-height: 1.3;
+				margin: 16px 0 18px;
 			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+			.lede {
+				font-size: 18px;
+				color: var(--muted);
+				line-height: 1.8;
+				margin: 0 0 22px;
 			}
-			.last-updated-on {
-				font-style: italic;
+			.hero {
+				max-width: 960px;
+				margin: 0 auto 48px;
+			}
+			.hero img {
+				display: block;
+				width: 100%;
+				border-radius: var(--radius);
+				aspect-ratio: 2 / 1;
+				object-fit: cover;
+				background: var(--tile);
+			}
+			.body {
+				max-width: 680px;
+				margin: 0 auto;
+			}
+			.pager {
+				max-width: 680px;
+				margin: 64px auto 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 16px;
+			}
+			.pager a {
+				border: 1px solid var(--line);
+				border-radius: 14px;
+				padding: 18px 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				background: var(--surface);
+			}
+			.pager a:hover {
+				border-color: var(--accent);
+			}
+			.pager small {
+				font-size: 11px;
+				color: var(--muted);
+			}
+			.pager strong {
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 1.5;
+			}
+			.pager .next {
+				grid-column: 2;
+				text-align: right;
+			}
+			.end {
+				max-width: 680px;
+				margin: 48px auto 0;
+				padding: 24px;
+				background: var(--soft);
+				border-radius: 14px;
+				display: flex;
+				gap: 18px;
+				align-items: center;
+			}
+			.avatar {
+				flex: none;
+				width: 44px;
+				height: 44px;
+				display: grid;
+				place-items: center;
+				background: var(--accent);
+				color: var(--bg);
+				border-radius: 50%;
+				font-weight: 650;
+			}
+			.end p {
+				margin: 0;
+				font-size: 13px;
+				color: var(--muted);
+				line-height: 1.8;
+			}
+			.end a {
+				color: var(--accent);
+				font-weight: 600;
+			}
+			@media (max-width: 620px) {
+				.article-head {
+					padding: 36px 0 26px;
+				}
+				.lede {
+					font-size: 16px;
+				}
+				.hero {
+					margin-bottom: 32px;
+				}
+				.pager {
+					grid-template-columns: 1fr;
+				}
+				.pager .next {
+					grid-column: 1;
+				}
+			}
+			@media (prefers-reduced-motion: reduce) {
+				.progress {
+					display: none;
+				}
 			}
 		</style>
 	</head>
 
 	<body>
-		<Header />
-		<main>
+		<div class="progress" id="progress" aria-hidden="true"></div>
+		<Header active="blog" />
+		<main id="noi-dung" class="wrap">
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+				<header class="article-head">
+					<a class="back" href="/blog/"><span aria-hidden="true">←</span> Tất cả bài viết</a>
+					<div class="eyebrow"><span class="dot"></span>Bài viết</div>
+					<h1>{title}</h1>
+					{description && <p class="lede">{description}</p>}
+					<div class="meta">
+						<FormattedDate date={pubDate} />
+						{minutes && (
+							<>
+								<span>·</span>
+								<span>{minutes} phút đọc</span>
+							</>
+						)}
+						{
+							updatedDate && (
+								<>
+									<span>·</span>
+									<span>
+										Cập nhật <FormattedDate date={updatedDate} />
+									</span>
+								</>
+							)
+						}
 					</div>
+				</header>
+				{
+					heroImage && (
+						<div class="hero">
+							<img width={1020} height={510} src={heroImage} alt="" />
+						</div>
+					)
+				}
+				<div class="body prose">
 					<slot />
 				</div>
 			</article>
+
+			<aside class="end" aria-label="Về tác giả">
+				<div class="avatar" aria-hidden="true">H.</div>
+				<p>
+					Cảm ơn bạn đã đọc đến đây. Tôi là Hiếu, viết về kinh doanh, sản phẩm và những điều học được
+					mỗi ngày. <a href="/about/">Đọc thêm về tôi ↗</a> hoặc <a href="/rss.xml">theo dõi qua RSS</a>.
+				</p>
+			</aside>
+
+			{
+				(prev || next) && (
+					<nav class="pager" aria-label="Bài khác">
+						{prev && (
+							<a href={`/blog/${prev.id}/`} rel="prev">
+								<small>← Bài trước</small>
+								<strong>{prev.title}</strong>
+							</a>
+						)}
+						{next && (
+							<a class="next" href={`/blog/${next.id}/`} rel="next">
+								<small>Bài sau →</small>
+								<strong>{next.title}</strong>
+							</a>
+						)}
+					</nav>
+				)
+			}
 		</main>
 		<Footer />
+
+		<script is:inline>
+			(() => {
+				const bar = document.getElementById('progress');
+				if (!bar) return;
+				let ticking = false;
+				const update = () => {
+					const max = document.documentElement.scrollHeight - window.innerHeight;
+					bar.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
+					ticking = false;
+				};
+				window.addEventListener(
+					'scroll',
+					() => {
+						if (!ticking) {
+							ticking = true;
+							requestAnimationFrame(update);
+						}
+					},
+					{ passive: true },
+				);
+				update();
+			})();
+		</script>
 	</body>
 </html>

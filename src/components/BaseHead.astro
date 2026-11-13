@@ -1,28 +1,49 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
+// Đầu trang dùng chung: meta SEO, phông Be Vietnam Pro, global.css
+// và đoạn chọn giao diện chạy sớm để không bị nháy màu khi tải trang.
 import '../styles/global.css';
 
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	type?: 'website' | 'article';
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = '/blog-placeholder-1.jpg', type = 'website' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+<link rel="alternate" type="application/rss+xml" title="Blog Hiếu VV" href={new URL('rss.xml', Astro.site)} />
 
-<!-- Font preloads -->
-<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
+<!-- Phông chữ tiếng Việt -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+	rel="stylesheet"
+/>
+
+<!-- Giao diện: Tự động (06:00-18:00 sáng, còn lại tối, theo giờ máy người xem) / Sáng / Tối -->
+<script is:inline>
+	(() => {
+		let mode = 'auto';
+		try {
+			mode = localStorage.getItem('hieuvv-theme') || 'auto';
+		} catch {}
+		if (!['auto', 'light', 'dark'].includes(mode)) mode = 'auto';
+		const h = new Date().getHours();
+		document.documentElement.dataset.theme = mode === 'auto' ? (h >= 6 && h < 18 ? 'light' : 'dark') : mode;
+		document.documentElement.dataset.mode = mode;
+	})();
+</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -33,7 +54,8 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content="vi_VN" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
