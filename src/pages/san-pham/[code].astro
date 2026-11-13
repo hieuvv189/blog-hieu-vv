@@ -2,12 +2,13 @@
 // Trang chi tiết từng mã sản phẩm Molli: /san-pham/mol3019/.
 // Chỉ dùng dữ liệu đã có trong src/data/molli.ts (giá lẻ, quy cách, ghi chú, giấy kiểm định, video feedback).
 // Không đưa giá đại lý lên web.
+import { REAL_PHOTOS, PRODUCT_AGES } from '../../data/product-details';
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import {
 	CATEGORIES,
-	PAPERS,
+	paperPagesOf,
 	PRODUCTS,
 	type Product,
 	formatPrice,
@@ -23,8 +24,11 @@ export function getStaticPaths() {
 }
 
 const { product: p } = Astro.props as { product: Product };
+const photos = REAL_PHOTOS[p.code] ?? [];
+const age = PRODUCT_AGES[p.code] ?? 'Nhắn Molli để xác nhận độ tuổi phù hợp';
 const cat = CATEGORIES.find((c) => c.key === p.cat)!;
-const paper = PAPERS.find((x) => x.code === p.code);
+const papers = paperPagesOf(p.code);
+const paper = papers.length > 0;
 const videos = videosOf(p.code);
 const related = PRODUCTS.filter((x) => x.cat === p.cat && x.code !== p.code).slice(0, 4);
 const title = `${p.name} ${p.spec.split(' · ')[0]} · ${p.code} · Molli`;
@@ -121,16 +125,30 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 			}
 			.buy a {
 				flex: 1 1 180px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 54px;
+				box-sizing: border-box;
 				text-align: center;
+				white-space: nowrap;
 				font-weight: 700;
-				padding: 14px 20px;
+				line-height: 1.25;
+				padding: 12px 20px;
 				border-radius: 99px;
+				border: 2px solid transparent;
 				text-decoration: none;
 				font-size: 16px;
 			}
 			.buy .z {
 				background: var(--brand);
+				border-color: var(--brand);
 				color: #fff;
+			}
+			@media (max-width: 520px) {
+				.buy a {
+					flex-basis: 100%;
+				}
 			}
 			.buy .s {
 				background: #fff1ec;
@@ -160,25 +178,28 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 				font-size: clamp(22px, 2.6vw, 28px);
 				margin: 0 0 20px;
 			}
-			.paper {
-				display: flex;
-				gap: 20px;
-				align-items: center;
+            .real-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+            .real-photos a { background: white; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+            .real-photos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+			.papers {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+				gap: 16px;
+				max-width: 820px;
 			}
-			.paper a {
-				flex: 0 0 180px;
+			.papers a {
 				border: 1px solid var(--line);
 				border-radius: 14px;
 				overflow: hidden;
 				background: #fff;
 			}
-			.paper img {
+			.papers img {
 				display: block;
 				width: 100%;
 				height: auto;
 			}
-			.paper p {
-				margin: 0;
+			.paper-note {
+				margin: 14px 0 0;
 				color: var(--muted);
 				line-height: 1.7;
 			}
@@ -257,13 +278,8 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 				.related {
 					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
-				.paper {
-					flex-direction: column;
-					align-items: flex-start;
-				}
-				.paper a {
-					flex: none;
-					width: 200px;
+				.papers {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
 				.vids {
 					grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -292,6 +308,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 					<p class="price-note">Giá bán lẻ khuyến nghị, cập nhật 13/11/2026. Giá trên Shopee có thể khác khi shop chạy chương trình.</p>
 					<ul class="info">
 						<li><b>Quy cách:</b> {p.spec}</li>
+						<li><b>Độ tuổi sử dụng:</b> {age}</li>
 						<li><b>Đặc điểm:</b> {p.note}</li>
 						<li><b>Nhóm hàng:</b> {cat.label}</li>
 						{paper && <li><b>Giấy kiểm định:</b> có, xem ở phía dưới.</li>}
@@ -308,16 +325,35 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 				</div>
 			</section>
 
+
+            {photos.length > 0 && (
+                <section class="block" aria-labelledby="sp-photos">
+                    <h2 id="sp-photos">Ảnh thật sản phẩm</h2>
+                    <div class="real-photos">
+                        {photos.map((src, i) => (
+                            <a href={src} target="_blank" rel="noopener" aria-label={`Xem ảnh thật ${p.name}, ảnh ${i + 1}`}>
+                                <img src={src} alt={`Ảnh thật ${p.name} ${p.code}, ảnh ${i + 1}`} loading="lazy" width="600" height="600" />
+                            </a>
+                        ))}
+                    </div>
+                    <p class="paper-note">Bấm vào ảnh để xem bản gốc rõ hơn.</p>
+                </section>
+            )}
+
 			{
 				paper && (
 					<section class="block" aria-labelledby="sp-paper">
 						<h2 id="sp-paper">Giấy kiểm định của mã này</h2>
-						<div class="paper">
-							<a href={`/images/molli/giay/${p.code.toLowerCase()}.webp`} target="_blank" rel="noopener" aria-label={`Mở to ${paper.alt}`}>
-								<img src={`/images/molli/giay/${p.code.toLowerCase()}.webp`} alt={paper.alt} width="400" height="533" loading="lazy" />
-							</a>
-							<p>Bấm vào ảnh để xem to. Mẹ cần bản đầy đủ thì nhắn Zalo, Molli gửi ngay.</p>
+						<div class="papers">
+							{papers.map((pg) => (
+								<a href={pg.src} target="_blank" rel="noopener" aria-label={`Mở to ${pg.alt}`}>
+									<img src={pg.src} alt={pg.alt} width="400" height="565" loading="lazy" />
+								</a>
+							))}
 						</div>
+						<p class="paper-note">
+							{papers.length > 1 ? `Ảnh chụp bản gốc, ${papers.length} trang. ` : ''}Bấm vào từng trang để xem to. Mẹ cần bản đầy đủ thì nhắn Zalo, Molli gửi ngay.
+						</p>
 					</section>
 				)
 			}
