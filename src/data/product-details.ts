@@ -121,8 +121,9 @@ export const REAL_PHOTOS: Record<string, string[]> = {
     "/images/molli/anh-that/mol3016-1.jpg"
   ],
   "MOL3019": [
-    "/images/molli/anh-that/mol3019-mieng-lot.jpg",
-    "/images/molli/anh-that/mol3019-tham-nuoc.jpg",
+    "/images/molli/anh-that/mol3019-drive-5.png",
+    "/images/molli/anh-that/mol3019-drive-6.png",
+    "/images/molli/anh-that/mol3019-drive-extra-0.png",
     "/images/molli/anh-that/mol3019-1.jpg"
   ],
   "MOL3020": [
