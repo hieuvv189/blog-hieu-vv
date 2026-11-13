@@ -28,7 +28,13 @@
       "testPages": [
         6,
         7
-      ]
+      ],
+      "displayPages": [
+        1,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL2014": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -56,7 +62,13 @@
       "testPages": [
         12,
         13
-      ]
+      ],
+      "displayPages": [
+        1,
+        12,
+        13
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL2015": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -84,7 +96,13 @@
       "testPages": [
         10,
         11
-      ]
+      ],
+      "displayPages": [
+        1,
+        10,
+        11
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL2058": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -112,7 +130,13 @@
       "testPages": [
         8,
         9
-      ]
+      ],
+      "displayPages": [
+        1,
+        8,
+        9
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL3003": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -142,7 +166,15 @@
         15,
         16,
         17
-      ]
+      ],
+      "displayPages": [
+        1,
+        14,
+        15,
+        16,
+        17
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL3043": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -172,7 +204,15 @@
         15,
         16,
         17
-      ]
+      ],
+      "displayPages": [
+        1,
+        14,
+        15,
+        16,
+        17
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL3013": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -200,7 +240,13 @@
       "testPages": [
         18,
         19
-      ]
+      ],
+      "displayPages": [
+        1,
+        18,
+        19
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL3014": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
@@ -228,7 +274,13 @@
       "testPages": [
         18,
         19
-      ]
+      ],
+      "displayPages": [
+        1,
+        18,
+        19
+      ],
+      "displayNote": "Chỉ hiển thị giấy chứng nhận và phiếu liên quan; giữ trang quyết định/phụ lục trong hồ sơ nguồn."
     },
     "MOL3019": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
