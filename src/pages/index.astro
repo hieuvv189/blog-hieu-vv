@@ -10,8 +10,7 @@ import { SITE_DESCRIPTION } from '../consts';
 import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, shopeeLink, zaloLink } from '../data/molli';
 
 const catLabel = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.label]));
-// Tab Nổi bật hiện theo đúng thứ tự `featured` (1, 2, 3...); các mã còn lại giữ thứ tự trong PRODUCTS.
-const featuredFirst = [...PRODUCTS.filter((p) => p.featured).sort((a, b) => (a.featured ?? 0) - (b.featured ?? 0)), ...PRODUCTS.filter((p) => !p.featured)];
+// Thẻ render theo đúng thứ tự trong PRODUCTS (thứ tự từng nhóm). Tab Nổi bật dùng CSS `order` = `featured` (1, 2, 3...), JS bỏ `order` khi sang tab nhóm.
 const total = (items: { price: number }[]) => items.reduce((sum, i) => sum + i.price, 0);
 
 const values = [
@@ -224,7 +223,7 @@ const papers = [
 			/* Nhóm */
 			.groups {
 				display: grid;
-				grid-template-columns: repeat(5, 1fr);
+				grid-template-columns: repeat(6, 1fr);
 				gap: 18px;
 				margin-top: 36px;
 			}
@@ -881,7 +880,7 @@ const papers = [
 					<img class="mascot-side ms-right" src="/images/molli/linh-vat/tho-vay-chao.webp" alt="" aria-hidden="true" loading="lazy" />
 					<span class="tag">Danh mục</span>
 					<h2 id="h-groups" class="title">Mẹ đang tìm gì cho bé?</h2>
-					<p class="lead">Năm nhóm sản phẩm theo đúng những việc mẹ làm mỗi ngày.</p>
+					<p class="lead">Sáu nhóm sản phẩm theo những việc mẹ làm mỗi ngày, cho bé và cho cả nhà.</p>
 					<div class="groups">
 						{
 							CATEGORIES.map((c) => (
@@ -914,8 +913,8 @@ const papers = [
 				</div>
 				<div class="wrap grid" id="product-grid">
 					{
-						featuredFirst.map((p) => (
-							<article class="card" data-cat={p.cat} data-featured={p.featured ? 'true' : 'false'} hidden={!p.featured}>
+						PRODUCTS.map((p) => (
+							<article class="card" data-cat={p.cat} data-featured={p.featured ? 'true' : 'false'} hidden={!p.featured} data-fo={p.featured ?? undefined} style={p.featured ? `order:${p.featured}` : undefined}>
 								<img src={imageOf(p.code)} alt={`${p.name} Molli ${p.code}`} width="560" height="560" loading="lazy" />
 								<div class="card-body">
 									<span class="code">
@@ -1097,8 +1096,11 @@ const papers = [
 				const pick = (cat) => {
 					const btn = tabs.find((b) => b.dataset.cat === cat) || tabs[0];
 					tabs.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+					const featured = btn.dataset.cat === 'featured';
 					cards.forEach((c) => {
-						c.hidden = btn.dataset.cat === 'featured' ? c.dataset.featured !== 'true' : c.dataset.cat !== btn.dataset.cat;
+						c.hidden = featured ? c.dataset.featured !== 'true' : c.dataset.cat !== btn.dataset.cat;
+						// Tab Nổi bật xếp theo số `featured`, các tab nhóm giữ thứ tự trong PRODUCTS
+						c.style.order = featured && c.dataset.fo ? c.dataset.fo : '';
 					});
 				};
 				tabs.forEach((b) => b.addEventListener('click', () => pick(b.dataset.cat)));
