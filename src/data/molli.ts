@@ -33,6 +33,64 @@ export const CATEGORIES: { key: CategoryKey; label: string; desc: string; cover:
 	{ key: 'diu', label: 'Địu em bé', desc: 'Địu ngồi, địu ngồi hông', cover: 'MOL3043' },
 ];
 
+// Link Shopee của từng mã, lấy từ file "Molli - Danh sách link Shopee.xlsx" trên Drive (anh Hiếu cập nhật 13/11/2026).
+// Mã chưa có link thì nút "Mua ngay" dẫn về gian hàng Molli.
+export const SHOPEE_LINKS: Record<string, string> = {
+	MOL3001: 'https://shopee.vn/product/335593706/25155432590',
+	MOL3018: 'https://shopee.vn/product/335593706/25155432590',
+	MOL3045: 'https://shopee.vn/product/335593706/25155432590',
+	MOL3007: 'https://shopee.vn/product/335593706/25155432590',
+	MOL3026: 'https://shopee.vn/product/335593706/29485359459',
+	MOL3002: 'https://shopee.vn/product/335593706/24855459853',
+	MOL3022: 'https://shopee.vn/product/335593706/26984747370',
+	MOL3031: 'https://shopee.vn/product/335593706/41451873963',
+	MOL3030: 'https://shopee.vn/product/335593706/41451873963',
+	MOL3015: 'https://shopee.vn/product/335593706/25987918331',
+	MOL3010: 'https://shopee.vn/product/335593706/25987918331',
+	MOL3011: 'https://shopee.vn/product/335593706/25987918331',
+	MOL3012: 'https://shopee.vn/product/335593706/25987918331',
+	MOL0035: 'https://shopee.vn/product/335593706/28566025158',
+	MOL3013: 'https://shopee.vn/product/335593706/25889707749',
+	MOL3014: 'https://shopee.vn/product/335593706/25889707749',
+	MOL3006: 'https://shopee.vn/product/335593706/25455502627',
+	MOL3028: 'https://shopee.vn/product/335593706/41910982336',
+	MOL3029: 'https://shopee.vn/product/335593706/41910982336',
+	MOL3025: 'https://shopee.vn/product/335593706/25133437831',
+	MOL3038: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3039: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3040: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3023: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3019: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3020: 'https://shopee.vn/product/335593706/29330476199',
+	MOL3016: 'https://shopee.vn/product/335593706/29323251587',
+	MOL3036: 'https://shopee.vn/product/335593706/29323251587',
+	MOL3041: 'https://shopee.vn/product/335593706/29323251587',
+	MOL3032: 'https://shopee.vn/product/335593706/41652617890',
+	MOL3033: 'https://shopee.vn/product/335593706/41652617890',
+	MOL3035: 'https://shopee.vn/product/335593706/41652617890',
+	MOL3008: 'https://shopee.vn/product/335593706/24822962361',
+	MOL3046: 'https://shopee.vn/product/335593706/47013056614',
+	MOL3048: 'https://shopee.vn/product/335593706/49813051374',
+	MOL2014: 'https://shopee.vn/product/335593706/24304672212',
+	MOL2028: 'https://shopee.vn/product/335593706/25805570655',
+	MOL2015: 'https://shopee.vn/product/335593706/25008571951',
+	MOL2016: 'https://shopee.vn/product/335593706/24214523044',
+	MOL2059: 'https://shopee.vn/product/335593706/43858067762',
+	MOL2030: 'https://shopee.vn/product/335593706/24705485756',
+	MOL2003: 'https://shopee.vn/product/335593706/25518538710',
+	MOL2031: 'https://shopee.vn/product/335593706/25455519452',
+	MOL2023: 'https://shopee.vn/product/335593706/25806609775',
+	MOL2026: 'https://shopee.vn/product/335593706/24605106510',
+	MOL2058: 'https://shopee.vn/product/335593706/25504598770',
+	MOL2053: 'https://shopee.vn/product/335593706/25256240410',
+	MOL2002: 'https://shopee.vn/product/335593706/25663588820',
+	MOL2029: 'https://shopee.vn/product/335593706/25406615893',
+	MOL3003: 'https://shopee.vn/product/335593706/27305802149',
+	MOL3043: 'https://shopee.vn/product/335593706/50709308514',
+};
+
+export const shopeeLink = (code: string) => SHOPEE_LINKS[code] ?? CONTACT.shopee;
+
 export interface Product {
 	code: string;
 	name: string;
