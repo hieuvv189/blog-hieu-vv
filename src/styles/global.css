@@ -748,13 +748,9 @@ img {
 	.bottom-bar .bb-zalo .bb-ic {
 		background: #0068ff;
 	}
-	.bottom-bar .bb-main {
-		background: var(--brand);
-		color: #fff;
-	}
+	/* Mua ngay: nền trắng như 2 ô kia, biểu tượng túi Shopee màu cam chuẩn Shopee */
 	.bottom-bar .bb-main .bb-ic {
-		background: #fff;
-		color: var(--brand);
+		background: #ee4d2d;
 	}
 	.foot-grid {
 		grid-template-columns: 1fr;
