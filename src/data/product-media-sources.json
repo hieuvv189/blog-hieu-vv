@@ -305,7 +305,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3020": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -330,7 +336,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3023": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -355,7 +367,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3025": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -380,7 +398,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3038": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -405,7 +429,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3039": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -430,7 +460,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3040": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
@@ -455,7 +491,13 @@
         "MOL3040"
       ],
       "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
-      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc",
+      "displayPages": [
+        5,
+        6,
+        7
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     },
     "MOL3016": {
       "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
@@ -570,7 +612,12 @@
         "MOL3042"
       ],
       "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
-      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7",
+      "displayPages": [
+        7,
+        6
+      ],
+      "displayNote": "Chỉ hiện chứng nhận và phiếu liên quan nếu có; giữ quyết định/phụ lục trong hồ sơ nguồn để đối chiếu phạm vi."
     }
   },
   "videos": [
