@@ -121,16 +121,30 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 			}
 			.buy a {
 				flex: 1 1 180px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 54px;
+				box-sizing: border-box;
 				text-align: center;
+				white-space: nowrap;
 				font-weight: 700;
-				padding: 14px 20px;
+				line-height: 1.25;
+				padding: 12px 20px;
 				border-radius: 99px;
+				border: 2px solid transparent;
 				text-decoration: none;
 				font-size: 16px;
 			}
 			.buy .z {
 				background: var(--brand);
+				border-color: var(--brand);
 				color: #fff;
+			}
+			@media (max-width: 520px) {
+				.buy a {
+					flex-basis: 100%;
+				}
 			}
 			.buy .s {
 				background: #fff1ec;
