@@ -2,7 +2,7 @@
 title: "Địu ngồi hay địu ngồi hông: chọn loại nào cho bé?"
 description: "Phân biệt địu ngồi và địu ngồi hông, cách đeo địu đúng tư thế và những điểm mẹ nên kiểm tra mỗi lần địu bé."
 pubDate: "2026-11-13"
-heroImage: "/images/molli/cam-nang/chon-diu.webp"
+heroImage: "/images/molli/cam-nang/chon-diu.webp?v=2"
 ---
 
 Địu giúp bố mẹ bế bé lâu mà đỡ mỏi tay, nhất là khi đi chơi, đi khám hay đưa bé đi dạo. Molli có hai loại địu, mỗi loại hợp một kiểu dùng.

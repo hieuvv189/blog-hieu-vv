@@ -2,7 +2,7 @@
 title: "Chọn lót chống thấm cho bé: loại dùng một lần hay loại vải?"
 description: "So sánh lót chống thấm dùng một lần và tấm lót vải, cách chọn size S, M, L và khi nào nên dùng tấm lót phân su."
 pubDate: "2026-11-11"
-heroImage: "/images/molli/cam-nang/lot-chong-tham.webp"
+heroImage: "/images/molli/cam-nang/lot-chong-tham.webp?v=2"
 ---
 
 Lót chống thấm giúp ga giường, đệm và chăn của bé luôn khô khi thay tã, khi bé tè lúc cởi tã hoặc khi bé trớ sữa. Molli có cả loại dùng một lần và loại vải giặt được, mỗi loại hợp một lúc khác nhau.
