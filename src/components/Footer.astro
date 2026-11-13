@@ -1,15 +1,59 @@
 ---
+// Chân trang Molli: thông tin công ty, kênh mua hàng, liên hệ, cùng nút Zalo/Gọi nổi.
+import { CONTACT, zaloLink, callLink, formatPhone } from '../data/molli';
 const year = new Date().getFullYear();
 ---
 
-<footer class="wrap">
-	<div class="footer">
-		<span>© {year} Hiếu VV · Viết từ trải nghiệm, chia sẻ bằng sự chân thành.</span>
+<footer class="site-foot">
+	<div class="wrap foot-grid">
+		<div>
+			<img src="/images/molli/logo.webp" alt="Molli" width="520" height="230" loading="lazy" />
+			<p>Phụ kiện cho mẹ và bé, chọn kỹ từ chất liệu đến bao bì. More Love - More Care.</p>
+			<p>Nhập khẩu và phân phối: {CONTACT.company}, {CONTACT.address}.</p>
+		</div>
+		<div>
+			<h3>Mua hàng</h3>
+			<ul>
+				<li><a href={CONTACT.shopee} target="_blank" rel="noopener">Shop Shopee chính thức</a></li>
+				<li><a href={CONTACT.tiktok} target="_blank" rel="noopener">TikTok @mollivn</a></li>
+				<li><a href="/#nhap-si">Nhập sỉ cho cửa hàng</a></li>
+			</ul>
+		</div>
+		<div>
+			<h3>Liên hệ</h3>
+			<ul>
+				<li><a href={zaloLink} target="_blank" rel="noopener">Zalo tư vấn: {formatPhone(CONTACT.zaloPhone)}</a></li>
+				<li><a href={callLink}>Gọi: {formatPhone(CONTACT.callPhone)}</a></li>
+				<li>Tư vấn 24/7, xử lý đơn 8h-21h</li>
+			</ul>
+		</div>
+		<div>
+			<h3>Theo dõi Molli</h3>
+			<ul>
+				<li><a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a></li>
+				<li><a href={CONTACT.zaloOA} target="_blank" rel="noopener">Zalo OA</a></li>
+				<li><a href={CONTACT.youtube} target="_blank" rel="noopener">YouTube</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap footer">
+		<span>© {year} Molli · More Love - More Care</span>
 		<div class="footer-links">
-			<a href="/blog/">Bài viết</a>
-			<a href="/about/">Về tôi</a>
-			<a href="/rss.xml">RSS</a>
+			<a href="/blog/">Cẩm nang</a>
+			<a href="/about/">Về Molli</a>
 			<a href="#noi-dung">Về đầu trang ↑</a>
 		</div>
 	</div>
 </footer>
+
+<div class="float-contact" aria-label="Liên hệ nhanh">
+	<a class="fc-zalo" href={zaloLink} target="_blank" rel="noopener" aria-label="Nhắn Zalo tư vấn">Zalo</a>
+	<a class="fc-call" href={callLink} aria-label={`Gọi ${formatPhone(CONTACT.callPhone)}`}>
+		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"></path></svg>
+	</a>
+</div>
+<nav class="bottom-bar" aria-label="Liên hệ nhanh">
+	<a href={callLink}><span aria-hidden="true">☎</span>Gọi</a>
+	<a href={zaloLink} target="_blank" rel="noopener"><span aria-hidden="true">💬</span>Nhắn Zalo</a>
+	<a class="bb-main" href={CONTACT.shopee} target="_blank" rel="noopener"><span aria-hidden="true">🛍</span>Mua Shopee</a>
+</nav>

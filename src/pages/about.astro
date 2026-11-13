@@ -3,23 +3,26 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import { SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
+import { CATEGORIES, CONTACT, callLink, formatPhone, zaloLink } from '../data/molli';
 
 const latest = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
 
-const topics = [
-	{ tone: 'tile', title: 'Kinh doanh', text: 'Bán hàng, chăm khách, vận hành một thương hiệu nhỏ và những bài học trả giá mới có.' },
-	{ tone: 'blue', title: 'Sáng tạo & công nghệ', text: 'Công cụ, tự động hóa và cách để máy làm việc lặp lại, người dành thời gian để nghĩ.' },
-	{ tone: 'peach', title: 'Cuộc sống', text: 'Thói quen, những khoảng nghỉ và các ghi chép nhỏ từ một ngày bình thường.' },
-];
-
-const principles = [
-	'Viết từ trải nghiệm thật, không viết để trông có vẻ hiểu biết.',
-	'Ngắn khi có thể, đủ sâu khi cần.',
-	'Không quảng cáo, không giật tít, không vội vàng.',
+const values = [
+	{
+		title: 'More Love',
+		text: 'Mỗi món đồ Molli làm là một việc nhỏ giúp mẹ bớt lo, để có thêm thời gian ôm con.',
+	},
+	{
+		title: 'More Care',
+		text: 'Chọn chất liệu kỹ, ghi rõ quy cách và độ tuổi dùng, để mẹ mua đúng thứ bé cần.',
+	},
+	{
+		title: 'Luôn có người trả lời',
+		text: 'Nhắn Zalo là có Molli tư vấn 24/7. Việc cần người thật xử lý được làm trong giờ 8h-21h.',
+	},
 ];
 ---
 
@@ -27,242 +30,195 @@ const principles = [
 <html lang="vi" data-theme="light">
 	<head>
 		<BaseHead
-			title={`Về tôi · ${SITE_TITLE}`}
-			description="Đôi điều về Hiếu VV: người làm kinh doanh, xây sản phẩm và viết để nghĩ rõ hơn."
-			image="/blog-placeholder-about.jpg"
+			title="Về Molli · More Love - More Care"
+			description="Molli là thương hiệu phụ kiện cho mẹ và bé, phân phối bởi Công ty TNHH Thương mại Vinabi Việt Nam."
 		/>
 		<style>
+			.h-display {
+				font-family: 'Baloo 2', 'Be Vietnam Pro', sans-serif;
+				font-weight: 800;
+				letter-spacing: -0.5px;
+			}
 			.intro {
 				display: grid;
-				grid-template-columns: 1.2fr 0.8fr;
-				gap: 72px;
+				grid-template-columns: 1.15fr 0.85fr;
+				gap: 64px;
 				align-items: center;
-				padding: 64px 0 56px;
+				padding: 56px 0;
 			}
 			.intro h1 {
-				font-size: clamp(34px, 4.2vw, 52px);
-				font-weight: 650;
-				letter-spacing: -2.2px;
-				line-height: 1.25;
-				margin: 20px 0 22px;
+				font-size: clamp(34px, 4.4vw, 54px);
+				line-height: 1.1;
+				margin: 18px 0 20px;
 			}
 			.intro h1 em {
 				font-style: normal;
+				color: var(--brand);
+			}
+			:root[data-theme='dark'] .intro h1 em {
 				color: var(--accent);
 			}
 			.intro p {
 				color: var(--muted);
-				line-height: 1.95;
-				max-width: 520px;
+				line-height: 1.85;
+				max-width: 540px;
 				margin: 0 0 14px;
 			}
-			.portrait {
-				position: relative;
-				height: 320px;
-				background: var(--tile);
-				border-radius: 16px 16px 120px 120px;
+			.art {
+				border-radius: 28px;
 				overflow: hidden;
-				display: grid;
-				place-items: center;
+				background: linear-gradient(160deg, #cfe6f8, #a9d1f2);
+				aspect-ratio: 1 / 1;
+				box-shadow: 18px 18px 0 var(--pink);
 			}
-			.portrait .sun {
-				position: absolute;
-				width: 70px;
-				height: 70px;
-				border-radius: 50%;
-				background: var(--peach);
-				top: 34px;
-				right: 40px;
-			}
-			.portrait .ring {
-				position: absolute;
-				width: 180px;
-				height: 180px;
-				border: 1px solid var(--accent);
-				opacity: 0.25;
-				border-radius: 50%;
-				left: -60px;
-				bottom: 20px;
-			}
-			.monogram {
-				width: 132px;
-				height: 132px;
-				border-radius: 50%;
-				background: var(--accent);
-				color: var(--bg);
-				display: grid;
-				place-items: center;
-				font-size: 46px;
-				font-weight: 800;
-				letter-spacing: -2px;
-				position: relative;
-			}
-			.portrait small {
-				position: absolute;
-				bottom: 18px;
-				left: 0;
-				right: 0;
-				text-align: center;
-				font-size: 9px;
-				letter-spacing: 1.5px;
-				color: var(--accent);
+			.art img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
 			}
 			.block {
 				padding: 48px 0;
 				border-top: 1px solid var(--line);
 			}
-			.block-grid {
-				display: grid;
-				grid-template-columns: 260px 1fr;
-				gap: 56px;
-			}
 			.block h2 {
-				font-size: 21px;
-				letter-spacing: -0.6px;
-				font-weight: 650;
-				margin: 0;
+				font-size: clamp(26px, 3vw, 34px);
+				margin: 0 0 22px;
 			}
-			.block .lead {
-				font-size: 12px;
-				color: var(--muted);
-				margin: 8px 0 0;
-			}
-			.topics {
+			.values {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
-				gap: 16px;
+				gap: 18px;
 			}
-			.topic {
-				border-radius: 14px;
-				padding: 22px;
-				background: var(--tile);
+			.values article {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 18px;
+				padding: 24px;
 			}
-			.topic.blue {
-				background: var(--blue);
-			}
-			.topic.peach {
-				background: var(--peach);
-			}
-			.topic h3 {
-				font-size: 16px;
-				font-weight: 650;
+			.values h3 {
 				margin: 0 0 8px;
+				font-size: 18px;
+				color: var(--brand);
 			}
-			.topic p {
-				font-size: 13px;
-				line-height: 1.8;
-				margin: 0;
-			}
-			.principles {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				counter-reset: p;
-			}
-			.principles li {
-				counter-increment: p;
-				display: grid;
-				grid-template-columns: 44px 1fr;
-				padding: 14px 0;
-				border-bottom: 1px solid var(--line);
-				font-size: 16px;
-			}
-			.principles li:first-child {
-				padding-top: 0;
-			}
-			.principles li::before {
-				content: '0' counter(p);
+			:root[data-theme='dark'] .values h3 {
 				color: var(--accent);
-				font-weight: 650;
-				font-size: 13px;
-				padding-top: 3px;
+			}
+			.values p {
+				margin: 0;
+				color: var(--muted);
+				font-size: 14px;
+				line-height: 1.7;
+			}
+			.cats {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+			.cats a {
+				border: 1px solid var(--line);
+				background: var(--surface);
+				border-radius: 999px;
+				padding: 9px 18px;
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.cats a:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+			.info {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 18px;
+			}
+			.info div {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 18px;
+				padding: 22px 24px;
+				font-size: 14.5px;
+				line-height: 1.8;
+			}
+			.info small {
+				display: block;
+				font-size: 12px;
+				font-weight: 700;
+				color: var(--muted);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 6px;
 			}
 			.latest {
 				list-style: none;
-				margin: 0;
 				padding: 0;
+				margin: 0;
+				display: grid;
+				gap: 2px;
 			}
 			.latest a {
 				display: flex;
 				justify-content: space-between;
-				gap: 20px;
+				gap: 18px;
 				padding: 14px 0;
 				border-bottom: 1px solid var(--line);
+				font-weight: 600;
 			}
-			.latest li:first-child a {
-				padding-top: 0;
-			}
-			.latest a:hover strong {
+			.latest a:hover {
 				color: var(--accent);
 			}
-			.latest strong {
-				font-weight: 600;
-				transition: color 0.2s;
-			}
-			.latest .meta {
-				white-space: nowrap;
-			}
 			.cta {
-				margin-top: 8px;
-				padding: 32px;
-				background: var(--soft);
-				border-radius: var(--radius);
+				margin: 24px 0 72px;
+				background: var(--brand-deep);
+				color: #fff;
+				border-radius: 24px;
+				padding: 36px 40px;
 				display: flex;
+				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: center;
-				gap: 24px;
+				gap: 20px;
 			}
 			.cta h2 {
-				font-size: 22px;
-				font-weight: 600;
-				letter-spacing: -0.6px;
-				margin: 0 0 6px;
+				margin: 0;
+				font-size: clamp(24px, 2.8vw, 32px);
 			}
 			.cta p {
-				margin: 0;
-				font-size: 13px;
-				color: var(--muted);
+				margin: 6px 0 0;
+				color: #dcebf7;
 			}
 			.cta-actions {
 				display: flex;
 				gap: 12px;
 				flex-wrap: wrap;
 			}
-			@media (max-width: 850px) {
+			.cta-actions a {
+				border-radius: 999px;
+				padding: 12px 22px;
+				font-weight: 700;
+				font-size: 14px;
+				background: #fff;
+				color: #1f5f8f;
+			}
+			.cta-actions a + a {
+				background: transparent;
+				color: #fff;
+				border: 1.5px solid rgba(255, 255, 255, 0.5);
+			}
+			@media (max-width: 860px) {
 				.intro {
+					grid-template-columns: 1fr;
 					gap: 36px;
 				}
-				.block-grid {
+				.art {
+					max-width: 420px;
+				}
+				.values,
+				.info {
 					grid-template-columns: 1fr;
-					gap: 22px;
-				}
-			}
-			@media (max-width: 620px) {
-				.intro {
-					grid-template-columns: 1fr;
-					padding: 40px 0;
-					gap: 30px;
-				}
-				.portrait {
-					height: 230px;
-					border-radius: 14px 14px 80px 80px;
-				}
-				.monogram {
-					width: 100px;
-					height: 100px;
-					font-size: 36px;
-				}
-				.topics {
-					grid-template-columns: 1fr;
-				}
-				.latest a {
-					flex-direction: column;
-					gap: 4px;
 				}
 				.cta {
-					flex-direction: column;
-					align-items: flex-start;
-					padding: 26px;
+					padding: 28px 24px;
 				}
 			}
 		</style>
@@ -272,89 +228,87 @@ const principles = [
 		<main id="noi-dung" class="wrap">
 			<section class="intro" aria-labelledby="about-title">
 				<div>
-					<div class="eyebrow"><span class="dot"></span>Về tôi</div>
-					<h1 id="about-title">Chào bạn, tôi là <em>Hiếu.</em></h1>
+					<div class="eyebrow"><span class="dot"></span>Về Molli</div>
+					<h1 id="about-title" class="h-display">More Love, <em>More Care.</em></h1>
 					<p>
-						Tôi làm kinh doanh, xây dựng sản phẩm cho mẹ và bé, và dành nhiều thời gian để tìm cách
-						làm việc gọn hơn nhờ công nghệ.
+						Molli là thương hiệu phụ kiện cho mẹ và bé. Molli làm những món nhỏ mẹ dùng mỗi ngày: túi trữ sữa, gạc rơ
+						lưỡi, tăm bông, lót chống thấm, khăn và chăn cho bé.
 					</p>
 					<p>
-						Blog này là cuốn sổ mở của tôi. Không phải câu trả lời cuối cùng, mà là những điều đang
-						học: viết ra để nghĩ rõ hơn, chia sẻ để cùng đi xa hơn.
+						Chú thỏ má hồng của Molli nhắc tụi mình một điều: đồ cho bé phải dễ thương, nhưng trước hết phải dễ dùng và
+						rõ ràng. Hiện Molli có hơn 50 mã, bán lẻ trên Shopee và giao sỉ cho cửa hàng mẹ và bé.
 					</p>
 				</div>
-				<div class="portrait" role="img" aria-label="Minh họa phẳng: chữ H trong vòng tròn xanh, cạnh một mặt trời">
-					<div class="sun"></div>
-					<div class="ring"></div>
-					<div class="monogram">H.</div>
-					<small>LÀM VIỆC CÓ TÂM. SỐNG CÓ GÓC NHÌN.</small>
+				<div class="art">
+					<img src="/images/molli/tho-vay-chao.webp" alt="Thỏ Molli vẫy tay chào" width="900" height="900" />
 				</div>
 			</section>
 
-			<section class="block" aria-labelledby="topics-title">
-				<div class="block-grid">
-					<div>
-						<h2 id="topics-title">Tôi viết về điều gì</h2>
-						<p class="lead">Ba mạch chính, đan vào nhau.</p>
-					</div>
-					<div class="topics">
-						{
-							topics.map((t) => (
-								<div class:list={['topic', t.tone]}>
-									<h3>{t.title}</h3>
-									<p>{t.text}</p>
-								</div>
-							))
-						}
-					</div>
+			<section class="block" aria-labelledby="values-title">
+				<h2 id="values-title" class="h-display">Molli giữ ba điều</h2>
+				<div class="values">
+					{
+						values.map((v) => (
+							<article>
+								<h3>{v.title}</h3>
+								<p>{v.text}</p>
+							</article>
+						))
+					}
 				</div>
 			</section>
 
-			<section class="block" aria-labelledby="principles-title">
-				<div class="block-grid">
+			<section class="block" aria-labelledby="cats-title">
+				<h2 id="cats-title" class="h-display">Molli có gì</h2>
+				<div class="cats">
+					{CATEGORIES.map((c) => <a href="/#san-pham">{c.label}</a>)}
+				</div>
+			</section>
+
+			<section class="block" aria-labelledby="info-title">
+				<h2 id="info-title" class="h-display">Thông tin liên hệ</h2>
+				<div class="info">
 					<div>
-						<h2 id="principles-title">Cách tôi viết</h2>
-						<p class="lead">Ba nguyên tắc cho mỗi bài.</p>
+						<small>Nhập khẩu và phân phối</small>
+						{CONTACT.company}<br />
+						{CONTACT.address}
 					</div>
-					<ol class="principles">
-						{principles.map((p) => <li>{p}</li>)}
-					</ol>
+					<div>
+						<small>Liên hệ</small>
+						Zalo tư vấn 24/7: <a href={zaloLink} target="_blank" rel="noopener">{formatPhone(CONTACT.zaloPhone)}</a><br />
+						Gọi đơn sỉ, hợp tác: <a href={callLink}>{formatPhone(CONTACT.callPhone)}</a>
+					</div>
 				</div>
 			</section>
 
 			{
 				latest.length > 0 && (
 					<section class="block" aria-labelledby="latest-title">
-						<div class="block-grid">
-							<div>
-								<h2 id="latest-title">Bắt đầu từ đây</h2>
-								<p class="lead">Những bài viết gần nhất.</p>
-							</div>
-							<ul class="latest">
-								{latest.map((post) => (
-									<li>
-										<a href={`/blog/${post.id}/`}>
-											<strong>{post.data.title}</strong>
-											<span class="meta">
-												<FormattedDate date={post.data.pubDate} />
-											</span>
-										</a>
-									</li>
-								))}
-							</ul>
-						</div>
+						<h2 id="latest-title" class="h-display">Cẩm nang mới</h2>
+						<ul class="latest">
+							{latest.map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`}>
+										<span>{post.data.title}</span>
+										<span class="meta">
+											<FormattedDate date={post.data.pubDate} />
+										</span>
+									</a>
+								</li>
+							))}
+						</ul>
 					</section>
 				)
 			}
 
 			<section class="cta" aria-labelledby="cta-title">
 				<div>
-					<h2 id="cta-title">Cùng đọc, cùng nghĩ.</h2>
-					<p>Theo dõi những trang viết tiếp theo qua RSS, hoặc ghé xem mã nguồn của blog này.</p>
+					<h2 id="cta-title" class="h-display">Mẹ cần tư vấn chọn đồ cho bé?</h2>
+					<p>Nhắn Molli qua Zalo, có người trả lời cả ngày lẫn đêm.</p>
 				</div>
 				<div class="cta-actions">
-					<a class="primary" href="/rss.xml">Theo dõi qua RSS <span aria-hidden="true">↗</span></a>
-					<a class="ghost" href="https://github.com/hieuvv189/blog-hieu-vv" rel="noopener">GitHub</a>
+					<a href={zaloLink} target="_blank" rel="noopener">Nhắn Zalo</a>
+					<a href={CONTACT.shopee} target="_blank" rel="noopener">Mua trên Shopee ↗</a>
 				</div>
 			</section>
 		</main>
