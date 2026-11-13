@@ -12,7 +12,7 @@ export const CONTACT = {
 	youtube: 'https://www.youtube.com/channel/UCPYcsRbvpwo8QMc7S6aDrHQ',
 	zaloOA: 'https://zalo.me/2503627525426511732',
 	company: 'Công ty TNHH Thương mại Vinabi Việt Nam',
-	address: '126 Chiến Thắng, Hà Đông, Hà Nội',
+	address: 'Số 126 đường Chiến Thắng, phường Hà Đông, TP. Hà Nội',
 	taxCode: '0109162658',
 };
 
