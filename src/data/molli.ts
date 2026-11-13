@@ -206,6 +206,41 @@ export const PAPERS: { code: string; label: string; alt: string }[] = [
 	{ code: 'MOL0035', label: 'MOL0035 Túi trữ sữa bột', alt: 'Phiếu kiểm nghiệm túi trữ sữa bột' },
 ];
 
+// Bản gốc nhiều trang của giấy kiểm nghiệm/tự công bố, theo từng mã.
+type PaperPage = { src: string; alt: string };
+const TUI_TRU_SUA: PaperPage[] = [
+	{ src: '/images/molli/giay/tui-tru-sua/01.webp', alt: 'Phiếu kết quả kiểm nghiệm túi trữ sữa, Viện Kiểm nghiệm an toàn vệ sinh thực phẩm quốc gia, trang 1' },
+	{ src: '/images/molli/giay/tui-tru-sua/02.webp', alt: 'Phiếu kết quả kiểm nghiệm túi trữ sữa, trang 2' },
+	{ src: '/images/molli/giay/tui-tru-sua/03.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa, trang 1' },
+	{ src: '/images/molli/giay/tui-tru-sua/04.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa, trang 2' },
+];
+const khanMat = (code: string): PaperPage[] => [
+	{ src: `/images/molli/giay/${code.toLowerCase()}/01.webp`, alt: `Phiếu kết quả thử nghiệm khăn mặt dùng 1 lần ${code}, trang 1` },
+	{ src: `/images/molli/giay/${code.toLowerCase()}/02.webp`, alt: `Phiếu kết quả thử nghiệm khăn mặt dùng 1 lần ${code}, trang 2` },
+];
+export const PAPER_PAGES: Record<string, PaperPage[]> = {
+	MOL3010: TUI_TRU_SUA,
+	MOL3011: TUI_TRU_SUA,
+	MOL3012: TUI_TRU_SUA,
+	MOL3015: TUI_TRU_SUA,
+	MOL0035: [
+		{ src: '/images/molli/giay/tui-tru-sua-bot/01.webp', alt: 'Phiếu kết quả kiểm nghiệm túi trữ sữa bột, Viện Kiểm nghiệm an toàn vệ sinh thực phẩm quốc gia, trang 1' },
+		{ src: '/images/molli/giay/tui-tru-sua-bot/02.webp', alt: 'Phiếu kết quả kiểm nghiệm túi trữ sữa bột, trang 2' },
+		{ src: '/images/molli/giay/tui-tru-sua-bot/03.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa bột, trang 1' },
+		{ src: '/images/molli/giay/tui-tru-sua-bot/04.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa bột, trang 2' },
+	],
+	MOL3032: khanMat('MOL3032'),
+	MOL3033: khanMat('MOL3033'),
+	MOL3035: khanMat('MOL3035'),
+};
+
+// Các trang giấy tờ của một mã: bản gốc nhiều trang nếu có, không thì ảnh đơn cũ trong PAPERS.
+export const paperPagesOf = (code: string): PaperPage[] => {
+	if (PAPER_PAGES[code]) return PAPER_PAGES[code];
+	const one = PAPERS.find((x) => x.code === code);
+	return one ? [{ src: `/images/molli/giay/${code.toLowerCase()}.webp`, alt: one.alt }] : [];
+};
+
 // Video feedback của một mã: slug chứa mã viết thường, ví dụ khan-kho-mol3016.
 export const videosOf = (code: string) => FEEDBACK_VIDEOS.filter((v) => v.slug.includes(code.toLowerCase()));
 
