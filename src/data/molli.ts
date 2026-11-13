@@ -189,6 +189,7 @@ export const STAGES: { step: string; title: string; items: { code: string; name:
 		items: [
 			{ code: 'MOL3012', name: 'Túi trữ sữa 250ml', price: 105000 },
 			{ code: 'MOL3010', name: 'Túi trữ sữa 150ml', price: 95000 },
+			{ code: 'MOL3015', name: 'Túi trữ sữa 100ml', price: 91000 },
 			{ code: 'MOL3006', name: 'Phễu hứng sữa silicon', price: 108000 },
 			{ code: 'MOL3008', name: 'Bộ cọ rửa bình 4 chi tiết', price: 86000 },
 		],
