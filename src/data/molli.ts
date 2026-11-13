@@ -147,20 +147,20 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3008', name: 'Bộ cọ rửa bình sữa 4 chi tiết', spec: '4 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ cổ chữ U, cọ ống hút.', price: 86000, cat: 'tru-sua' },
 	{ code: 'MOL3046', name: 'Bộ cọ rửa bình sữa 3 chi tiết', spec: '3 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ ống hút. Không BPA.', price: 102000, cat: 'tru-sua', featured: 8 },
 
-	{ code: 'MOL2031', name: 'Tấm lót chống thấm 4 lớp', spec: '50x70cm · 1 tấm', note: 'Hai lớp ngoài làm từ cotton, lớp TPU chống thấm.', price: 122000, cat: 'giac-ngu' },
-	{ code: 'MOL2003', name: 'Lót chống thấm vải in hình, thêu hình', spec: '50x70cm · 1 tấm', note: 'Mặt trên cotton chần bông, mặt dưới chống thấm. Bé 0-36 tháng.', price: 169000, cat: 'giac-ngu' },
-	{ code: 'MOL2059', name: 'Khăn sữa 6 lớp', spec: '3 khăn/hộp · 27x27cm', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 107000, cat: 'giac-ngu' },
-	{ code: 'MOL2030', name: 'Khăn sữa Premium Bamboo', spec: '6 khăn/hộp · 30x30cm', note: 'Làm từ sợi tre, không nhuộm màu.', price: 105000, cat: 'giac-ngu' },
 	{ code: 'MOL2015', name: 'Khăn sữa xô Muslin', spec: '5 khăn/hộp · 30x30cm', note: 'Muslin 2 lớp, viền ren. Bé 0-36 tháng.', price: 101000, cat: 'giac-ngu' },
 	{ code: 'MOL2016', name: 'Khăn yếm xô Muslin 2 in 1', spec: '3 khăn/hộp · 25x25cm', note: 'Muslin 4 lớp, có cúc bấm, vừa làm khăn vừa làm yếm.', price: 90000, cat: 'giac-ngu' },
-	{ code: 'MOL2028', name: 'Khăn xô Premium Bamboo', spec: '120x120cm · 1 khăn', note: 'Làm từ sợi tre. Từ 0 tháng.', price: 154000, cat: 'giac-ngu' },
+	{ code: 'MOL2030', name: 'Khăn sữa Premium Bamboo', spec: '6 khăn/hộp · 30x30cm', note: 'Làm từ sợi tre, không nhuộm màu.', price: 105000, cat: 'giac-ngu' },
+	{ code: 'MOL2059', name: 'Khăn sữa 6 lớp', spec: '3 khăn/hộp · 27x27cm', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 107000, cat: 'giac-ngu' },
 	{ code: 'MOL2014', name: 'Khăn xô Muslin đa năng', spec: '100x100cm · 1 khăn', note: 'Làm từ cotton 2 lớp. Từ 0 tháng.', price: 131000, cat: 'giac-ngu' },
+	{ code: 'MOL2028', name: 'Khăn xô Premium Bamboo', spec: '120x120cm · 1 khăn', note: 'Làm từ sợi tre. Từ 0 tháng.', price: 154000, cat: 'giac-ngu' },
+	{ code: 'MOL2058', name: 'Chăn xô 6 lớp', spec: '80x100cm', note: 'Làm từ cotton 6 lớp. Từ 3 tháng.', price: 192000, cat: 'giac-ngu' },
 	{ code: 'MOL2023', name: 'Chăn xô 3 lớp in hình', spec: '100x120cm', note: 'Làm từ cotton 3 lớp, có lỗ thoáng khí.', price: 270000, cat: 'giac-ngu' },
 	{ code: 'MOL2026', name: 'Chăn xô ủ 3 lớp in hình', spec: '90x90cm', note: 'Làm từ cotton 3 lớp. Từ 0 tháng.', price: 260000, cat: 'giac-ngu' },
-	{ code: 'MOL2058', name: 'Chăn xô 6 lớp', spec: '80x100cm', note: 'Làm từ cotton 6 lớp. Từ 3 tháng.', price: 192000, cat: 'giac-ngu' },
 	{ code: 'MOL2053', name: 'Chăn lông hạt đậu', spec: '100x120cm', note: 'Vải lông nhung hạt đậu. Từ 3 tháng.', price: 302000, cat: 'giac-ngu' },
 	{ code: 'MOL2029', name: 'Lót gối sơ sinh xô 6 lớp', spec: '25x40cm · 1 gối', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 64000, cat: 'giac-ngu' },
 	{ code: 'MOL2002', name: 'Gối cao su non in hình, thêu hình', spec: '22x38x3cm · 1 gối', note: 'Vỏ cotton chần bông, ruột cao su non. Từ 3 tuổi.', price: 265000, cat: 'giac-ngu' },
+	{ code: 'MOL2003', name: 'Lót chống thấm vải in hình, thêu hình', spec: '50x70cm · 1 tấm', note: 'Mặt trên cotton chần bông, mặt dưới chống thấm. Bé 0-36 tháng.', price: 169000, cat: 'giac-ngu' },
+	{ code: 'MOL2031', name: 'Tấm lót chống thấm 4 lớp', spec: '50x70cm · 1 tấm', note: 'Hai lớp ngoài làm từ cotton, lớp TPU chống thấm.', price: 122000, cat: 'giac-ngu' },
 
 	// Địu: chỉ ghi thông số trùng khớp giữa bảng giá và file thông tin sản phẩm.
 	// Độ tuổi và tải trọng hai nguồn đang lệch nhau nên chưa đưa lên web.
