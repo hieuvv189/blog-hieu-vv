@@ -7,7 +7,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DealerForm from '../components/DealerForm.astro';
 import { SITE_DESCRIPTION } from '../consts';
-import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, shopeeLink, zaloLink } from '../data/molli';
+import { CATEGORIES, CONTACT, FEEDBACK_VIDEOS as feedbackVideos, PAPERS as papers, PRODUCTS, STAGES, formatPrice, imageOf, productUrl, shopeeLink, zaloLink } from '../data/molli';
 
 const catLabel = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.label]));
 // Thẻ render theo đúng thứ tự trong PRODUCTS (thứ tự từng nhóm). Tab Nổi bật dùng CSS `order` = `featured` (1, 2, 3...), JS bỏ `order` khi sang tab nhóm.
@@ -20,41 +20,6 @@ const values = [
 	{ icon: '📦', title: 'Đủ size, đủ quy cách', text: 'Từ hộp nhỏ dùng thử đến bịch lớn cho cả tháng, mỗi nhà chọn đúng thứ mình cần.' },
 ];
 
-// Video feedback thật của khách (bản gốc trong brain: Molli/video-feedback.md), mã theo bảng video-feedback.
-const feedbackVideos = [
-	{ slug: 'lot-chong-tham-mol3019-01', label: 'Lót chống thấm size M 60 miếng', text: 'Mẹ rót cả cốc nước lên miếng lót để thử độ thấm.' },
-	{ slug: 'tui-tru-sua-mol3012', label: 'Túi trữ sữa 250ml', text: 'Khoá zip đôi, có vạch chia ml, phần ghi ngày giờ trữ sữa.' },
-	{ slug: 'lot-tham-sua-mol3013', label: 'Miếng lót thấm sữa', text: 'Mẹ đổ nước thử lên miếng lót thấm sữa.' },
-	{ slug: 'gac-ro-luoi-mol3002', label: 'Gạc rơ lưỡi', text: 'Từng chiếc gói riêng, mẹ lấy dùng một lần là bỏ.' },
-	{ slug: 'lot-chong-tham-mol3020', label: 'Lót chống thấm size L 35 miếng', text: 'Mẹ đổ nước màu lên miếng lót rồi xem mặt dưới.' },
-	{ slug: 'khan-kho-mol3016', label: 'Khăn vải khô 900g', text: 'Dùng khô hay nhúng nước đều được, túi zip tiện mang theo.' },
-	{ slug: 'bvs-quan-mol3028', label: 'BVS dạng quần sau sinh', text: 'Mẹ đổ nước màu thử lên lớp thấm của quần.' },
-	{ slug: 'lot-chong-tham-mol3023', label: 'Lót chống thấm size S 100 miếng', text: 'Mẹ đổ nước từ chai lên miếng lót để thử.' },
-	{ slug: 'khan-uot-mol3042', label: 'Khăn ướt Molli', text: 'Mẹ rút thử, kéo căng và lau thử khăn.' },
-	{ slug: 'tam-bong-mol3001', label: 'Tăm bông xoắn ốc 200 que', text: 'Mẹ dùng vệ sinh tai cho bé hằng ngày.' },
-	{ slug: 'lot-me-sau-sinh-mol3025', label: 'Lót cho mẹ sau sinh và người già', text: 'Mẹ thử độ thấm hút của miếng lót cỡ lớn.' },
-	{ slug: 'lot-chong-tham-mol3019-02', label: 'Lót chống thấm size M 60 miếng', text: 'Thêm một lần thử đổ nước lên miếng lót.' },
-	{ slug: 'diu-hong-mol3043', label: 'Địu ngồi hông cao cấp', text: 'Mẹ mở hộp, xem cận cảnh địu và cách đeo cho bé.' },
-	{ slug: 'hop-thuc-pham-mol3048-01', label: 'Set hộp đựng thực phẩm', text: 'Mẹ mở set, xem từng hộp nhỏ và nắp đậy.' },
-	{ slug: 'bang-dan-tai-mol3022', label: 'Băng dán tai chống nước', text: 'Mẹ mở hộp, xem miếng dán vành tai cho bé.' },
-	{ slug: 'co-binh-mol3046-01', label: 'Bộ cọ rửa bình 3 chi tiết', text: 'Cọ bình, cọ núm ti và cọ ống hút trong một vỉ.' },
-	{ slug: 'khan-xo-mol2028', label: 'Khăn xô Premium Bamboo', text: 'Mẹ mở túi, xem chất khăn xô sợi tre.' },
-	{ slug: 'bong-vien-mol3031', label: 'Viên bông ngọc trai 100 viên', text: 'Mẹ mở túi, xem cận cảnh từng viên bông.' },
-	{ slug: 'tui-tru-sua-mol3012-02', label: 'Túi trữ sữa đủ size', text: 'Một buổi trữ sữa của mẹ với túi Molli nhiều dung tích.' },
-	{ slug: 'hop-thuc-pham-mol3048-03', label: 'Set hộp đựng thực phẩm', text: 'Nắp vặn chắc, thiết kế tiện cho mẹ mang theo.' },
-];
-
-const papers = [
-	{ code: 'MOL3002', label: 'MOL3002 Gạc rơ lưỡi', alt: 'Giấy chứng nhận hợp quy MOL3002' },
-	{ code: 'MOL3012', label: 'MOL3012 Túi trữ sữa', alt: 'Phiếu kiểm nghiệm MOL3012' },
-	{ code: 'MOL3013', label: 'MOL3013 Lót thấm sữa', alt: 'Phiếu thử nghiệm MOL3013' },
-	{ code: 'MOL3019', label: 'MOL3019 Lót chống thấm', alt: 'Phiếu thử nghiệm lót chống thấm dùng 1 lần' },
-	{ code: 'MOL3016', label: 'MOL3016 Khăn khô', alt: 'Giấy chứng nhận hợp quy khăn vải khô' },
-	{ code: 'MOL3042', label: 'MOL3042 Khăn ướt', alt: 'Bản công bố hợp quy khăn ướt' },
-	{ code: 'MOL3003', label: 'MOL3003 Địu em bé', alt: 'Phiếu thử nghiệm địu em bé' },
-	{ code: 'MOL2058', label: 'MOL2058 Chăn xô 6 lớp', alt: 'Phiếu thử nghiệm chăn xô 6 lớp' },
-	{ code: 'MOL0035', label: 'MOL0035 Túi trữ sữa bột', alt: 'Phiếu kiểm nghiệm túi trữ sữa bột' },
-];
 ---
 
 <!doctype html>
@@ -304,6 +269,25 @@ const papers = [
 			}
 			.card:hover {
 				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+			}
+			.stage-link {
+				display: contents;
+				color: inherit;
+				text-decoration: none;
+			}
+			.stage-link:hover span {
+				color: var(--accent);
+				text-decoration: underline;
+			}
+			.card-img {
+				display: block;
+			}
+			.card h3 a {
+				color: inherit;
+				text-decoration: none;
+			}
+			.card h3 a:hover {
+				color: var(--accent);
 			}
 			.card img {
 				aspect-ratio: 1;
@@ -915,12 +899,16 @@ const papers = [
 					{
 						PRODUCTS.map((p) => (
 							<article class="card" data-cat={p.cat} data-featured={p.featured ? 'true' : 'false'} hidden={!p.featured} data-fo={p.featured ?? undefined} style={p.featured ? `order:${p.featured}` : undefined}>
-								<img src={imageOf(p.code)} alt={`${p.name} Molli ${p.code}`} width="560" height="560" loading="lazy" />
+								<a class="card-img" href={productUrl(p.code)} aria-label={`Xem chi tiết ${p.name} ${p.code}`}>
+									<img src={imageOf(p.code)} alt={`${p.name} Molli ${p.code}`} width="560" height="560" loading="lazy" />
+								</a>
 								<div class="card-body">
 									<span class="code">
 										{p.code} · {catLabel[p.cat]}
 									</span>
-									<h3>{p.name}</h3>
+									<h3>
+										<a href={productUrl(p.code)}>{p.name}</a>
+									</h3>
 									<span class="spec">{p.spec}</span>
 									<p class="note">{p.note}</p>
 									<div class="price">{formatPrice(p.price)}</div>
@@ -957,8 +945,10 @@ const papers = [
 								<ul>
 									{s.items.map((i) => (
 										<li>
-											<img src={imageOf(i.code)} alt="" width="36" height="36" loading="lazy" />
-											<span>{i.name}</span>
+											<a class="stage-link" href={productUrl(i.code)}>
+												<img src={imageOf(i.code)} alt="" width="36" height="36" loading="lazy" />
+												<span>{i.name}</span>
+											</a>
 										</li>
 									))}
 								</ul>
