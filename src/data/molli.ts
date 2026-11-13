@@ -71,6 +71,7 @@ export const SHOPEE_LINKS: Record<string, string> = {
 	MOL3008: 'https://shopee.vn/product/335593706/24822962361',
 	MOL3046: 'https://shopee.vn/product/335593706/47013056614',
 	MOL3048: 'https://shopee.vn/product/335593706/49813051374',
+	MOL3042: 'https://shopee.vn/product/335593706/44909373087',
 	MOL2014: 'https://shopee.vn/product/335593706/24304672212',
 	MOL2028: 'https://shopee.vn/product/335593706/25805570655',
 	MOL2015: 'https://shopee.vn/product/335593706/25008571951',
