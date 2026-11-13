@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3014', name: 'Miếng lót thấm sữa', spec: '100 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 145000, cat: 'sau-sinh', featured: 7 },
 	{ code: 'MOL3013', name: 'Miếng lót thấm sữa', spec: '50 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 85000, cat: 'sau-sinh' },
 	{ code: 'MOL3028', name: 'BVS dạng quần sau sinh size L', spec: '5 miếng/túi · vòng hông 85-110cm', note: 'Mặc như quần lót, ôm bụng.', price: 86000, cat: 'sau-sinh' },
-	{ code: 'MOL3029', name: 'BVS dạng quần sau sinh size XL', spec: '5 miếng/túi · vòng hông 90-120cm', note: 'Mặc như quần lót, cỡ lớn cho mẹ sau sinh.', price: 86000, cat: 'sau-sinh' },
+	{ code: 'MOL3029', name: 'BVS dạng quần sau sinh size XL', spec: '5 miếng/túi · vòng hông 105-125cm', note: 'Mặc như quần lót, cỡ lớn cho mẹ sau sinh.', price: 86000, cat: 'sau-sinh' },
 	{ code: 'MOL3006', name: 'Phễu hứng sữa silicon', spec: '2 cái/hộp · 100ml', note: 'Silicon, tiệt trùng được.', price: 108000, cat: 'sau-sinh' },
 	{ code: 'MOL3025', name: 'Lót chống thấm cho mẹ sau sinh và người già', spec: '10 miếng/túi · 60x90cm', note: 'Dùng 1 lần, thấm nhanh, chống thấm ngược.', price: 94000, cat: 'sau-sinh' },
 
