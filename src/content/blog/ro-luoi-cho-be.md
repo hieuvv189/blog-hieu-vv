@@ -2,7 +2,7 @@
 title: "Rơ lưỡi cho bé sơ sinh: làm khi nào và làm thế nào"
 description: "Vì sao nên vệ sinh miệng cho bé từ khi chưa mọc răng, các bước rơ lưỡi bằng gạc và những lỗi mẹ hay gặp."
 pubDate: "2026-11-10"
-heroImage: "/images/molli/cam-nang/ro-luoi.webp?v=2"
+heroImage: "/images/molli/cam-nang/ro-luoi.webp?v=3"
 ---
 
 Bé chỉ bú sữa, nhưng sữa vẫn đọng lại trên lưỡi và lợi. Lau sạch miệng mỗi ngày giúp miệng bé sạch hơn và tập cho bé quen với việc vệ sinh răng miệng từ sớm.

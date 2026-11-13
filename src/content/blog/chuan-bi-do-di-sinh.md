@@ -2,7 +2,7 @@
 title: "Chuẩn bị đồ đi sinh: danh sách gọn cho mẹ và bé"
 description: "Những món nên có trong túi đi sinh, chia theo đồ cho mẹ và đồ cho bé, kèm mẹo xếp túi để vào viện không phải lục tìm."
 pubDate: "2026-11-05"
-heroImage: "/images/molli/cam-nang/do-di-sinh.webp?v=2"
+heroImage: "/images/molli/cam-nang/do-di-sinh.webp?v=3"
 ---
 
 Túi đi sinh nên được xếp xong từ khoảng tuần thai thứ 34-36. Lúc chuyển dạ, mẹ và người nhà thường rất vội, có sẵn một túi gọn thì vào viện không phải lục tìm.
