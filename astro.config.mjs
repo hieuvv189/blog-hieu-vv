@@ -7,7 +7,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://blog-hieu-vv.hieuvv189.workers.dev",
+	site: "https://molli.vn",
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		// Khối mã đổi màu theo giao diện Sáng/Tối của blog.
