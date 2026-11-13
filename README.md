@@ -1,4 +1,24 @@
-# Astro Starter Kit: Blog
+# Blog Hiếu VV
+
+Website: https://blog-hieu-vv.hieuvv189.workers.dev
+
+## Tự triển khai từ GitHub
+
+Trong Cloudflare, mở Worker `blog-hieu-vv`, vào Settings → Builds → Connect.
+Cấp quyền GitHub cho repo `hieuvv189/blog-hieu-vv` rồi chọn:
+
+- Nhánh triển khai: `main`.
+- Thư mục gốc: `/`.
+- Lệnh build: `npm run build`.
+- Lệnh triển khai: `npx wrangler deploy`.
+- Phiên bản Node.js: `22` hoặc mới hơn.
+
+Sau khi kết nối thành công, mỗi thay đổi được đẩy lên `main` sẽ kích hoạt build và triển khai.
+Bài viết nằm trong `src/content/blog/`. Khi gắn tên miền riêng, cập nhật `site` trong `astro.config.mjs`.
+
+Kiểm tra trước khi triển khai: `npm ci` rồi `npm run check`.
+
+## Template gốc
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
 
