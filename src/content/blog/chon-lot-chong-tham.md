@@ -35,4 +35,4 @@ Tấm lót phân su khác lót chống thấm. Đây là miếng nhỏ (19x21cm)
 - Mang theo vài miếng lót một lần trong túi bỉm khi đi tiêm chủng, đi khám.
 - Tấm lót vải nên có 2-3 tấm để thay phiên khi giặt.
 
-Mẹ xem đủ các loại lót ở [nhóm Giấc ngủ của bé](/?nhom=giac-ngu#san-pham) nhé.
+Lót dùng một lần và tấm lót phân su nằm ở [nhóm Vệ sinh cho bé](/?nhom=ve-sinh#san-pham), lót vải giặt được nằm ở [nhóm Giấc ngủ của bé](/?nhom=giac-ngu#san-pham). Mẹ sau sinh cần lót cỡ lớn 60x90cm thì xem ở [nhóm Mẹ sau sinh](/?nhom=sau-sinh#san-pham) nhé.
