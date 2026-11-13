@@ -7,7 +7,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DealerForm from '../components/DealerForm.astro';
 import { SITE_DESCRIPTION } from '../consts';
-import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, zaloLink } from '../data/molli';
+import { CATEGORIES, CONTACT, PRODUCTS, STAGES, formatPrice, imageOf, shopeeLink, zaloLink } from '../data/molli';
 
 const catLabel = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.label]));
 // Tab Nổi bật hiện theo đúng thứ tự `featured` (1, 2, 3...); các mã còn lại giữ thứ tự trong PRODUCTS.
@@ -929,7 +929,7 @@ const papers = [
 										<a class="z" href={zaloLink} target="_blank" rel="noopener">
 											Tư vấn Zalo
 										</a>
-										<a class="s" href={CONTACT.shopee} target="_blank" rel="noopener">
+										<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">
 											Mua ngay
 										</a>
 									</div>
