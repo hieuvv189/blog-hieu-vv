@@ -180,24 +180,6 @@ img {
 .nav-cta:hover {
 	filter: brightness(1.08);
 }
-.theme {
-	border: 1px solid var(--line);
-	padding: 6px 10px;
-	background: var(--surface);
-	border-radius: 50px;
-	display: flex;
-	gap: 6px;
-	align-items: center;
-}
-.theme select {
-	background: transparent;
-	border: 0;
-	color: var(--ink);
-	font-size: 12px;
-	max-width: 100px;
-	padding: 2px;
-	cursor: pointer;
-}
 
 /* Thành phần dùng lại */
 .eyebrow {
@@ -684,9 +666,6 @@ img {
 	}
 	.nav-cta {
 		display: none;
-	}
-	.theme {
-		margin-left: auto;
 	}
 	.navlinks {
 		gap: 18px;
