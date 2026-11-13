@@ -25,10 +25,10 @@ export type CategoryKey = 've-sinh' | 'sau-sinh' | 'tru-sua' | 'giac-ngu' | 'diu
 
 // Nhóm hàng theo bản mẫu website-mau/molli-trang-chu anh Hiếu chọn, thêm nhóm Địu riêng.
 export const CATEGORIES: { key: CategoryKey; label: string; desc: string; cover: string }[] = [
-	{ key: 've-sinh', label: 'Vệ sinh cho bé', desc: 'Gạc rơ lưỡi, tăm bông, bông viên, khăn', cover: 'MOL3018' },
-	{ key: 'sau-sinh', label: 'Mẹ sau sinh', desc: 'Lót thấm sữa, BVS dạng quần, phễu hứng sữa', cover: 'MOL3013' },
+	{ key: 've-sinh', label: 'Vệ sinh cho bé', desc: 'Gạc rơ lưỡi, tăm bông, khăn, lót chống thấm 1 lần', cover: 'MOL3018' },
+	{ key: 'sau-sinh', label: 'Mẹ sau sinh', desc: 'Lót thấm sữa, BVS dạng quần, lót chống thấm 1 lần', cover: 'MOL3013' },
 	{ key: 'tru-sua', label: 'Trữ sữa và ăn dặm', desc: 'Túi trữ sữa 100-250ml, cọ bình, hộp ăn dặm', cover: 'MOL3012' },
-	{ key: 'giac-ngu', label: 'Giấc ngủ của bé', desc: 'Lót chống thấm, khăn xô, chăn, gối', cover: 'MOL2023' },
+	{ key: 'giac-ngu', label: 'Giấc ngủ của bé', desc: 'Lót chống thấm vải, khăn xô, chăn, gối', cover: 'MOL2023' },
 	{ key: 'diu', label: 'Địu em bé', desc: 'Địu ngồi, địu ngồi hông', cover: 'MOL3043' },
 ];
 
@@ -54,10 +54,18 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3036', name: 'Khăn vải khô đa năng 600g', spec: 'Khoảng 416 tờ · 20x14cm', note: 'Vải không dệt, sản xuất tại Việt Nam.', price: 104000, cat: 've-sinh' },
 	{ code: 'MOL3041', name: 'Khăn vải khô đa năng 300g', spec: 'Khoảng 208 tờ · 20x14cm', note: 'Túi nhỏ gọn, sản xuất tại Việt Nam.', price: 61000, cat: 've-sinh' },
 	{ code: 'MOL3022', name: 'Băng dán tai chống nước', spec: '30 miếng/hộp · 4,5x7cm', note: 'Dán vành tai cho bé khi tắm, khi bơi.', price: 83000, cat: 've-sinh' },
+	{ code: 'MOL3051', name: 'Tấm lót phân su sơ sinh', spec: '30 miếng/túi · 19x21cm', note: 'Lót trong tã những ngày đầu, sản xuất tại Việt Nam.', price: 40000, cat: 've-sinh' },
+	{ code: 'MOL3038', name: 'Lót chống thấm 1 lần size S', spec: '32 miếng/túi · 25x33cm', note: 'Túi nhỏ tiện mang đi. Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 've-sinh' },
+	{ code: 'MOL3039', name: 'Lót chống thấm 1 lần size M', spec: '20 miếng/túi · 33x45cm', note: 'Túi nhỏ tiện mang đi. Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 've-sinh', featured: true },
+	{ code: 'MOL3040', name: 'Lót chống thấm 1 lần size L', spec: '12 miếng/túi · 45x60cm', note: 'Túi nhỏ tiện mang đi. Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 've-sinh' },
+	{ code: 'MOL3023', name: 'Lót chống thấm 1 lần size S', spec: '100 miếng/túi · 25x33cm', note: 'Túi lớn dùng ở nhà. Viền cách ly 3cm, giữ khô thoáng.', price: 198000, cat: 've-sinh' },
+	{ code: 'MOL3019', name: 'Lót chống thấm 1 lần size M', spec: '60 miếng/túi · 33x45cm', note: 'Túi lớn dùng ở nhà. Viền cách ly 3cm, giữ khô thoáng.', price: 198000, cat: 've-sinh' },
+	{ code: 'MOL3020', name: 'Lót chống thấm 1 lần size L', spec: '35 miếng/túi · 45x60cm', note: 'Túi lớn dùng ở nhà. Viền cách ly 3cm, giữ khô thoáng.', price: 198000, cat: 've-sinh' },
 
 	{ code: 'MOL3013', name: 'Miếng lót thấm sữa', spec: '50 miếng/túi', note: '6 lớp, 3 lớp chống thấm ngược, gói riêng từng miếng.', price: 85000, cat: 'sau-sinh', featured: true },
 	{ code: 'MOL3028', name: 'BVS dạng quần sau sinh size L', spec: '5 miếng/túi · vòng hông 85-110cm', note: 'Mặc như quần lót, ôm bụng.', price: 86000, cat: 'sau-sinh', featured: true },
 	{ code: 'MOL3006', name: 'Phễu hứng sữa silicon', spec: '2 cái/hộp · 100ml', note: 'Silicon, tiệt trùng được.', price: 108000, cat: 'sau-sinh' },
+	{ code: 'MOL3025', name: 'Lót chống thấm cho mẹ sau sinh và người già', spec: '10 miếng/túi · 60x90cm', note: 'Dùng 1 lần, thấm nhanh, chống thấm ngược.', price: 94000, cat: 'sau-sinh' },
 
 	{ code: 'MOL3015', name: 'Túi trữ sữa 100ml', spec: '30 túi/hộp', note: 'Khóa zip đôi, có vòi đổ, không BPA.', price: 91000, cat: 'tru-sua' },
 	{ code: 'MOL3010', name: 'Túi trữ sữa 150ml', spec: '30 túi/hộp', note: 'Khóa zip đôi, có vòi đổ, không BPA.', price: 95000, cat: 'tru-sua' },
@@ -67,8 +75,6 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3008', name: 'Bộ cọ rửa bình sữa 4 chi tiết', spec: '4 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ cổ chữ U, cọ ống hút.', price: 86000, cat: 'tru-sua' },
 	{ code: 'MOL3046', name: 'Bộ cọ rửa bình sữa 3 chi tiết', spec: '3 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ ống hút. Không BPA.', price: 102000, cat: 'tru-sua' },
 
-	{ code: 'MOL3051', name: 'Tấm lót phân su sơ sinh', spec: '30 miếng/túi · 19x21cm', note: 'Lót trong tã những ngày đầu, sản xuất tại Việt Nam.', price: 40000, cat: 'giac-ngu' },
-	{ code: 'MOL3039', name: 'Lót chống thấm 1 lần size M', spec: '20 miếng/túi · 33x45cm', note: 'Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 'giac-ngu', featured: true },
 	{ code: 'MOL2031', name: 'Tấm lót chống thấm 4 lớp', spec: '50x70cm · 1 tấm', note: 'Hai lớp ngoài làm từ cotton, lớp TPU chống thấm.', price: 122000, cat: 'giac-ngu' },
 	{ code: 'MOL2059', name: 'Khăn sữa 6 lớp', spec: '3 khăn/hộp · 27x27cm', note: 'Làm từ cotton 6 lớp. Bé 0-36 tháng.', price: 107000, cat: 'giac-ngu' },
 	{ code: 'MOL2030', name: 'Khăn sữa Premium Bamboo', spec: '6 khăn/hộp · 30x30cm', note: 'Làm từ sợi tre, không nhuộm màu.', price: 105000, cat: 'giac-ngu' },
