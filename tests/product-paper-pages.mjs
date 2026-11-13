@@ -13,3 +13,6 @@ for (const [code, record] of Object.entries(provenance.papers)) {
   assert.equal(new Set(paperPagesOf(code).map(p => p.src)).size, actual.length, `${code}: không lặp trang`);
 }
 console.log('Đạt: mỗi mã có đúng các trang hồ sơ và phiếu liên quan.');
+for (const code of ['MOL3041', 'MOL3036', 'MOL3016']) {
+  assert.deepEqual(paperPagesOf(code).map(p => p.src), [8, 9, 7, 6].map(n => `/images/molli/giay/khan-kho-uot/${String(n).padStart(2, '0')}.webp`), `${code}: phiếu kiểm nghiệm đủ 2 trang và chứng nhận Việt/Anh`);
+}
