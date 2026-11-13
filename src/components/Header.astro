@@ -1,14 +1,14 @@
 ---
-// Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút mua Shopee, nút giao diện góc phải.
-import { CONTACT } from '../data/molli';
+// Thanh đầu trang dùng chung của Molli: logo, điều hướng, nút nhắn Zalo, nút giao diện góc phải.
+import { zaloLink } from '../data/molli';
 interface Props {
 	active?: 'home' | 'blog' | 'about';
 }
 const { active } = Astro.props;
 const links = [
 	{ key: 'products', href: '/#san-pham', label: 'Sản phẩm' },
-	{ key: 'stages', href: '/#goi-y', label: 'Gợi ý theo giai đoạn' },
-	{ key: 'wholesale', href: '/#nhap-si', label: 'Nhập sỉ' },
+	{ key: 'stages', href: '/#giai-doan', label: 'Theo giai đoạn' },
+	{ key: 'wholesale', href: '/#dai-ly', label: 'Đại lý' },
 	{ key: 'blog', href: '/blog/', label: 'Cẩm nang' },
 	{ key: 'about', href: '/about/', label: 'Về Molli' },
 	{ key: 'contact', href: '/#lien-he', label: 'Liên hệ' },
@@ -34,7 +34,7 @@ const links = [
 				))
 			}
 		</nav>
-		<a class="nav-cta" href={CONTACT.shopee} target="_blank" rel="noopener">Mua trên Shopee</a>
+		<a class="nav-cta" href={zaloLink} target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
 		<div class="theme">
 			<span id="theme-icon" aria-hidden="true">◐</span>
 			<label for="theme-mode" class="sr-only">Chọn giao diện</label>

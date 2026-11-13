@@ -261,7 +261,7 @@ const values = [
 			<section class="block" aria-labelledby="cats-title">
 				<h2 id="cats-title" class="h-display">Molli có gì</h2>
 				<div class="cats">
-					{CATEGORIES.map((c) => <a href="/#san-pham">{c.label}</a>)}
+					{CATEGORIES.map((c) => <a href={`/?nhom=${c.key}#san-pham`}>{c.label}</a>)}
 				</div>
 			</section>
 
