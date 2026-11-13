@@ -26,7 +26,7 @@ export type CategoryKey = 've-sinh' | 'sau-sinh' | 'tru-sua' | 'giac-ngu' | 'diu
 
 // Nhóm hàng theo bản mẫu website-mau/molli-trang-chu anh Hiếu chọn, thêm nhóm Địu riêng.
 export const CATEGORIES: { key: CategoryKey; label: string; desc: string; cover: string }[] = [
-	{ key: 've-sinh', label: 'Vệ sinh cho bé', desc: 'Gạc rơ lưỡi, tăm bông, khăn, lót chống thấm 1 lần', cover: 'MOL3019' },
+	{ key: 've-sinh', label: 'Vệ sinh cho bé', desc: 'Gạc rơ lưỡi, tăm bông, khăn, khăn rửa mặt, lót chống thấm 1 lần', cover: 'MOL3019' },
 	{ key: 'sau-sinh', label: 'Mẹ sau sinh', desc: 'Lót thấm sữa, BVS dạng quần, lót chống thấm 1 lần', cover: 'MOL3013' },
 	{ key: 'tru-sua', label: 'Trữ sữa và ăn dặm', desc: 'Túi trữ sữa 100-250ml, cọ bình, hộp ăn dặm', cover: 'MOL3012' },
 	{ key: 'giac-ngu', label: 'Giấc ngủ của bé', desc: 'Lót chống thấm vải, khăn xô, chăn, gối', cover: 'MOL2023' },
@@ -116,6 +116,9 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3036', name: 'Khăn vải khô đa năng 600g', spec: 'Khoảng 416 tờ · 20x14cm', note: 'Vải không dệt, sản xuất tại Việt Nam.', price: 104000, cat: 've-sinh' },
 	{ code: 'MOL3041', name: 'Khăn vải khô đa năng 300g', spec: 'Khoảng 208 tờ · 20x14cm', note: 'Túi nhỏ gọn, sản xuất tại Việt Nam.', price: 61000, cat: 've-sinh' },
 	{ code: 'MOL3042', name: 'Khăn ướt Molli', spec: '80 tờ/túi · 18x14cm', note: 'Vải không dệt, không cồn, không paraben. Sản xuất tại Việt Nam.', price: 31000, cat: 've-sinh', featured: 6 },
+	{ code: 'MOL3032', name: 'Khăn rửa mặt dùng 1 lần', spec: '60 tờ/bịch · 20x20cm', note: 'Sợi thực vật, không dệt. Dạng rút tiện mang đi.', price: 72000, cat: 've-sinh' },
+	{ code: 'MOL3033', name: 'Khăn rửa mặt dùng 1 lần', spec: '200g/túi · 20x20cm', note: 'Sợi thực vật, không dệt. Túi rút dây để bàn.', price: 76000, cat: 've-sinh' },
+	{ code: 'MOL3035', name: 'Khăn rửa mặt dùng 1 lần', spec: '160 tờ/bịch · 19x20cm', note: 'Sợi thực vật, không dệt. Bịch lớn cho cả nhà.', price: 161000, cat: 've-sinh' },
 	{ code: 'MOL3022', name: 'Băng dán tai chống nước', spec: '30 miếng/hộp · 4,5x7cm', note: 'Dán vành tai cho bé khi tắm, khi bơi.', price: 83000, cat: 've-sinh' },
 	{ code: 'MOL3051', name: 'Tấm lót phân su sơ sinh', spec: '30 miếng/túi · 19x21cm', note: 'Lót trong tã những ngày đầu, sản xuất tại Việt Nam.', price: 40000, cat: 've-sinh' },
 	{ code: 'MOL3038', name: 'Lót chống thấm 1 lần size S', spec: '32 miếng/túi · 25x33cm', note: 'Túi nhỏ tiện mang đi. Viền cách ly 3cm, giữ khô thoáng.', price: 84000, cat: 've-sinh' },
