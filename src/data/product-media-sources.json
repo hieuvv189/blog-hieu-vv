@@ -1,0 +1,1431 @@
+{
+  "taskId": "t_f8772133a0d3",
+  "checkedAt": "2026-11-13",
+  "papers": {
+    "MOL3002": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        6,
+        7
+      ]
+    },
+    "MOL2014": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        12,
+        13
+      ]
+    },
+    "MOL2015": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        10,
+        11
+      ]
+    },
+    "MOL2058": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        8,
+        9
+      ]
+    },
+    "MOL3003": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy. Hai phiếu mẫu địu không ghi mã riêng, giữ cùng bộ và không suy phiếu /01 hay /02 thuộc riêng mã nào.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "MOL3043": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy. Hai phiếu mẫu địu không ghi mã riêng, giữ cùng bộ và không suy phiếu /01 hay /02 thuộc riêng mã nào.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "MOL3013": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        18,
+        19
+      ]
+    },
+    "MOL3014": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/gac-lot-tham-sua-diu-khan-vai.pdf",
+      "driveId": null,
+      "fileName": "gac-lot-tham-sua-diu-khan-vai.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "coveredCodes": [
+        "MOL3002",
+        "MOL2014",
+        "MOL2015",
+        "MOL2058",
+        "MOL3003",
+        "MOL3043",
+        "MOL3013",
+        "MOL3014"
+      ],
+      "evidence": "Phụ lục trang 4-5 ghi trực tiếp các mã; chứng nhận chỉ có giá trị lô hàng nêu trong giấy.",
+      "sha256": "2f7d26bc51a23fddc89f367e8f1e896e8037809f3e615f9c4b183cbfd16c5c99",
+      "testPages": [
+        18,
+        19
+      ]
+    },
+    "MOL3019": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3020": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3023": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3025": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3038": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3039": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3040": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/lot-chong-tham-1-lan.pdf",
+      "driveId": null,
+      "fileName": "lot-chong-tham-1-lan.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3019",
+        "MOL3020",
+        "MOL3023",
+        "MOL3025",
+        "MOL3038",
+        "MOL3039",
+        "MOL3040"
+      ],
+      "evidence": "Phụ lục trang 3-4 ghi mã, size, số miếng; phiếu thử nghiệm mẫu gộp không phải từng size độc lập.",
+      "sha256": "579ee828fdc40d1a7493e944c3d34c604d617e5319a17b802b9b3bd872f127dc"
+    },
+    "MOL3016": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
+      "driveId": null,
+      "fileName": "khan-kho-khan-uot.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coveredCodes": [
+        "MOL3016",
+        "MOL3036",
+        "MOL3041",
+        "MOL3042"
+      ],
+      "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+    },
+    "MOL3036": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
+      "driveId": null,
+      "fileName": "khan-kho-khan-uot.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coveredCodes": [
+        "MOL3016",
+        "MOL3036",
+        "MOL3041",
+        "MOL3042"
+      ],
+      "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+    },
+    "MOL3041": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
+      "driveId": null,
+      "fileName": "khan-kho-khan-uot.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coveredCodes": [
+        "MOL3016",
+        "MOL3036",
+        "MOL3041",
+        "MOL3042"
+      ],
+      "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+    },
+    "MOL3042": {
+      "sourcePath": "attachments/molli-giay-kiem-dinh/goc/khan-kho-khan-uot.pdf",
+      "driveId": null,
+      "fileName": "khan-kho-khan-uot.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coveredCodes": [
+        "MOL3016",
+        "MOL3036",
+        "MOL3041",
+        "MOL3042"
+      ],
+      "evidence": "Phụ lục tên nhóm khăn vải khô và khăn ướt; đối chiếu ba khối lượng khăn khô trong file chuẩn. Phiếu thử nghiệm trang 8-9 là mẫu khăn khô, không gán kết quả riêng cho khăn ướt.",
+      "sha256": "1caabdb4ecb9c98e828142146dbae2ed2e6241458aad8f16083a6def4cc357d7"
+    }
+  },
+  "videos": [
+    {
+      "slug": "verified-mol3048-1DB9CpWDA76X7fynvdRJ6jFTUr7HZgVqj",
+      "codes": [
+        "MOL3048"
+      ],
+      "label": "Set hộp đựng thực phẩm MOL3048",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1DB9CpWDA76X7fynvdRJ6jFTUr7HZgVqj",
+      "fileName": "MOL3048_RW_02.mp4",
+      "md5": "01d4a1d486c6b5787a8d8a39728842aa",
+      "sourcePath": "attachments/video-feedback/1DB9CpWDA76X7fynvdRJ6jFTUr7HZgVqj.mp4",
+      "evidence": {
+        "code": "MOL3048",
+        "time": 14.9,
+        "exact": "Mã sản phẩm: MOL3048.",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/001/f-0023.jpg",
+        "frame_time": 14.9,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-001-01.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/001-01.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "d7ab51fd203f8935ed658471b25c4b240563473930aa25a868b9175b0eb8ee3c",
+      "posterSha256": "bfd6d44f942a6ce96f2a39c8b658e7818cb68f835966ac8203e2e9d2feb6c066",
+      "posterTime": 14.9,
+      "bytes": 4503383
+    },
+    {
+      "slug": "verified-mol2059-1GxTmyl5tgyp3kOfa1oFi12IeluTeT6my",
+      "codes": [
+        "MOL2059"
+      ],
+      "label": "Khăn sữa 6 lớp MOL2059",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1GxTmyl5tgyp3kOfa1oFi12IeluTeT6my",
+      "fileName": "MOL2059_RW_01.mp4",
+      "md5": "02595daa86efb68582258b2b9b2472a4",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/02595daa86efb68582258b2b9b2472a4.mp4",
+      "evidence": {
+        "code": "MOL2059",
+        "time": 14.333333,
+        "exact": "MÃ SẢN PHẨM: MOL2059",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/002/f-0019.jpg",
+        "frame_time": 14.333333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-002-01.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/002-01.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "3b12a2adaadafa6a7880d644aff84ce3135168c7720eddf8cd240111460429f6",
+      "posterSha256": "124a2f12ae4c8c420ff1b6ff4e1a7d7ee4f0bf5433c56be9346f2c4ad175ed2b",
+      "posterTime": 14.333333,
+      "bytes": 6869964
+    },
+    {
+      "slug": "verified-mol3014-182zab6VsyWpSroB6CG882QdtdBPA8fhp",
+      "codes": [
+        "MOL3014"
+      ],
+      "label": "Miếng lót thấm sữa MOL3014",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "182zab6VsyWpSroB6CG882QdtdBPA8fhp",
+      "fileName": "MOL3014_RW_01.mp4",
+      "md5": "06140af88540414779a4c8719c744035",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/06140af88540414779a4c8719c744035.mp4",
+      "evidence": {
+        "code": "MOL3014",
+        "time": 8.1,
+        "exact": "MSP: MOL3014",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/005/f-0011.jpg",
+        "frame_time": 8.1,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-005-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/005-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "2b52769cdc802642d74c571445819e7679960512ea5b7669b7e07005346917a2",
+      "posterSha256": "6e365808627b448d0d3c155494b03d2f24b440bca8e0b84565bfa8b64c3d7087",
+      "posterTime": 8.1,
+      "bytes": 3165990
+    },
+    {
+      "slug": "verified-mol3022-1_C59tc1WVZOoR1gooDU06a2ISLKhdIeQ",
+      "codes": [
+        "MOL3022"
+      ],
+      "label": "Băng dán tai chống nước MOL3022",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1_C59tc1WVZOoR1gooDU06a2ISLKhdIeQ",
+      "fileName": "MOL3022_RW_01.mp4",
+      "md5": "06a036905ca592f664eef2331a17dfe5",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/06a036905ca592f664eef2331a17dfe5.mp4",
+      "evidence": {
+        "code": "MOL3022",
+        "time": 5.1333333,
+        "exact": "Mã sản phẩm: MOL3022",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/006/f-0007.jpg",
+        "frame_time": 5.133333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-005-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/006-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "78acfd0345464775c6edc427744fad51c504d0767d758df0e6fddab17438f6a2",
+      "posterSha256": "205c65507c2d8d6ef07a41b2cb089763525486ed72ae5a02668bf0b3c9db7cd6",
+      "posterTime": 5.133333,
+      "bytes": 3299919
+    },
+    {
+      "slug": "verified-mol3002-1Fba2X7GhBNn0sCoS0o6zA8A3D8rKA-0D",
+      "codes": [
+        "MOL3002"
+      ],
+      "label": "Gạc rơ lưỡi cho bé MOL3002",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1Fba2X7GhBNn0sCoS0o6zA8A3D8rKA-0D",
+      "fileName": "MOL3002_RW_01.mp4",
+      "md5": "099eb4432dbc7b865be4c71267fffa1d",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/099eb4432dbc7b865be4c71267fffa1d.mp4",
+      "evidence": {
+        "code": "MOL3002",
+        "time": 2.0,
+        "frame_time": 2.0,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/009/f-0003.jpg",
+        "exact": "Molli; Gạc vệ sinh răng miệng cho bé;30PCS",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "dea27853012e87e8708cb12634c7e71812de2e6d73f252ba89c7ccc1c90a56fc",
+      "posterSha256": "c07cca6025b47f632c1f4b9f0fc92e3f8efe2197bceea988e1acf0f9e927431f",
+      "posterTime": 2.0,
+      "bytes": 2279804
+    },
+    {
+      "slug": "verified-mol3042-1UgzXOEvMe3z9LF_KYOvqBhK8e4DgP_Rp",
+      "codes": [
+        "MOL3042"
+      ],
+      "label": "Khăn ướt Molli MOL3042",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1UgzXOEvMe3z9LF_KYOvqBhK8e4DgP_Rp",
+      "fileName": "MOL3042_RW_02.mp4",
+      "md5": "0a6fefc32a46fee62ff03cea53e0c38b",
+      "sourcePath": "attachments/video-feedback/1UgzXOEvMe3z9LF_KYOvqBhK8e4DgP_Rp.mp4",
+      "evidence": {
+        "code": "MOL3042",
+        "time": 4.0,
+        "frame_time": 4.0,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/011/f-0005.jpg",
+        "exact": "Molli Wet Wipes; Khăn ướt Molli;80Tờ Sheets",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "50a4a7a36e10a8d6a8d756cb001c8a76181cd73afe8fa1c98235a48a20fb2347",
+      "posterSha256": "39fae30332f44918d44b6a68245ecb8bab893fd0525296d2019ad296b5d2d51b",
+      "posterTime": 4.0,
+      "bytes": 3086214
+    },
+    {
+      "slug": "verified-mol3046-1AJ1Aj5TiXSaF1lG5hZ1SvEU1qfWEEN_m",
+      "codes": [
+        "MOL3046"
+      ],
+      "label": "Bộ cọ rửa bình sữa 3 chi tiết MOL3046",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1AJ1Aj5TiXSaF1lG5hZ1SvEU1qfWEEN_m",
+      "fileName": "MOL3046_RW_01.mp4",
+      "md5": "0c00485d25dd76f34cf713e873ee449e",
+      "sourcePath": "attachments/video-feedback/1AJ1Aj5TiXSaF1lG5hZ1SvEU1qfWEEN_m.mp4",
+      "evidence": {
+        "code": "MOL3046",
+        "time": 4.2333333,
+        "exact": "MÃ SẢN PHẨM: MOL3046",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/012/f-0007.jpg",
+        "frame_time": 4.233333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-011-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/012-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "41476e4d829d4cdbca43f6f5623062cc1861127ba62dcf5fb054fbfbbaf73d4b",
+      "posterSha256": "61990705adc177463481470cfb9b735a442a6dda8c92ef053d83f9bfeb567cd9",
+      "posterTime": 4.233333,
+      "bytes": 3604004
+    },
+    {
+      "slug": "verified-mol3011-1Zq1--VV1xR9MTu0y7naBCBDrW7_xrwNX",
+      "codes": [
+        "MOL3011"
+      ],
+      "label": "Túi trữ sữa 200ml MOL3011",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1Zq1--VV1xR9MTu0y7naBCBDrW7_xrwNX",
+      "fileName": "MOL3011_RW_02.mp4",
+      "md5": "0d4fb3367b041a56263c8892f259c628",
+      "sourcePath": "attachments/video-feedback/1Zq1--VV1xR9MTu0y7naBCBDrW7_xrwNX.mp4",
+      "evidence": {
+        "code": "MOL3011",
+        "time": 4.72,
+        "frame_time": 4.72,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/014/f-0007.jpg",
+        "exact": "MOL3011",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "a29640c96e10fd58f7d41128a0e0495577442e915016389b1a63e3901d50df9d",
+      "posterSha256": "d357f118ba448e029bac66f6d76187c5663c2235af2ce9cb301e981c021bb7fd",
+      "posterTime": 4.72,
+      "bytes": 3136108
+    },
+    {
+      "slug": "verified-mol3010-12A0zdGbfS4YY1h78xs7UVhi82q2KuwZd",
+      "codes": [
+        "MOL3010"
+      ],
+      "label": "Túi trữ sữa 150ml MOL3010",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "12A0zdGbfS4YY1h78xs7UVhi82q2KuwZd",
+      "fileName": "MOL3010_RW_01.mp4",
+      "md5": "0da08db8c321fba176b4997ab03596cc",
+      "sourcePath": "attachments/video-feedback/12A0zdGbfS4YY1h78xs7UVhi82q2KuwZd.mp4",
+      "evidence": {
+        "code": "MOL3010",
+        "time": 3.1,
+        "frame_time": 3.1,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/016/f-0005.jpg",
+        "exact": "MOL3010",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "407486ec2564f56cd608056b16e63fa4f9277a96697c3cc92a67c6e68f600ecd",
+      "posterSha256": "8a16b5e3152fbad4c5b97fe6823ed14a27af46f56ad212207cab73b3c2fe83f7",
+      "posterTime": 3.1,
+      "bytes": 3939646
+    },
+    {
+      "slug": "verified-mol3039-1riF2_nLagpnF1PH9wmC9OHejV3_ruV65",
+      "codes": [
+        "MOL3039"
+      ],
+      "label": "Lót chống thấm 1 lần size M MOL3039",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1riF2_nLagpnF1PH9wmC9OHejV3_ruV65",
+      "fileName": "MOL3039_RW_01.mp4",
+      "md5": "0f90b01b16336ab53765d6748d00aea7",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/0f90b01b16336ab53765d6748d00aea7.mp4",
+      "evidence": {
+        "code": "MOL3039",
+        "inherited": true,
+        "source": "attachments/video-feedback/visual-t_b70106277ebc/verified-codes.json",
+        "frame": "attachments/video-feedback/visual-t_b70106277ebc/frames/0f90b01b16336ab53765d6748d00aea7/sample-3.jpg",
+        "frame_time": 20.652
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "662a1ba1df128de86f42d884f366582d7c072343872ee9edd50c6f3710121bdb",
+      "posterSha256": "bc62dbc1e5ff4e8696d46e636f3d32aab112ffe5491cb33b094e0d0d824e991b",
+      "posterTime": 20.652,
+      "bytes": 3115596
+    },
+    {
+      "slug": "verified-mol3019-16c4beaTF1-_EKkLi8VvS-Om38rFyRGoI",
+      "codes": [
+        "MOL3019"
+      ],
+      "label": "Lót chống thấm 1 lần size M MOL3019",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "16c4beaTF1-_EKkLi8VvS-Om38rFyRGoI",
+      "fileName": "MOL3019_RW_02.mp4",
+      "md5": "0fdc0d2604831c4d37286535eeac3a87",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/0fdc0d2604831c4d37286535eeac3a87.mp4",
+      "evidence": {
+        "code": "MOL3019",
+        "time": 6.766667,
+        "frame_time": 6.766667,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/023/f-0008.jpg",
+        "exact": "M; 60 miếng; Mã SP: MOL3019; 330x450 mm",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "266f0fd78bcb2b903febbf5903db5696d5ebfdd63ec83a3404cfd4c6e0b63511",
+      "posterSha256": "331d3ca4efdc33ef78f042052fc86c8b2b7336046f00b8d533ab5d00c699751d",
+      "posterTime": 6.766667,
+      "bytes": 2786319
+    },
+    {
+      "slug": "verified-mol3023-1T98NnY8UvbpAyxxakBbIhwUAnJHH6YSi",
+      "codes": [
+        "MOL3023"
+      ],
+      "label": "Lót chống thấm 1 lần size S MOL3023",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1T98NnY8UvbpAyxxakBbIhwUAnJHH6YSi",
+      "fileName": "MOL3023_RW_01.mp4",
+      "md5": "125bc3c7ad407b92f31618d83e9e4828",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/125bc3c7ad407b92f31618d83e9e4828.mp4",
+      "evidence": {
+        "code": "MOL3023",
+        "time": 4.13,
+        "exact": "100 miếng | Mã SP: MOL 3023",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/031/f-0006.jpg",
+        "frame_time": 4.133333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-030-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/031-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "4e8cd6650dc5229d0800ca23f83f57e6ef5b620280dbd583ced5c8af01674825",
+      "posterSha256": "e3ec2dbb6ed9d1c4010d6a802c3ec19307e56b19aacdcfb5fb933ce0c1f465ad",
+      "posterTime": 4.133333,
+      "bytes": 3549012
+    },
+    {
+      "slug": "verified-mol3020-1lhI-YQq7t9_u9XdqGZV-G3mOq36PMGZl",
+      "codes": [
+        "MOL3020"
+      ],
+      "label": "Lót chống thấm 1 lần size L MOL3020",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1lhI-YQq7t9_u9XdqGZV-G3mOq36PMGZl",
+      "fileName": "MOL3020_RW_01.mp4",
+      "md5": "13ffe7b1e7ab6d97df36d658d30312d5",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/13ffe7b1e7ab6d97df36d658d30312d5.mp4",
+      "evidence": {
+        "code": "MOL3020",
+        "time": 0,
+        "exact": "35 miếng | Mã SP: MOL3020",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/033/f-0001.jpg",
+        "frame_time": 0.0,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-032-03.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/033-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "84c23d9f80a9039f087a9eccafa1e34f425680b8f5c7af9fbd4698892c23888a",
+      "posterSha256": "b3aeb0abd46e6d624e22852f4a2496f93b7b28ee4440496e6ba5b99b43db1441",
+      "posterTime": 0.0,
+      "bytes": 3826929
+    },
+    {
+      "slug": "verified-mol2014-1xuLCeov7TvxwkIX2uxqZZfPq16TbQn7T",
+      "codes": [
+        "MOL2014"
+      ],
+      "label": "Khăn xô Muslin đa năng MOL2014",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1xuLCeov7TvxwkIX2uxqZZfPq16TbQn7T",
+      "fileName": "MOL2014_RW_01.mp4",
+      "md5": "1667ffe0da41704ced5501ae85b30624",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/1667ffe0da41704ced5501ae85b30624.mp4",
+      "evidence": {
+        "code": "MOL2014",
+        "time": 7.033333,
+        "exact": "MOLLI / Mã sản phẩm : MOL2014",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/039/f-0009.jpg",
+        "frame_time": 7.033333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-038-01.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/039-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "51ca361a92aa48b242a42e2467729d95f0cadde1e74177a3bb4cb76481785bbf",
+      "posterSha256": "420c4b6ba255834367a6ad35de7f47aef42d507146f3703d580fa99c38e932f9",
+      "posterTime": 7.033333,
+      "bytes": 3024282
+    },
+    {
+      "slug": "verified-mol3031-1oO7p98-KBJtXQhLWNuJcR5iHpzh1GHbN",
+      "codes": [
+        "MOL3031"
+      ],
+      "label": "Viên bông ngọc trai 1g MOL3031",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1oO7p98-KBJtXQhLWNuJcR5iHpzh1GHbN",
+      "fileName": "MOL3031_RW_01.mp4",
+      "md5": "19b50c1a3db1ec071167d49954a57cf0",
+      "sourcePath": "attachments/video-feedback/Feedback Viên bông ngọc trai 100 viên MOL3031 01.mp4",
+      "evidence": {
+        "code": "MOL3031",
+        "time": 25.57,
+        "exact": "MÃ SẢN PHẨM: MOL3031",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/044/f-0028.jpg",
+        "frame_time": 25.566667,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-044-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/044-02.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "c271f1abd01d86b9ac1dd2188211515d8e9592022948ee7efeafa7958fe14216",
+      "posterSha256": "6fa68e47ea3faa2e0a1566c87ae6552130193d93866c0911b4660265d5becaa7",
+      "posterTime": 25.566667,
+      "bytes": 4395116
+    },
+    {
+      "slug": "verified-mol3028-1XkUBlVD6k4BCN-Z2nHnWgsrhUl5j4fV5",
+      "codes": [
+        "MOL3028"
+      ],
+      "label": "BVS dạng quần sau sinh size L MOL3028",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1XkUBlVD6k4BCN-Z2nHnWgsrhUl5j4fV5",
+      "fileName": "MOL3028_RW_01.mp4",
+      "md5": "19eef65fa165ff544084d0faea165e69",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/19eef65fa165ff544084d0faea165e69.mp4",
+      "evidence": {
+        "code": "MOL3028",
+        "time": 3,
+        "exact": "MOL3028",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/045/f-0004.jpg",
+        "frame_time": 3.0,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-044-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/045-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "5456a61d67e1fcee26bda02f496534b65b850b637cf3223b7c4c67a50bc618da",
+      "posterSha256": "7a38099a938a68261b520de0f6686b9615b65e13fdd222fb2715c0b474723d73",
+      "posterTime": 3.0,
+      "bytes": 2783601
+    },
+    {
+      "slug": "verified-mol3025-1Qbb0fEjfv-DahxIL0muMfdu4KE5qNWWt",
+      "codes": [
+        "MOL3025"
+      ],
+      "label": "Lót chống thấm cho mẹ sau sinh và người già MOL3025",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1Qbb0fEjfv-DahxIL0muMfdu4KE5qNWWt",
+      "fileName": "MOL3025_RW_02.mp4",
+      "md5": "1aac2b51844b081b14d18f34cbd3661d",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/1aac2b51844b081b14d18f34cbd3661d.mp4",
+      "evidence": {
+        "code": "MOL3025",
+        "time": 4.533333,
+        "frame_time": 4.533333,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/047/f-0006.jpg",
+        "exact": "MOL3025; 10 PCS; kích thước 600x900mm; dành cho phụ nữ sau sinh và người cao tuổi",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "a6e357ec65ae8efc72ad087d0c4ed6648ebb3d608a009d20a88c51bb6c18e663",
+      "posterSha256": "8dd8a0ffe58e53fd48892df9aa7279ad8faab3f6c260ae51899345b8a262ff57",
+      "posterTime": 4.533333,
+      "bytes": 6305003
+    },
+    {
+      "slug": "verified-mol3003-1uMTWRLn7-iMylLyf2HFUQU4amQmtuEFi",
+      "codes": [
+        "MOL3003"
+      ],
+      "label": "Địu ngồi cho bé MOL3003",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1uMTWRLn7-iMylLyf2HFUQU4amQmtuEFi",
+      "fileName": "MOL3003_RW_01.mp4",
+      "md5": "1c6b2c5630bf3602dc04abb8a1885f69",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/1c6b2c5630bf3602dc04abb8a1885f69.mp4",
+      "evidence": {
+        "code": "MOL3003",
+        "time": 6.6,
+        "exact": "MOL3003",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/049/f-0008.jpg",
+        "frame_time": 6.6,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-048-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/049-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "526e15b4d4e1fec98ead3f2afc2838460e7c11bad4ab1909879524121dcefe26",
+      "posterSha256": "46c2565bb0223e6f1be482a8d90700b8f75038f31f66128e0cb3379f0837b5bc",
+      "posterTime": 6.6,
+      "bytes": 2954601
+    },
+    {
+      "slug": "verified-mol2028-1QxtyktXitufpSP3qDphXPqudlkE4Ducy",
+      "codes": [
+        "MOL2028"
+      ],
+      "label": "Khăn xô Premium Bamboo MOL2028",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1QxtyktXitufpSP3qDphXPqudlkE4Ducy",
+      "fileName": "MOL2028_RW_01.mp4",
+      "md5": "2102d83e7eb07fc8a4468a41e2689f07",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/2102d83e7eb07fc8a4468a41e2689f07.mp4",
+      "evidence": {
+        "code": "MOL2028",
+        "time": 4.4,
+        "frame_time": 4.4,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/054/f-0006.jpg",
+        "exact": "Khăn Xô Đa Năng Bamboo; Kích thước 120x120cm; Mã sản phẩm MOL2028",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "250599da9d62493793c5bd216ab998204ecf59595cc55752bf6f5638684aceac",
+      "posterSha256": "0b050b9a843945eabe4c963c26e7425744c4f8b55bd6cbef6db91f1e8d039c4c",
+      "posterTime": 4.4,
+      "bytes": 5149864
+    },
+    {
+      "slug": "verified-mol0035-1xljVh6qfIx9nTD_oNAoxUvp4Zjqtug4u",
+      "codes": [
+        "MOL0035"
+      ],
+      "label": "Túi trữ sữa bột 50g MOL0035",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1xljVh6qfIx9nTD_oNAoxUvp4Zjqtug4u",
+      "fileName": "MOL0035_RW_01.mp4",
+      "md5": "22e44b2f32ce5578def0251a60acc0d9",
+      "sourcePath": "attachments/video-feedback/1xljVh6qfIx9nTD_oNAoxUvp4Zjqtug4u.mp4",
+      "evidence": {
+        "code": "MOL0035",
+        "inherited": true,
+        "source": "attachments/video-feedback/visual-t_b70106277ebc/verified-codes.json",
+        "frame": "attachments/video-feedback/visual-t_b70106277ebc/frames/22e44b2f32ce5578def0251a60acc0d9/sample-3.jpg",
+        "frame_time": 15.141
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "d392d80ba3c1038f3ba354775b041a7953ee3428508b39b67575668ecc0010e5",
+      "posterSha256": "5b570b6d873c795772bdb8821e8263f9aedb8589531d3e2113cc3ee28e15e6eb",
+      "posterTime": 15.141,
+      "bytes": 2789820
+    },
+    {
+      "slug": "verified-mol3035-1YjXmphOQrNCSBijKvDmP4i6qX7MZ-iBX",
+      "codes": [
+        "MOL3035"
+      ],
+      "label": "Khăn rửa mặt dùng 1 lần MOL3035",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1YjXmphOQrNCSBijKvDmP4i6qX7MZ-iBX",
+      "fileName": "MOL3035_RW_02.mp4",
+      "md5": "285dacc7c88ed48495f64fa445a5fcaa",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/285dacc7c88ed48495f64fa445a5fcaa.mp4",
+      "evidence": {
+        "code": "MOL3035",
+        "time": 7.933333,
+        "frame_time": 7.933333,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/062/f-0011.jpg",
+        "exact": "MÃ SẢN PHẨM MOL3035;160 khăn;20x19cm; Khăn Rửa Mặt Sử Dụng1 Lần",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "e7e935c5c2a789cd9faf67f2cf207346fbaacfa29167bd5e461d5d21f66184ca",
+      "posterSha256": "8b808c12e258dc9692fbfb73f9eaf3cd94d08297d90624ec9a5303a53c641449",
+      "posterTime": 7.933333,
+      "bytes": 4020505
+    },
+    {
+      "slug": "verified-mol3030-12LA36_0cyujsqkvPZDe5yu5ol-pbZeFP",
+      "codes": [
+        "MOL3030"
+      ],
+      "label": "Viên bông ngọc trai 0,5g MOL3030",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "12LA36_0cyujsqkvPZDe5yu5ol-pbZeFP",
+      "fileName": "MOL3030_RW_01.mp4",
+      "md5": "2868c2066e2216242e1766eb40319e97",
+      "sourcePath": "attachments/video-feedback/Feedback Viên bông ngọc trai 200 viên MOL3030 01.mp4",
+      "evidence": {
+        "code": "MOL3030",
+        "inherited": true,
+        "source": "attachments/video-feedback/visual-t_b70106277ebc/verified-codes.json",
+        "frame": "attachments/video-feedback/visual-t_b70106277ebc/frames/2868c2066e2216242e1766eb40319e97/sample-4.jpg",
+        "frame_time": 27.542
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "29daeecfb954e627cfdb3de1ed73de85412a7191512cfd0e3c04bad9d1d02774",
+      "posterSha256": "5d9fc464b660b0d17286f1c422b8e839e66970060aa30506ec148a30f4d339fe",
+      "posterTime": 27.542,
+      "bytes": 2958099
+    },
+    {
+      "slug": "verified-mol2058-1LjWVOZpbEKoEpXPMJYzZx4KT0ovht3kO",
+      "codes": [
+        "MOL2058"
+      ],
+      "label": "Chăn xô 6 lớp MOL2058",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1LjWVOZpbEKoEpXPMJYzZx4KT0ovht3kO",
+      "fileName": "MOL2058_RW_01.mp4",
+      "md5": "28ab88af022045e5f55bc8c881427f20",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/28ab88af022045e5f55bc8c881427f20.mp4",
+      "evidence": {
+        "code": "MOL2058",
+        "time": 7.066667,
+        "exact": "Mã sản phẩm : MOL2058",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/064/f-0009.jpg",
+        "frame_time": 7.066667,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-064-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/064-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "7746f1e8b9a420ba8c437c5ebdfedaf43ebcefaaab9a6111ea696f8d6ba665c2",
+      "posterSha256": "36b990bf2e58519e6615630bcb7cab6aaf6674c7a24ed032bf432062d390ead1",
+      "posterTime": 7.066667,
+      "bytes": 2694961
+    },
+    {
+      "slug": "verified-mol3012-11d3UK6qVKXYwTXegYqRy8CQ-zzlmXMLT",
+      "codes": [
+        "MOL3012"
+      ],
+      "label": "Túi trữ sữa 250ml MOL3012",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "11d3UK6qVKXYwTXegYqRy8CQ-zzlmXMLT",
+      "fileName": "MOL3012_RW_03.mp4",
+      "md5": "298ada7067f726ffe27ea43df36dcca5",
+      "sourcePath": "attachments/video-feedback/11d3UK6qVKXYwTXegYqRy8CQ-zzlmXMLT.mp4",
+      "evidence": {
+        "code": "MOL3012",
+        "time": 1,
+        "exact": "MOL3012",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/066/f-0002.jpg",
+        "frame_time": 1.0,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-066-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/066-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "caaa4f598dccb45fd2cd1fc99b3978776f00739112446b2277370c9d2937265d",
+      "posterSha256": "02a641e9a7ffe522760715d13b1fa61c31b93a4df3a6117f4558e4c5da61e11f",
+      "posterTime": 1.0,
+      "bytes": 3647028
+    },
+    {
+      "slug": "verified-mol3040-1LSyjhoQq08P4Dqx-QMGYk7fuJ2-6-NOR",
+      "codes": [
+        "MOL3040"
+      ],
+      "label": "Lót chống thấm 1 lần size L MOL3040",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1LSyjhoQq08P4Dqx-QMGYk7fuJ2-6-NOR",
+      "fileName": "MOL3040_RW_01.mp4",
+      "md5": "3c5aa5f3d2b35e42425692b311b4e3c9",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/3c5aa5f3d2b35e42425692b311b4e3c9.mp4",
+      "evidence": {
+        "code": "MOL3040",
+        "time": 5.9,
+        "exact": "Mã sản phẩm: MOL3040",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/106/f-0007.jpg",
+        "frame_time": 5.9,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-105-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/106-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "c3cc7ff6de08d716e94bfeaf9e056c08ddad4e1705961e1e1033f8d8da192727",
+      "posterSha256": "513ffb7751b824d7b5425177ca1603d215298ef4d49f09399607a1a8c7a2455a",
+      "posterTime": 5.9,
+      "bytes": 5218284
+    },
+    {
+      "slug": "verified-mol2030-1Zt-Q98GzeX_eWYeyuAEEXhsoYtkVwhjI",
+      "codes": [
+        "MOL2030"
+      ],
+      "label": "Khăn sữa Premium Bamboo MOL2030",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1Zt-Q98GzeX_eWYeyuAEEXhsoYtkVwhjI",
+      "fileName": "MOL2030_RW_01.mp4",
+      "md5": "42ddeac40ef48fd17b0e6103389c0af0",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/42ddeac40ef48fd17b0e6103389c0af0.mp4",
+      "evidence": {
+        "code": "MOL2030",
+        "time": 8.133333,
+        "exact": "Thương hiệu: MOLLI / Mã sản phẩm: MOL2030",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/120/f-0010.jpg",
+        "frame_time": 8.133333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-119-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/120-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "c0252d0756be7c7a1cb19b59bbf4519953dda05d0c803b76d90c4603adbcadf5",
+      "posterSha256": "27fa07129404d5368308a833749cdf6f9d2aef3b10a2f3bf5a5c42355948aa1a",
+      "posterTime": 8.133333,
+      "bytes": 2678381
+    },
+    {
+      "slug": "verified-mol2053-1YsZ1dsc8n-1Kv1e3mOYBYOifORl-Qmam",
+      "codes": [
+        "MOL2053"
+      ],
+      "label": "Chăn lông hạt đậu MOL2053",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1YsZ1dsc8n-1Kv1e3mOYBYOifORl-Qmam",
+      "fileName": "MOL2053_RW_01.mp4",
+      "md5": "55facf3033b605dd8d0928b6457a2614",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/55facf3033b605dd8d0928b6457a2614.mp4",
+      "evidence": {
+        "code": "MOL2053",
+        "time": 3,
+        "exact": "Mã SP: MOL2053",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/145/f-0004.jpg",
+        "frame_time": 3.0,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-144-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/145-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "641dea9b7c2fc2f0bc60bb294722d21371adefeb8d08bf6b6282e4b567dd89ec",
+      "posterSha256": "ce323aa1b4d17a6904c6c256cb23845b65b9fe8866619e75dfef9e47efb14fb6",
+      "posterTime": 3.0,
+      "bytes": 1537185
+    },
+    {
+      "slug": "verified-mol3038-1Js0N2KzcexIDjPdCZNc3oTfZbC97V_Vq",
+      "codes": [
+        "MOL3038"
+      ],
+      "label": "Lót chống thấm 1 lần size S MOL3038",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1Js0N2KzcexIDjPdCZNc3oTfZbC97V_Vq",
+      "fileName": "MOL3038_RW_01.mp4",
+      "md5": "57c21b66fd46723f0d4958ba23aee202",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/57c21b66fd46723f0d4958ba23aee202.mp4",
+      "evidence": {
+        "code": "MOL3038",
+        "inherited": true,
+        "source": "attachments/video-feedback/visual-t_b70106277ebc/verified-codes.json",
+        "frame": "attachments/video-feedback/visual-t_b70106277ebc/frames/57c21b66fd46723f0d4958ba23aee202/sample-3.jpg",
+        "frame_time": 19.863
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "7507248d90debe643e5fd06ada2ce4d22f02e15e6864cc7ccac4a71dd3e9f882",
+      "posterSha256": "ac0a59e429bff13980d9b193e384f55c0e01f2a7d2866baf9bf08a4d5ca584c1",
+      "posterTime": 19.863,
+      "bytes": 3659575
+    },
+    {
+      "slug": "verified-mol3029-1fCxYCMt51QBcs994wL1jm2hm9gNKyBaL",
+      "codes": [
+        "MOL3029"
+      ],
+      "label": "BVS dạng quần sau sinh size XL MOL3029",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1fCxYCMt51QBcs994wL1jm2hm9gNKyBaL",
+      "fileName": "MOL3029_RW_01.mp4",
+      "md5": "743640d2710d6ec8eec2d9d90004069a",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/743640d2710d6ec8eec2d9d90004069a.mp4",
+      "evidence": {
+        "code": "MOL3029",
+        "time": 7.23,
+        "exact": "MOL3029",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/196/f-0011.jpg",
+        "frame_time": 7.233333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-195-02.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/196-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "3c78d8604b81119ab7081ce9c2a4de6bdf275a264dcc3648269fffe171254957",
+      "posterSha256": "67fda3c8380130224d6f9ca224edf9ee23d7a95c5ed7aeed97b0fb86cc947c15",
+      "posterTime": 7.233333,
+      "bytes": 4984110
+    },
+    {
+      "slug": "verified-mol3013-1qX6dptnESLGmq3QFQmSkh3b-SxDotBrm",
+      "codes": [
+        "MOL3013"
+      ],
+      "label": "Miếng lót thấm sữa MOL3013",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1qX6dptnESLGmq3QFQmSkh3b-SxDotBrm",
+      "fileName": "MOL3013_RW_01.mp4",
+      "md5": "74ef81dc9b55efc88c245902b0ec008e",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/74ef81dc9b55efc88c245902b0ec008e.mp4",
+      "evidence": {
+        "code": "MOL3013",
+        "time": 7.433333,
+        "exact": "MSP: MOL3013",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/200/f-0009.jpg",
+        "frame_time": 7.433333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-200-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/200-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "7336fbdee1adf6528ff98b8fc0e754804451207116d0f726e54e9510bf0c0e0f",
+      "posterSha256": "9926f7cc208141fdb609ea5a653792e04f33e5ae86f08c0d3adbd469adab692d",
+      "posterTime": 7.433333,
+      "bytes": 3339261
+    },
+    {
+      "slug": "verified-mol3033-1UvHNh2TwTL0E4TKDB_du0EvlaiPt6gb-",
+      "codes": [
+        "MOL3033"
+      ],
+      "label": "Khăn rửa mặt dùng 1 lần MOL3033",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1UvHNh2TwTL0E4TKDB_du0EvlaiPt6gb-",
+      "fileName": "MOL3033_RW_01.mp4",
+      "md5": "8a07042f4b454a9edc8ae8b2af0e63ef",
+      "sourcePath": "attachments/video-feedback/resume-t_d9e922c584bd/media/8a07042f4b454a9edc8ae8b2af0e63ef.mp4",
+      "evidence": {
+        "code": "MOL3033",
+        "time": 6.133333,
+        "exact": "MOL3033",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/243/f-0008.jpg",
+        "frame_time": 6.133333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-242-05.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/243-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "188fda7ca178a0773ca4bf5964f5c5d4fbb76279259047e992af0d97eb6ec235",
+      "posterSha256": "507d9de419c69d1314fa58aa72139de3e14814bb99cd1a1d91ba7fbe69566cb4",
+      "posterTime": 6.133333,
+      "bytes": 2849927
+    },
+    {
+      "slug": "verified-mol3008-1WC29Ll1pB1eAQoy8Yy3M7ghkIlt4PogA",
+      "codes": [
+        "MOL3008"
+      ],
+      "label": "Bộ cọ rửa bình sữa 4 chi tiết MOL3008",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1WC29Ll1pB1eAQoy8Yy3M7ghkIlt4PogA",
+      "fileName": "MOL3008_RW_01.mp4",
+      "md5": "a764d9b1f56d0b1859b48d8057b8f007",
+      "sourcePath": "attachments/video-feedback/1WC29Ll1pB1eAQoy8Yy3M7ghkIlt4PogA.mp4",
+      "evidence": {
+        "code": "MOL3008",
+        "time": 3.466667,
+        "exact": "MOL-3008",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/305/f-0005.jpg",
+        "frame_time": 3.466667,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-304-01.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/305-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "2b0688c678efa113832642e54c85da8a52517a961f8b3001a0e15ea063ebd275",
+      "posterSha256": "2e905c68a4a2a6e754f530e04d644dcff7f3b0ba9d83bcd782c60d07b66cf9ec",
+      "posterTime": 3.466667,
+      "bytes": 2743979
+    },
+    {
+      "slug": "verified-mol3016-1360iad9b-8xwfo0Mh_f7XhG2JNBgnAdW",
+      "codes": [
+        "MOL3016"
+      ],
+      "label": "Khăn vải khô đa năng 900g MOL3016",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1360iad9b-8xwfo0Mh_f7XhG2JNBgnAdW",
+      "fileName": "MOL3016_RW_01.mp4",
+      "md5": "bef9a862627142d22cf3890ff35820d5",
+      "sourcePath": "attachments/video-feedback/1360iad9b-8xwfo0Mh_f7XhG2JNBgnAdW.mp4",
+      "evidence": {
+        "code": "MOL3016",
+        "time": 6.566667,
+        "frame_time": 6.566667,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/349/f-0008.jpg",
+        "exact": "MãSP:MOL3016; Khăn khô; kích thước200x140mm",
+        "manual_check": true
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "9d7e930d26b16aed941b851831d566d704396b0a8bc18db131fe0ddfc0cfa49c",
+      "posterSha256": "4632d17272cb8497789ffa308d31280fd0f249a66de635646232d2234467c803",
+      "posterTime": 6.566667,
+      "bytes": 2607133
+    },
+    {
+      "slug": "verified-mol3015-1gWzk-LULdnrBtzCSCMoy6gHodM974jBU",
+      "codes": [
+        "MOL3015"
+      ],
+      "label": "Túi trữ sữa 100ml MOL3015",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1gWzk-LULdnrBtzCSCMoy6gHodM974jBU",
+      "fileName": "MOL3015_RW_01.mp4",
+      "md5": "c6736c844308e2bf8ebe8c9132528ab7",
+      "sourcePath": "attachments/video-feedback/1gWzk-LULdnrBtzCSCMoy6gHodM974jBU.mp4",
+      "evidence": {
+        "code": "MOL3015",
+        "time": 9.9,
+        "exact": "MOL3015",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/358/f-0012.jpg",
+        "frame_time": 9.9,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-357-04.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/358-00.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "f95416ef27eb93f67b1a036ad3079b9b96493cfb949aedf899e963f528fd3e35",
+      "posterSha256": "60d181d672c9f895f8c9a68494fccda9342089d29bc0b0998a090a80158f7914",
+      "posterTime": 9.9,
+      "bytes": 3335871
+    },
+    {
+      "slug": "verified-mol3026-1lRFi5WHaeXSi4sfoE-Wr77gi2YONKjl_",
+      "codes": [
+        "MOL3026"
+      ],
+      "label": "Tăm bông trẻ em MOL3026",
+      "text": "Video mở hộp và trải nghiệm sản phẩm Molli.",
+      "driveId": "1lRFi5WHaeXSi4sfoE-Wr77gi2YONKjl_",
+      "fileName": "MOL3026_RW_01.mp4",
+      "md5": "cfd218d7eceef82e0d72b3d6b5d13648",
+      "sourcePath": "attachments/video-feedback/1lRFi5WHaeXSi4sfoE-Wr77gi2YONKjl_.mp4",
+      "evidence": {
+        "code": "MOL3026",
+        "time": 22.533333,
+        "exact": "Mã sản phẩm: MOL3026",
+        "valid_time_and_catalog": true,
+        "frame": "attachments/video-feedback/hd-t_b70106277ebc/frames/386/f-0028.jpg",
+        "frame_time": 22.533333,
+        "vision_file": "attachments/video-feedback/hd-t_b70106277ebc/vision-386-00.json",
+        "contact_sheet": "attachments/video-feedback/hd-t_b70106277ebc/contacts/386-02.jpg"
+      },
+      "reviewMethod": "Xem frame gốc tại mốc nhận diện và chuỗi frame đầu/giữa/cuối; đối chiếu Whisper có sẵn, không sửa lời thoại. Không xem liên tục toàn video.",
+      "videoSha256": "ddcd5ea2db24cc4de7822303c755beba2f32ea8d9d07355e987f15bd89b1231c",
+      "posterSha256": "394249dbd8c6856f8ebeb29fc13b5a5f1181a94c095e4c4020664855d82b1c0c",
+      "posterTime": 22.533333,
+      "bytes": 1584386
+    }
+  ],
+  "legacyVideos": [
+    {
+      "slug": "tam-bong-mol3001",
+      "codes": [
+        "MOL3001"
+      ],
+      "source": "Molli/video-feedback.md",
+      "driveId": "1hjYfLdh4Ni-luE4D2b8V38XCIDcgU3Ar",
+      "status": "Đã đối chiếu frame gốc 0/3/6/9/12/15 giây: hộp 200 que, hai đầu dẹt và xoắn ốc, nguồn user xác nhận trong Molli/video-feedback.md; giữ nguyên bản tối ưu hiện có."
+    }
+  ]
+}

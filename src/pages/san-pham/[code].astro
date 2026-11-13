@@ -338,7 +338,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 						<li><b>Độ tuổi sử dụng:</b> {age}</li>
 						<li><b>Đặc điểm:</b> {p.note}</li>
 						<li><b>Nhóm hàng:</b> {cat.label}</li>
-						{paper && <li><b>Giấy kiểm định:</b> có, xem ở phía dưới.</li>}
+						{paper && <li><b>Hồ sơ sản phẩm:</b> xem tài liệu gốc phía dưới.</li>}
 					</ul>
 					<div class="buy">
 						<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">Mua ngay trên Shopee</a>
@@ -357,7 +357,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 			{
 				paper && (
 					<section class="block" aria-labelledby="sp-paper">
-						<h2 id="sp-paper">Giấy kiểm định của mã này</h2>
+						<h2 id="sp-paper">Hồ sơ kiểm định và công bố</h2>
 						<div class="papers">
 							{papers.map((pg) => (
 								<a href={pg.src} target="_blank" rel="noopener" aria-label={`Mở to ${pg.alt}`}>
@@ -366,7 +366,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 							))}
 						</div>
 						<p class="paper-note">
-							{papers.length > 1 ? `Ảnh chụp bản gốc, ${papers.length} trang. ` : ''}Bấm vào từng trang để xem to. Mẹ cần bản đầy đủ thì nhắn Zalo, Molli gửi ngay.
+							{papers.length > 1 ? `Ảnh chụp bản gốc, ${papers.length} trang. ` : ''}Bấm vào từng trang để xem to. Phạm vi mã và lô hàng theo phụ lục; kết quả thử nghiệm áp dụng cho mẫu ghi trong phiếu.
 						</p>
 					</section>
 				)
@@ -375,7 +375,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 			{
 				videos.length > 0 && (
 					<section class="block" aria-labelledby="sp-videos">
-						<h2 id="sp-videos">Video thật từ các mẹ</h2>
+						<h2 id="sp-videos">Video mở hộp và trải nghiệm</h2>
 						<div class="vids">
 							{videos.map((v) => (
 								<div>
