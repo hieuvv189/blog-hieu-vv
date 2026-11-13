@@ -1,0 +1,369 @@
+---
+// Trang chi tiết từng mã sản phẩm Molli: /san-pham/mol3019/.
+// Chỉ dùng dữ liệu đã có trong src/data/molli.ts (giá lẻ, quy cách, ghi chú, giấy kiểm định, video feedback).
+// Không đưa giá đại lý lên web.
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import {
+	CATEGORIES,
+	PAPERS,
+	PRODUCTS,
+	type Product,
+	formatPrice,
+	imageOf,
+	productUrl,
+	shopeeLink,
+	videosOf,
+	zaloLink,
+} from '../../data/molli';
+
+export function getStaticPaths() {
+	return PRODUCTS.map((p) => ({ params: { code: p.code.toLowerCase() }, props: { product: p } }));
+}
+
+const { product: p } = Astro.props as { product: Product };
+const cat = CATEGORIES.find((c) => c.key === p.cat)!;
+const paper = PAPERS.find((x) => x.code === p.code);
+const videos = videosOf(p.code);
+const related = PRODUCTS.filter((x) => x.cat === p.cat && x.code !== p.code).slice(0, 4);
+const title = `${p.name} ${p.spec.split(' · ')[0]} · ${p.code} · Molli`;
+const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ ${formatPrice(p.price)}. Tư vấn Zalo 24/7.`;
+---
+
+<!doctype html>
+<html lang="vi" data-theme="light">
+	<head>
+		<BaseHead title={title} description={description} image={imageOf(p.code)} />
+		<style>
+			.crumbs {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+				font-size: 14px;
+				color: var(--muted);
+				padding: 24px 0 8px;
+			}
+			.crumbs a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.detail {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				gap: 48px;
+				align-items: start;
+				padding: 16px 0 48px;
+			}
+			.photo {
+				background: #fff;
+				border: 1px solid var(--line);
+				border-radius: 24px;
+				overflow: hidden;
+			}
+			.photo img {
+				display: block;
+				width: 100%;
+				height: auto;
+				aspect-ratio: 1;
+				object-fit: contain;
+			}
+			.code {
+				display: inline-block;
+				background: #e8f3fb;
+				color: var(--accent);
+				font-weight: 700;
+				font-size: 13px;
+				padding: 6px 14px;
+				border-radius: 99px;
+			}
+			.detail h1 {
+				color: #24618f;
+				font-size: clamp(28px, 3.4vw, 40px);
+				line-height: 1.2;
+				margin: 14px 0 10px;
+			}
+			.spec {
+				color: var(--muted);
+				font-size: 16px;
+				margin: 0;
+			}
+			.price {
+				font-size: 32px;
+				font-weight: 800;
+				color: var(--price, #e0533d);
+				margin: 20px 0 4px;
+			}
+			.price-note {
+				font-size: 13px;
+				color: var(--muted);
+				margin: 0 0 20px;
+			}
+			.info {
+				list-style: none;
+				padding: 18px 20px;
+				margin: 0 0 24px;
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 18px;
+				display: grid;
+				gap: 10px;
+				font-size: 15.5px;
+				line-height: 1.6;
+			}
+			.info b {
+				color: #24618f;
+			}
+			.buy {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+			}
+			.buy a {
+				flex: 1 1 180px;
+				text-align: center;
+				font-weight: 700;
+				padding: 14px 20px;
+				border-radius: 99px;
+				text-decoration: none;
+				font-size: 16px;
+			}
+			.buy .z {
+				background: var(--brand);
+				color: #fff;
+			}
+			.buy .s {
+				background: #fff1ec;
+				color: #d6461f;
+				border: 2px solid #f7c8b8;
+			}
+			.promise {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px 18px;
+				margin: 18px 0 0;
+				padding: 0;
+				list-style: none;
+				font-size: 14px;
+				color: var(--muted);
+			}
+			.promise a {
+				color: var(--accent);
+				font-weight: 700;
+			}
+			.block {
+				padding: 40px 0;
+				border-top: 1px solid var(--line);
+			}
+			.block h2 {
+				color: #24618f;
+				font-size: clamp(22px, 2.6vw, 28px);
+				margin: 0 0 20px;
+			}
+			.paper {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+			}
+			.paper a {
+				flex: 0 0 180px;
+				border: 1px solid var(--line);
+				border-radius: 14px;
+				overflow: hidden;
+				background: #fff;
+			}
+			.paper img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			.paper p {
+				margin: 0;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+			.vids {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(200px, 240px));
+				gap: 16px;
+			}
+			.vids video {
+				width: 100%;
+				aspect-ratio: 9 / 16;
+				object-fit: cover;
+				border-radius: 16px;
+				background: #dfeaf3;
+				display: block;
+			}
+			.vids p {
+				font-size: 14px;
+				color: var(--muted);
+				margin: 8px 0 0;
+				line-height: 1.5;
+			}
+			.related {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 16px;
+			}
+			.related a {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid var(--line);
+				border-radius: 18px;
+				overflow: hidden;
+				background: var(--surface);
+				text-decoration: none;
+				color: inherit;
+				transition: 0.2s;
+			}
+			.related a:hover {
+				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+			}
+			.related img {
+				width: 100%;
+				height: auto;
+				aspect-ratio: 1;
+				object-fit: cover;
+				display: block;
+			}
+			.related span {
+				padding: 10px 14px 0;
+				font-size: 12px;
+				font-weight: 700;
+				color: var(--accent);
+			}
+			.related h3 {
+				font-size: 15px;
+				margin: 2px 14px 4px;
+				line-height: 1.35;
+			}
+			.related b {
+				margin: auto 14px 14px;
+				color: var(--price, #e0533d);
+			}
+			.back {
+				display: inline-block;
+				margin-top: 24px;
+				color: var(--accent);
+				font-weight: 700;
+				text-decoration: none;
+			}
+			@media (max-width: 860px) {
+				.detail {
+					grid-template-columns: 1fr;
+					gap: 24px;
+				}
+				.related {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+				.paper {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				.paper a {
+					flex: none;
+					width: 200px;
+				}
+				.vids {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main id="noi-dung" class="wrap">
+			<nav class="crumbs" aria-label="Đường dẫn">
+				<a href="/">Trang chủ</a><span aria-hidden="true">›</span>
+				<a href="/#san-pham">Sản phẩm</a><span aria-hidden="true">›</span>
+				<span>{cat.label}</span>
+			</nav>
+
+			<section class="detail" aria-labelledby="sp-title">
+				<div class="photo">
+					<img src={imageOf(p.code)} alt={`${p.name} Molli ${p.code}`} width="560" height="560" />
+				</div>
+				<div>
+					<span class="code">{p.code} · {cat.label}</span>
+					<h1 id="sp-title">{p.name}</h1>
+					<p class="spec">{p.spec}</p>
+					<div class="price">{formatPrice(p.price)}</div>
+					<p class="price-note">Giá bán lẻ khuyến nghị, cập nhật 13/11/2026. Giá trên Shopee có thể khác khi shop chạy chương trình.</p>
+					<ul class="info">
+						<li><b>Quy cách:</b> {p.spec}</li>
+						<li><b>Đặc điểm:</b> {p.note}</li>
+						<li><b>Nhóm hàng:</b> {cat.label}</li>
+						{paper && <li><b>Giấy kiểm định:</b> có, xem ở phía dưới.</li>}
+					</ul>
+					<div class="buy">
+						<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">Mua ngay trên Shopee</a>
+						<a class="z" href={zaloLink} target="_blank" rel="noopener">Tư vấn qua Zalo</a>
+					</div>
+					<ul class="promise">
+						<li>Lỗi là đổi, trong 3 ngày</li>
+						<li>Molli luôn ở đây 24/7</li>
+						<li>Cửa hàng nhập sỉ: <a href="/dai-ly/">xem chính sách đại lý</a></li>
+					</ul>
+				</div>
+			</section>
+
+			{
+				paper && (
+					<section class="block" aria-labelledby="sp-paper">
+						<h2 id="sp-paper">Giấy kiểm định của mã này</h2>
+						<div class="paper">
+							<a href={`/images/molli/giay/${p.code.toLowerCase()}.webp`} target="_blank" rel="noopener" aria-label={`Mở to ${paper.alt}`}>
+								<img src={`/images/molli/giay/${p.code.toLowerCase()}.webp`} alt={paper.alt} width="400" height="533" loading="lazy" />
+							</a>
+							<p>Bấm vào ảnh để xem to. Mẹ cần bản đầy đủ thì nhắn Zalo, Molli gửi ngay.</p>
+						</div>
+					</section>
+				)
+			}
+
+			{
+				videos.length > 0 && (
+					<section class="block" aria-labelledby="sp-videos">
+						<h2 id="sp-videos">Video thật từ các mẹ</h2>
+						<div class="vids">
+							{videos.map((v) => (
+								<div>
+									<video
+										src={`/videos/feedback/${v.slug}.mp4`}
+										poster={`/videos/feedback/${v.slug}.webp`}
+										controls
+										playsinline
+										preload="none"
+										aria-label={`Video feedback ${v.label} Molli`}
+									/>
+									<p>{v.text}</p>
+								</div>
+							))}
+						</div>
+					</section>
+				)
+			}
+
+			{
+				related.length > 0 && (
+					<section class="block" aria-labelledby="sp-related">
+						<h2 id="sp-related">Cùng nhóm {cat.label}</h2>
+						<div class="related">
+							{related.map((r) => (
+								<a href={productUrl(r.code)}>
+									<img src={imageOf(r.code)} alt={`${r.name} Molli ${r.code}`} width="560" height="560" loading="lazy" />
+									<span>{r.code}</span>
+									<h3>{r.name}</h3>
+									<b>{formatPrice(r.price)}</b>
+								</a>
+							))}
+						</div>
+						<a class="back" href="/#san-pham">← Xem tất cả sản phẩm</a>
+					</section>
+				)
+			}
+		</main>
+		<Footer />
+	</body>
+</html>
