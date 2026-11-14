@@ -96,8 +96,6 @@ export const REAL_PHOTOS: Record<string, string[]> = {
   ],
   "MOL3002": [
     "/images/molli/anh-that/mol3002-1.jpg",
-    "/images/molli/anh-that/mol3002-drive-1I76VdIbIP0ExBopa3tpIHsmlk73nrInZ.png",
-    "/images/molli/anh-that/mol3002-drive-1SxE59xVA0r5UF_rSHgV_rgejarbQ9XpC.png",
     "/images/molli/anh-that/mol3002-drive-1afZmSbROuWDld_V-XVQvtdS_gWGb91G3.png"
   ],
   "MOL2059": [
