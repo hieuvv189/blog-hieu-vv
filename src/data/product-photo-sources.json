@@ -2,9 +2,21 @@
   "MOL3019": {
     "folder": "https://drive.google.com/drive/folders/1QjhQbnREoN1MRDmGJ5qVb3UlmERZ_iqi",
     "photos": [
-      {"path": "/images/molli/anh-that/mol3019-drive-5.png", "fileId": "1HWUv_i2jcB-3DFdaskxkJwOR4Kh3XmuY", "name": "5.png"},
-      {"path": "/images/molli/anh-that/mol3019-drive-6.png", "fileId": "1ygvsNepXWBV4o1yQvV3CFigcknW8caUE", "name": "6.png"},
-      {"path": "/images/molli/anh-that/mol3019-drive-extra-0.png", "fileId": "14QZ1VPqeReNf1vkKUxmuNCrlgctFcP4l", "name": "8.png"}
+      {
+        "path": "/images/molli/anh-that/mol3019-drive-5.png",
+        "fileId": "1HWUv_i2jcB-3DFdaskxkJwOR4Kh3XmuY",
+        "name": "5.png"
+      },
+      {
+        "path": "/images/molli/anh-that/mol3019-drive-6.png",
+        "fileId": "1ygvsNepXWBV4o1yQvV3CFigcknW8caUE",
+        "name": "6.png"
+      },
+      {
+        "path": "/images/molli/anh-that/mol3019-drive-extra-0.png",
+        "fileId": "14QZ1VPqeReNf1vkKUxmuNCrlgctFcP4l",
+        "name": "8.png"
+      }
     ]
   },
   "MOL3051": {
@@ -1747,6 +1759,24 @@
     "photos": [
       {
         "code": "MOL3002",
+        "path": "/images/molli/anh-that/mol3002-drive-1afZmSbROuWDld_V-XVQvtdS_gWGb91G3.png",
+        "fileId": "1afZmSbROuWDld_V-XVQvtdS_gWGb91G3",
+        "name": "8.png",
+        "folderId": "1-8t_F7MVMfovAQpAkhfI1Tl5EVzlOy0r",
+        "folderName": "MOL3002 - Gạc Vệ  Sinh Răng Miệng",
+        "folder": "https://drive.google.com/drive/folders/1-8t_F7MVMfovAQpAkhfI1Tl5EVzlOy0r",
+        "sha256": "71f636690955a5094c2e82b916c7ed798c295d6c88790dd72a59d4cba1705cf7",
+        "dimensions": [
+          1200,
+          1200
+        ],
+        "reviewedAt": "2026-11-13",
+        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI."
+      }
+    ],
+    "excludedPhotos": [
+      {
+        "code": "MOL3002",
         "path": "/images/molli/anh-that/mol3002-drive-1I76VdIbIP0ExBopa3tpIHsmlk73nrInZ.png",
         "fileId": "1I76VdIbIP0ExBopa3tpIHsmlk73nrInZ",
         "name": "11.png",
@@ -1759,7 +1789,8 @@
           1200
         ],
         "reviewedAt": "2026-11-13",
-        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI."
+        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI.",
+        "reason": "Chủ xác nhận mẫu bao bì cũ đã thay thế, gỡ khỏi khung ảnh sản phẩm."
       },
       {
         "code": "MOL3002",
@@ -1775,23 +1806,8 @@
           1200
         ],
         "reviewedAt": "2026-11-13",
-        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI."
-      },
-      {
-        "code": "MOL3002",
-        "path": "/images/molli/anh-that/mol3002-drive-1afZmSbROuWDld_V-XVQvtdS_gWGb91G3.png",
-        "fileId": "1afZmSbROuWDld_V-XVQvtdS_gWGb91G3",
-        "name": "8.png",
-        "folderId": "1-8t_F7MVMfovAQpAkhfI1Tl5EVzlOy0r",
-        "folderName": "MOL3002 - Gạc Vệ  Sinh Răng Miệng",
-        "folder": "https://drive.google.com/drive/folders/1-8t_F7MVMfovAQpAkhfI1Tl5EVzlOy0r",
-        "sha256": "71f636690955a5094c2e82b916c7ed798c295d6c88790dd72a59d4cba1705cf7",
-        "dimensions": [
-          1200,
-          1200
-        ],
-        "reviewedAt": "2026-11-13",
-        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI."
+        "verification": "Đã xem ảnh gốc: sản phẩm, bề mặt hoặc góc nhìn phù hợp mã trong thư mục riêng; không có giá đại lý, không dùng khung hình video hoặc ảnh dựng AI.",
+        "reason": "Chủ xác nhận mẫu bao bì cũ đã thay thế, gỡ khỏi khung ảnh sản phẩm."
       }
     ]
   },
