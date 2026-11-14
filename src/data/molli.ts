@@ -287,7 +287,9 @@ export const paperPagesOf = (code: string): PaperPage[] => {
 // Ánh xạ mã tường minh; tài nguyên dùng chung khai báo mọi mã đã xác minh trong codes.
 export const videosOf = (code: string) => FEEDBACK_VIDEOS.filter((v) => v.codes.includes(code));
 
-export const imageOf = (code: string) => `/images/molli/sp/${code.toLowerCase()}.webp`;
+export const imageOf = (code: string) => code.toUpperCase() === 'MOL3002'
+	? '/images/molli/sp/mol3002-light-v2.webp'
+	: `/images/molli/sp/${code.toLowerCase()}.webp`;
 
 // Gợi ý theo giai đoạn (theo bản mẫu). Tổng tiền là giá lẻ cộng lại, không phải combo giảm giá.
 export const STAGES: { step: string; title: string; items: { code: string; name: string; price: number }[] }[] = [
