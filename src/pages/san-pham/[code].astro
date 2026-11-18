@@ -8,6 +8,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import {
 	CATEGORIES,
+	paperLookupUrl,
 	paperPagesOf,
 	PRODUCTS,
 	type Product,
@@ -367,6 +368,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 						</div>
 						<p class="paper-note">
 							{papers.length > 1 ? `Ảnh chụp bản gốc, ${papers.length} trang. ` : ''}Bấm vào từng trang để xem to. Phạm vi mã và lô hàng theo phụ lục; kết quả thử nghiệm áp dụng cho mẫu ghi trong phiếu.
+							<a href={paperLookupUrl(p.code)}>Xem giấy cỡ lớn</a> · <a href="/giay-kiem-dinh/">Tra cứu giấy của mã khác</a>
 						</p>
 					</section>
 				)

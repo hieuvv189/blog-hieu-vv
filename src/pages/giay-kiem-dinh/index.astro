@@ -1,0 +1,106 @@
+---
+// Trang tra cứu giấy kiểm định: mục lục theo nhóm hàng, bấm tên sản phẩm để xem ảnh giấy tờ.
+// Chỉ liệt kê mã đã có giấy trong src/data/molli.ts (paperPagesOf).
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { CATEGORIES, PRODUCTS, imageOf, paperLookupUrl, paperPagesOf, zaloLink } from '../../data/molli';
+
+const groups = CATEGORIES.map((c) => ({
+	...c,
+	items: PRODUCTS.filter((p) => p.cat === c.key && paperPagesOf(p.code).length > 0),
+})).filter((g) => g.items.length > 0);
+const total = groups.reduce((n, g) => n + g.items.length, 0);
+---
+
+<!doctype html>
+<html lang="vi" data-theme="light">
+	<head>
+		<BaseHead
+			title="Tra cứu giấy kiểm định sản phẩm · Molli"
+			description={`Tra cứu giấy chứng nhận, phiếu thử nghiệm và bản công bố của ${total} mã sản phẩm Molli. Bấm tên sản phẩm để xem ảnh chụp bản gốc.`}
+		/>
+		<style>
+			.crumbs { display: flex; flex-wrap: wrap; gap: 6px; font-size: 14px; color: var(--muted); padding: 24px 0 8px; }
+			.crumbs a { color: var(--accent); text-decoration: none; }
+			.intro { padding: 8px 0 24px; max-width: 760px; }
+			.intro h1 { color: #24618f; font-size: clamp(26px, 3.4vw, 38px); margin: 0 0 12px; }
+			.intro p { color: var(--muted); line-height: 1.7; margin: 0; }
+			.search { display: block; width: 100%; max-width: 480px; margin: 20px 0 0; padding: 12px 16px; font: inherit; font-size: 15px; border: 1px solid var(--line); border-radius: 999px; background: #fff; }
+			.search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+			.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+			.toc a { display: inline-block; padding: 6px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--accent); font-size: 14px; font-weight: 600; text-decoration: none; }
+			.group { padding: 28px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+			.group h2 { color: #24618f; font-size: clamp(20px, 2.4vw, 26px); margin: 0 0 16px; }
+			.group h2 small { color: var(--muted); font-size: 14px; font-weight: 500; margin-left: 6px; }
+			.list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+			.list a { display: flex; gap: 14px; align-items: center; padding: 12px; background: #fff; border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: inherit; height: 100%; box-sizing: border-box; }
+			.list a:hover { border-color: var(--accent); }
+			.list img { width: 64px; height: 64px; object-fit: contain; border-radius: 10px; background: #f6fafd; flex: none; }
+			.list b { display: block; color: var(--ink, #1d3b53); font-size: 15px; line-height: 1.4; }
+			.list span { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+			.list em { display: block; color: var(--accent); font-size: 13px; font-style: normal; font-weight: 600; margin-top: 4px; }
+			.empty { color: var(--muted); padding: 24px 0; }
+			.ask { padding: 32px 0 56px; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.7; }
+			.ask a { color: var(--accent); font-weight: 700; }
+		</style>
+	</head>
+	<body>
+		<Header active="papers" />
+		<main id="noi-dung" class="wrap">
+			<nav class="crumbs" aria-label="Đường dẫn">
+				<a href="/">Trang chủ</a><span aria-hidden="true">›</span>
+				<span>Giấy kiểm định</span>
+			</nav>
+			<section class="intro">
+				<h1>Tra cứu giấy kiểm định</h1>
+				<p>Giấy chứng nhận, phiếu thử nghiệm và bản công bố của {total} mã sản phẩm Molli. Bấm vào tên sản phẩm để xem ảnh chụp bản gốc.</p>
+				<input class="search" type="search" placeholder="Gõ tên hoặc mã sản phẩm, ví dụ: tăm bông, 3019" aria-label="Tìm sản phẩm" data-paper-search />
+				<ul class="toc" aria-label="Mục lục nhóm hàng">
+					{groups.map((g) => <li><a href={`#${g.key}`}>{g.label} ({g.items.length})</a></li>)}
+				</ul>
+			</section>
+
+			{
+				groups.map((g) => (
+					<section class="group" id={g.key} aria-labelledby={`h-${g.key}`} data-paper-group>
+						<h2 id={`h-${g.key}`}>{g.label}<small>{g.items.length} mã</small></h2>
+						<ul class="list">
+							{g.items.map((p) => (
+								<li data-paper-item data-q={`${p.name} ${p.code} ${p.spec}`.toLowerCase()}>
+									<a href={paperLookupUrl(p.code)}>
+										<img src={imageOf(p.code)} alt="" width="64" height="64" loading="lazy" />
+										<div>
+											<b>{p.name}</b>
+											<span>{p.code} · {p.spec}</span>
+											<em>{paperPagesOf(p.code).length} trang giấy tờ ›</em>
+										</div>
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				))
+			}
+			<p class="empty" hidden data-paper-empty>Chưa thấy mã này. Mẹ nhắn Molli để xin giấy nhé.</p>
+
+			<section class="ask">
+				Chưa thấy giấy của mã mẹ cần? <a href={zaloLink} target="_blank" rel="noopener">Nhắn Zalo Molli</a> để được gửi bản chụp.
+			</section>
+		</main>
+		<script>
+			const input = document.querySelector<HTMLInputElement>('[data-paper-search]');
+			const items = Array.from(document.querySelectorAll<HTMLElement>('[data-paper-item]'));
+			const groups = Array.from(document.querySelectorAll<HTMLElement>('[data-paper-group]'));
+			const empty = document.querySelector<HTMLElement>('[data-paper-empty]');
+			const fold = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+			input?.addEventListener('input', () => {
+				const q = fold(input.value.trim());
+				items.forEach((li) => { li.hidden = q !== '' && !fold(li.dataset.q ?? '').includes(q); });
+				groups.forEach((g) => { g.hidden = !g.querySelector('[data-paper-item]:not([hidden])'); });
+				if (empty) empty.hidden = groups.some((g) => !g.hidden);
+			});
+		</script>
+		<Footer />
+	</body>
+</html>
