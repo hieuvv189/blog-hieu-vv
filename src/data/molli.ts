@@ -241,6 +241,13 @@ const KHAN_KHO_PAPERS: PaperPage[] = [
  { src: '/images/molli/giay/khan-kho-uot/07.webp', alt: 'Giấy chứng nhận khăn khô, bản tiếng Việt' },
  { src: '/images/molli/giay/khan-kho-uot/06.webp', alt: 'Giấy chứng nhận khăn khô, bản tiếng Anh' },
 ];
+// Tăm bông: giấy chứng nhận hợp quy TQC.7.7768.26.04 (trang 9) rồi phiếu thử nghiệm VNTEST đúng quy cách hộp.
+// Hai phiếu 200 que (/10 và /11) không ghi mã riêng nên ba mã 200 que cùng hiện cả hai.
+const tamBong = (pages: [number, string][]): PaperPage[] => [
+	{ src: '/images/molli/giay/tam-bong/09.webp', alt: 'Giấy chứng nhận hợp quy QCVN 01:2017/BCT cho tăm bông Molli, TQC CGLOBAL' },
+	...pages.map(([n, label]) => ({ src: `/images/molli/giay/tam-bong/${String(n).padStart(2, '0')}.webp`, alt: `Phiếu kết quả thử nghiệm tăm bông Molli ${label}, VNTEST` })),
+];
+const TAM_BONG_200 = tamBong([[5, '200 que, phiếu 10, trang 1/2'], [6, '200 que, phiếu 10, trang 2/2'], [7, '200 que, phiếu 11, trang 1/2'], [8, '200 que, phiếu 11, trang 2/2']]);
 export const PAPER_PAGES: Record<string, PaperPage[]> = {
 	"MOL3002": [{"src": "/images/molli/giay/det-may/01.webp", "alt": "Giấy chứng nhận áp dụng MOL3002"}, {"src": "/images/molli/giay/det-may/06.webp", "alt": "Phiếu thử nghiệm MOL3002, trang gốc 6"}, {"src": "/images/molli/giay/det-may/07.webp", "alt": "Phiếu thử nghiệm MOL3002, trang gốc 7"}],
 	"MOL2014": [{"src": "/images/molli/giay/det-may/01.webp", "alt": "Giấy chứng nhận áp dụng MOL2014"}, {"src": "/images/molli/giay/det-may/12.webp", "alt": "Phiếu thử nghiệm MOL2014, trang gốc 12"}, {"src": "/images/molli/giay/det-may/13.webp", "alt": "Phiếu thử nghiệm MOL2014, trang gốc 13"}],
@@ -278,6 +285,11 @@ export const PAPER_PAGES: Record<string, PaperPage[]> = {
 		{ src: '/images/molli/giay/mol3048/03.webp', alt: 'Bản tự công bố sản phẩm set hộp đựng thực phẩm MOL3048, trang 1' },
 		{ src: '/images/molli/giay/mol3048/04.webp', alt: 'Bản tự công bố sản phẩm set hộp đựng thực phẩm MOL3048, trang 2' },
 	],
+	MOL3026: tamBong([[1, '600 que, trang 1/2'], [2, '600 que, trang 2/2']]),
+	MOL3007: tamBong([[3, '400 que, trang 1/2'], [4, '400 que, trang 2/2']]),
+	MOL3001: TAM_BONG_200,
+	MOL3018: TAM_BONG_200,
+	MOL3045: TAM_BONG_200,
 	MOL3032: khanMat('MOL3032'),
 	MOL3033: khanMat('MOL3033'),
 	MOL3035: khanMat('MOL3035'),
