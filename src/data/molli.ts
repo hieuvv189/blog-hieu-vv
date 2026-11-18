@@ -169,6 +169,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const productUrl = (code: string) => `/san-pham/${code.toLowerCase()}/`;
+export const paperLookupUrl = (code: string) => `/giay-kiem-dinh/${code.toLowerCase()}/`;
 
 // Video feedback thật của khách (bản gốc trong brain: Molli/video-feedback.md), mã theo bảng video-feedback.
 export const FEEDBACK_VIDEOS: { slug: string; codes: string[]; label: string; text: string }[] = [
