@@ -272,6 +272,12 @@ export const PAPER_PAGES: Record<string, PaperPage[]> = {
 		{ src: '/images/molli/giay/tui-tru-sua-bot/03.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa bột, trang 1' },
 		{ src: '/images/molli/giay/tui-tru-sua-bot/04.webp', alt: 'Bản tự công bố sản phẩm túi trữ sữa bột, trang 2' },
 	],
+	MOL3048: [
+		{ src: '/images/molli/giay/mol3048/01.webp', alt: 'Phiếu kết quả kiểm nghiệm set hộp đựng thực phẩm MOL3048, Viện Kiểm nghiệm an toàn vệ sinh thực phẩm quốc gia, trang 1' },
+		{ src: '/images/molli/giay/mol3048/02.webp', alt: 'Phiếu kết quả kiểm nghiệm set hộp đựng thực phẩm MOL3048, trang 2' },
+		{ src: '/images/molli/giay/mol3048/03.webp', alt: 'Bản tự công bố sản phẩm set hộp đựng thực phẩm MOL3048, trang 1' },
+		{ src: '/images/molli/giay/mol3048/04.webp', alt: 'Bản tự công bố sản phẩm set hộp đựng thực phẩm MOL3048, trang 2' },
+	],
 	MOL3032: khanMat('MOL3032'),
 	MOL3033: khanMat('MOL3033'),
 	MOL3035: khanMat('MOL3035'),
