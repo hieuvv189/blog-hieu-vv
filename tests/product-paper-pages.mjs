@@ -20,3 +20,5 @@ for (const code of ['MOL3019','MOL3020','MOL3023','MOL3025','MOL3038','MOL3039',
  assert.deepEqual(paperPagesOf(code).map(p => p.src), [5,6,7].map(n => `/images/molli/giay/lot-1-lan/${String(n).padStart(2,'0')}.webp`), `${code}: chỉ chứng nhận và phiếu lót dùng chung`);
 }
 assert.deepEqual(paperPagesOf('MOL3042').map(p => p.src), [7,6].map(n => `/images/molli/giay/khan-kho-uot/${String(n).padStart(2,'0')}.webp`), 'Khăn ướt không được hiện phiếu thử khăn khô hoặc trang hành chính');
+assert.deepEqual(paperPagesOf('MOL3048').map(p => p.src), [1,2,3,4].map(n => `/images/molli/giay/mol3048/${String(n).padStart(2,'0')}.webp`), 'MOL3048: phiếu kiểm nghiệm ATTP 2 trang và bản tự công bố 2 trang');
+console.log('Đạt: MOL3048 có đủ kiểm nghiệm ATTP và tự công bố.');
