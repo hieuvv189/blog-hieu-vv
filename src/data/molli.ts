@@ -21,6 +21,8 @@ export const callLink = `tel:${CONTACT.callPhone}`;
 
 export const formatPhone = (p: string) => p.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3');
 export const formatPrice = (n: number) => `${n.toLocaleString('vi-VN')}đ`;
+export const COMING_SOON = 'Sắp ra mắt';
+export const priceLabel = (p: { price: number; comingSoon?: boolean }) => (p.comingSoon ? COMING_SOON : formatPrice(p.price));
 
 export type CategoryKey = 've-sinh' | 'sau-sinh' | 'tru-sua' | 'giac-ngu' | 'diu' | 'ca-nha';
 
@@ -102,6 +104,8 @@ export interface Product {
 	cat: CategoryKey;
 	/** Thứ tự trong tab Nổi bật (1 = đầu tiên). Bỏ trống = không nổi bật. */
 	featured?: number;
+	/** Sản phẩm chưa bán: hiện "Sắp ra mắt" thay giá, ẩn nút mua Shopee. */
+	comingSoon?: boolean;
 }
 
 // Chỉ ghi điều có trong file thông tin sản phẩm; không ghi "100%" và các câu còn chờ xác minh.
@@ -146,6 +150,7 @@ export const PRODUCTS: Product[] = [
 	{ code: 'MOL3048', name: 'Set hộp đựng thực phẩm', spec: '3 hộp/bộ', note: 'Nhựa PP không BPA, lồng gọn, có vạch chia ml.', price: 135000, cat: 'tru-sua' },
 	{ code: 'MOL3008', name: 'Bộ cọ rửa bình sữa 4 chi tiết', spec: '4 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ cổ chữ U, cọ ống hút.', price: 86000, cat: 'tru-sua' },
 	{ code: 'MOL3046', name: 'Bộ cọ rửa bình sữa 3 chi tiết', spec: '3 món/vỉ', note: 'Cọ bình, cọ núm ti, cọ ống hút. Không BPA.', price: 102000, cat: 'tru-sua', featured: 8 },
+	{ code: 'MOL3052', name: 'Yếm ăn dặm Măm Măm tiện lợi', spec: 'Quy cách cập nhật sau', note: 'Yếm ăn dùng một lần cho bé. Sắp ra mắt, nhắn Molli để được báo khi có hàng.', price: 0, cat: 'tru-sua', comingSoon: true },
 
 	{ code: 'MOL2015', name: 'Khăn sữa xô Muslin', spec: '5 khăn/hộp · 30x30cm', note: 'Muslin 2 lớp, viền ren. Bé 0-36 tháng.', price: 101000, cat: 'giac-ngu' },
 	{ code: 'MOL2016', name: 'Khăn yếm xô Muslin 2 in 1', spec: '3 khăn/hộp · 25x25cm', note: 'Muslin 4 lớp, có cúc bấm, vừa làm khăn vừa làm yếm.', price: 90000, cat: 'giac-ngu' },
