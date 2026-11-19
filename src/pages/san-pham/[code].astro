@@ -13,6 +13,7 @@ import {
 	PRODUCTS,
 	type Product,
 	formatPrice,
+	priceLabel,
 	imageOf,
 	productUrl,
 	shopeeLink,
@@ -33,8 +34,8 @@ const papers = paperPagesOf(p.code);
 const paper = papers.length > 0;
 const videos = videosOf(p.code);
 const related = PRODUCTS.filter((x) => x.cat === p.cat && x.code !== p.code).slice(0, 4);
-const title = `${p.name} ${p.spec.split(' · ')[0]} · ${p.code} · Molli`;
-const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ ${formatPrice(p.price)}. Tư vấn Zalo 24/7.`;
+const title = `${p.name} ${p.comingSoon ? 'sắp ra mắt' : p.spec.split(' · ')[0]} · ${p.code} · Molli`;
+const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} ${p.comingSoon ? 'Sắp ra mắt.' : `Giá lẻ ${formatPrice(p.price)}.`} Tư vấn Zalo 24/7.`;
 ---
 
 <!doctype html>
@@ -332,8 +333,8 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 					<span class="code">{p.code} · {cat.label}</span>
 					<h1 id="sp-title">{p.name}</h1>
 					<p class="spec">{p.spec}</p>
-					<div class="price">{formatPrice(p.price)}</div>
-					<p class="price-note">Giá bán lẻ khuyến nghị, cập nhật 13/11/2026. Giá trên Shopee có thể khác khi shop chạy chương trình.</p>
+					<div class="price">{priceLabel(p)}</div>
+					<p class="price-note">{p.comingSoon ? 'Sản phẩm sắp ra mắt, quy cách và giá Molli cập nhật sau. Nhắn Zalo để được báo khi có hàng.' : 'Giá bán lẻ khuyến nghị, cập nhật 13/11/2026. Giá trên Shopee có thể khác khi shop chạy chương trình.'}</p>
 					<ul class="info">
 						<li><b>Quy cách:</b> {p.spec}</li>
 						<li><b>Độ tuổi sử dụng:</b> {age}</li>
@@ -342,8 +343,8 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 						{paper && <li><b>Hồ sơ sản phẩm:</b> xem tài liệu gốc phía dưới.</li>}
 					</ul>
 					<div class="buy">
-						<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">Mua ngay trên Shopee</a>
-						<a class="z" href={zaloLink} target="_blank" rel="noopener">Tư vấn qua Zalo</a>
+						{!p.comingSoon && <a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">Mua ngay trên Shopee</a>}
+						<a class="z" href={zaloLink} target="_blank" rel="noopener">{p.comingSoon ? 'Nhắn Zalo để được báo khi có hàng' : 'Tư vấn qua Zalo'}</a>
 					</div>
 					<ul class="promise">
 						<li>Lỗi là đổi, trong 3 ngày</li>
@@ -407,7 +408,7 @@ const description = `${p.name} Molli ${p.code}, ${p.spec}. ${p.note} Giá lẻ $
 									<img src={imageOf(r.code)} alt={`${r.name} Molli ${r.code}`} width="560" height="560" loading="lazy" />
 									<span>{r.code}</span>
 									<h3>{r.name}</h3>
-									<b>{formatPrice(r.price)}</b>
+									<b>{priceLabel(r)}</b>
 								</a>
 							))}
 						</div>

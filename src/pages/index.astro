@@ -7,7 +7,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DealerForm from '../components/DealerForm.astro';
 import { SITE_DESCRIPTION } from '../consts';
-import { CATEGORIES, CONTACT, FEEDBACK_VIDEOS as feedbackVideos, PAPERS as papers, PRODUCTS, STAGES, formatPrice, imageOf, productUrl, shopeeLink, zaloLink } from '../data/molli';
+import { CATEGORIES, CONTACT, FEEDBACK_VIDEOS as feedbackVideos, PAPERS as papers, PRODUCTS, STAGES, formatPrice, imageOf, priceLabel, productUrl, shopeeLink, zaloLink } from '../data/molli';
 
 const catLabel = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.label]));
 // Thẻ render theo đúng thứ tự trong PRODUCTS (thứ tự từng nhóm). Tab Nổi bật dùng CSS `order` = `featured` (1, 2, 3...), JS bỏ `order` khi sang tab nhóm.
@@ -911,14 +911,16 @@ const values = [
 									</h3>
 									<span class="spec">{p.spec}</span>
 									<p class="note">{p.note}</p>
-									<div class="price">{formatPrice(p.price)}</div>
+									<div class="price">{priceLabel(p)}</div>
 									<div class="card-actions">
 										<a class="z" href={zaloLink} target="_blank" rel="noopener">
 											Tư vấn Zalo
 										</a>
-										<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">
-											Mua ngay
-										</a>
+										{!p.comingSoon && (
+											<a class="s" href={shopeeLink(p.code)} target="_blank" rel="noopener">
+												Mua ngay
+											</a>
+										)}
 									</div>
 								</div>
 							</article>
